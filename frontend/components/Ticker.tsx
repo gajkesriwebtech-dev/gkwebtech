@@ -2,7 +2,7 @@ import React from 'react';
 import { Asterisk } from 'lucide-react';
 
 export const Ticker: React.FC = () => {
-  const items = ["SEO Optimization", "Social Media Marketing", "Content Strategy & Analysis", "Google & Meta Ads", "Campaign Planning & Analytics", "Website Management", "Creative Reels"];
+  const items = ["SEO Optimization", "Social Media Marketing", "Content Strategy & Branding", "Google & Meta Ads", "Campaign Planning & Analytics", "Website Management & Wordpress", "Creative Ad Design & Reels"];
 
   return (
     <div className="bg-secondary py-6 overflow-hidden relative transform -skew-y-1 origin-bottom-left md:skew-y-0 xl:mx-[-2rem] 2xl:mx-[-4rem]">

@@ -161,11 +161,11 @@ export const Contact: React.FC = () => {
                     <option value="">Select Service (Optional)</option>
                     <option value="seo">SEO Optimization</option>
                     <option value="social">Social Media Marketing</option>
-                    <option value="content">Content Strategy</option>
-                    <option value="ppc">PPC Advertising</option>
-                    <option value="ppc">PPC Advertising</option>
-                    <option value="ppc">PPC Advertising</option>
-                    <option value="ppc">PPC Advertising</option>
+                    <option value="content">Content Strategy & Branding</option>
+                    <option value="ppc">Google & Meta Ads</option>
+                    <option value="ppc">Campaign Planning & Analytics</option>
+                    <option value="ppc">Website Management & Wordpress</option>
+                    <option value="ppc">Creative Ad Design & Reels</option>
                   </select>
                 </div>
               </div>
