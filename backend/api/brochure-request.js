@@ -1,7 +1,7 @@
-const connectToDatabase = require('./db');
-const { Lead, Brochure } = require('./models');
+import connectToDatabase from './db.js';
+import { Lead, Brochure } from './models.js';
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
