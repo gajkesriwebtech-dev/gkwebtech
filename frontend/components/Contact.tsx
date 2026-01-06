@@ -17,14 +17,12 @@ export const Contact: React.FC = () => {
     setStatus('loading');
 
     try {
-      const response = await fetch(process.env.NEXT_PUBLIC_BACKEND_URI, {
-
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+      const backendUrl = (import.meta as any).env?.VITE_BACKEND_URL || '';
+      const response = await fetch(`${backendUrl}/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
-      });
+      });   
 
       const data = await response.json();
 
@@ -164,6 +162,9 @@ export const Contact: React.FC = () => {
                     <option value="seo">SEO Optimization</option>
                     <option value="social">Social Media Marketing</option>
                     <option value="content">Content Strategy</option>
+                    <option value="ppc">PPC Advertising</option>
+                    <option value="ppc">PPC Advertising</option>
+                    <option value="ppc">PPC Advertising</option>
                     <option value="ppc">PPC Advertising</option>
                   </select>
                 </div>

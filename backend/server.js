@@ -6,30 +6,28 @@ import connectToDatabase from "./api/db.js";
 
 const app = express();
 
-// Middleware first
-app.use(cors());
+// Middleware
+app.use(cors({
+  origin: process.env.FRONTEND_URL || "*",
+  methods: ["GET", "POST", "OPTIONS"],
+}));
 app.use(express.json());
 
-// Mount router correctly
+// Mount router
 app.use("/api/contact", contactRouter);
+app.use("/contact", contactRouter);
 
 // Health check
 app.get("/", (req, res) => {
   res.json({ success: true, message: "Backend is running" });
 });
 
-// Start server inside async function
 async function startServer() {
-  try {
-    await connectToDatabase();
-    console.log("MongoDB connected ✔");
-  } catch (err) {
-    console.log("MongoDB connection failed:", err.message);
-  }
+  await connectToDatabase();
 
   const PORT = process.env.PORT || 4000;
   app.listen(PORT, () => {
-    console.log(`Backend running on http://localhost:${PORT} 🚀`);
+    console.log(`Backend running on http://localhost:${PORT}`);
   });
 }
 
