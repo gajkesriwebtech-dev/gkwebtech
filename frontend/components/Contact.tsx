@@ -17,7 +17,7 @@ export const Contact: React.FC = () => {
     setStatus('loading');
 
     try {
-      const response = await fetch('http://localhost:4000/api/contact', {
+      const response = await fetch(process.env.NEXT_PUBLIC_BACKEND_URI, {
 
         method: 'POST',
         headers: {
