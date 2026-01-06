@@ -60,7 +60,7 @@ function App() {
 
               {/* Floating WhatsApp CTA goes here, OUTSIDE of Routes */}
               <a
-                href="https://wa.me/9971944676?text=Hi,%20I%20want%20to%20discuss%20digital%20marketing%20services."
+                href="https://wa.me/+919971944676?text=Hi,%20I%20want%20to%20discuss%20digital%20marketing%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="z-50 fixed bottom-5 right-4 flex items-center justify-center bg-white dark:bg-gray-900 rounded-full shadow-lg hover:scale-110 transition"
