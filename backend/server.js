@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // Mount router correctly
-app.use("/api", contactRouter);
+app.use("/api/contact", contactRouter);
 
 // Health check
 app.get("/", (req, res) => {
