@@ -1,5 +1,5 @@
-const connectToDatabase = require('./db');
-const { TeamMember } = require('./models');
+import connectToDatabase from './db.js';
+import { TeamMember } from './models.js';
 
 const seedTeam = [
   {
@@ -39,7 +39,7 @@ const seedTeam = [
   }
 ];
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
 

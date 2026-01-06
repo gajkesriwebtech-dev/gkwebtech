@@ -1,5 +1,5 @@
-const connectToDatabase = require('./db');
-const { Project } = require('./models');
+import connectToDatabase from './db.js';
+import { Project } from './models.js';
 
 // Initial Data for Seeding
 const seedProjects = [
@@ -107,7 +107,7 @@ const seedProjects = [
   }
 ];
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
 

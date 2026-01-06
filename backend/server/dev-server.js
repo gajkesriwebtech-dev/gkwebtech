@@ -5,17 +5,14 @@ dotenv.config({ path: "../.env.local" });
 import express from "express";
 import cors from "cors";
 
-import contactHandler from "../api/contact.js";
+import contactRouter from "../api/contact.js";
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-// Mimic Vercel serverless function locally
-app.post("/api/contact", (req, res) => {
-  return contactHandler(req, res);
-});
+app.use("/api", contactRouter);
 
 const PORT = 5000;
 

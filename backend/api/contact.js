@@ -1,26 +1,20 @@
+import express from "express";
 import connectToDatabase from "./db.js";
 import { Lead } from "./models.js";
 
-export default async function handler(req, res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+const router = express.Router();
 
-  if (req.method === "OPTIONS") {
-    return res.status(200).end();
-  }
-
-  if (req.method !== "POST") {
-    return res
-      .status(405)
-      .json({ success: false, message: "Method not allowed" });
-  }
-
+router.post("/", async (req, res) => {
   try {
+    console.log("📩 Incoming form data:", req.body);
+
+    // Connect to MongoDB
     await connectToDatabase();
+    console.log("🟢 MongoDB connected");
 
     const { name, email, phone, service, details } = req.body;
 
+    // Validate required fields
     if (!name || !email || !phone) {
       return res.status(400).json({
         success: false,
@@ -28,27 +22,33 @@ export default async function handler(req, res) {
       });
     }
 
+    // Create new lead document
     const newLead = new Lead({
       name,
       email,
       phone,
-      source: "contact_form",
       serviceInterested: service || null,
       projectDetails: details || null,
+      source: "contact_form",
       createdAt: new Date(),
     });
 
+    // Save to database
     await newLead.save();
+    console.log("Lead saved successfully ✅");
 
     return res.status(200).json({
       success: true,
-      message: "Message sent successfully!",
+      message: "Form submitted successfully!",
     });
+
   } catch (error) {
-    console.error("Contact API Error:", error);
+    console.error("🔥 Contact API Error:", error.message);
     return res.status(500).json({
       success: false,
-      message: "Server error",
+      message: "Server error while saving lead",
     });
   }
-}
+});
+
+export default router;
