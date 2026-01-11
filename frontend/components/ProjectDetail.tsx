@@ -182,21 +182,63 @@ export const ProjectDetail: React.FC = () => {
       </div>
 
       {/* ▶ Fullscreen Modal (Autoplay + close on outside click, unchanged behavior) */}
-      {fullScreenMedia && (
-        <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-6" onClick={() => setFullScreenMedia(null)}>
-          <div className="relative" onClick={(e) => e.stopPropagation()}>
-            <iframe
-              src={`https://www.youtube.com/embed/${fullScreenMedia.url}?autoplay=1&controls=1`}
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-              className="w-[90vw] md:w-[80vw] h-[85vh] rounded-xl shadow-2xl border-0 z-40"
-            />
-            <button onClick={() => setFullScreenMedia(null)} className="absolute top-4 right-4 text-white bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all z-50">
-              <X size={32}/>
-            </button>
-          </div>
-        </div>
+      {/* ▶ Fullscreen Modal */}
+{fullScreenMedia && (
+  <div
+    className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-6"
+    onClick={() => setFullScreenMedia(null)}
+  >
+    <div className="relative max-w-[95vw] max-h-[95vh]" onClick={(e) => e.stopPropagation()}>
+
+      {/* 🖼 IMAGE FULLSCREEN */}
+      {fullScreenMedia.type === "image" && (
+        <img
+          src={galleryImages[currentImageIndex]}
+          alt="Fullscreen"
+          className="max-w-[95vw] max-h-[90vh] object-contain rounded-xl shadow-2xl"
+        />
       )}
+
+      {/* ▶ VIDEO FULLSCREEN */}
+      {fullScreenMedia.type === "video" && (
+        <iframe
+          src={`https://www.youtube.com/embed/${fullScreenMedia.url}?autoplay=1&controls=1`}
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          className="w-[90vw] md:w-[80vw] h-[85vh] rounded-xl shadow-2xl border-0"
+        />
+      )}
+
+      {/* ❌ Close button */}
+      <button
+        onClick={() => setFullScreenMedia(null)}
+        className="absolute top-4 right-4 text-white bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all z-50"
+      >
+        <X size={32} />
+      </button>
+
+      {/* ⬅➡ Image navigation (only for images) */}
+      {fullScreenMedia.type === "image" && galleryImages.length > 1 && (
+        <>
+          <button
+            onClick={prevImage}
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full"
+          >
+            <ChevronLeft size={28} />
+          </button>
+
+          <button
+            onClick={nextImage}
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full"
+          >
+            <ChevronRight size={28} />
+          </button>
+        </>
+      )}
+    </div>
+  </div>
+)}
+
 
     </>
   );
