@@ -446,17 +446,22 @@ export const projectsData: Project[] = [
     title: "Nirvanavan Foundation",
     location: "Dadikar, Rajasthan",
     category: "Event ",
-    description: "A cinematic showcase of the 15th-century heritage property, highlighting its architectural splendor and luxury amenities through drone videography and lifestyle photography.",
+    description: "A cinematic event coverage for an 8-day NGO-organized art initiative (World Art Mela, 1–8 December, 2025), where artists from across India created live artwork and raised donations for social causes. We are the digital partener of Nirvanavan Foundation .",
     image: "/images/portfolio/Nirvanan-Foundation/Group.jpeg",
     mediaStats: { photos: 10, videos: 1 },
-    tags: ["Drone", "Video", "Art"],
+    tags: ["Video", "Photography", "Art", "NGO", "Event Coverage"],
     client: "Nirvanan Foundation",
-    duration: "2 Weeks",
-    challenge: "The property, despite its historical significance, was struggling to attract the modern luxury traveler due to an outdated digital presence.",
-    solution: "We executed a comprehensive visual rebranding campaign. Utilizing 4K drone videography to capture the scale of the fort and intimate lifestyle photography to showcase the guest experience.",
-    results: ["300% Increase in Wedding Bookings", "2M+ Views on Social Media", "Featured in Travel & Leisure"],
+    duration: "1 Week",
+    challenge: "The foundation needed meaningful visual documentation of the art mela that truly reflected its purpose — live artist participation, community engagement, and donation impact — rather than generic event photos. The challenge was to capture emotions, storytelling, and credibility in a single day while doing justice to 8 days of artistic contribution.",
+    solution:
+    "We created a cinematic storytelling film focusing on artists, their artwork process, visitor interactions, and the foundation’s mission. Along with structured photography of artwork, crowds, donation moments, and volunteer participation, we produced a video optimized for awareness and trust-building on YouTube and social platforms.",
+  results: [
+    "Successfully documented 20+ artists and live artwork creation",
+    "NGO gained strong visual assets for awareness and credibility",
+    "Video published on YouTube to drive long-term engagement and support"
+  ],
     testimonial: {
-      text: "Gajkesri Webtech captured the soul of our property. The visuals are breathtaking and have directly contributed to our highest occupancy season ever.",
+      text: "Gajkesri Webtech didn’t just cover an event — they captured our mission and the artists' passion beautifully. The film will help us inspire more people to contribute and connect with our cause.",
       author: "Nirvanan Bodhisattva",
       role: "Founder of Nirvanan Foundation"
     },
@@ -468,57 +473,73 @@ export const projectsData: Project[] = [
     id: "Rambihari Palace",
     title: "Rambihari Palace",
     location: "Kishanpur, Alwar, Rajasthan",
-    category: "Luxury Palace Shoot",
-    description: "Capturing the regal essence of one of the best hidden gem of Rajasthan's culture. Our team delivered a comprehensive visual package for their digital rebranding.",
+    category: "Hospitality & Luxury Palace Shoot",
+    description: "A creation of a comprehensive stay-and-evaluate project at the heritage Rambihari Palace in Alwar, focusing on assessing the property against European wellness retreat standards. We are the partners for digital scale up of the chain.",
     image: "/images/portfolio/Rambihari/Screenshot 2025-12-26 091754.png",
     mediaStats: { photos: 20, videos: 1 },
-    tags: ["Luxury", "Interior", "Royality", "Lifestyle", "Hospitality"],
+    tags: ["Hospitality", "Wellness", "Royality", "Lifestyle", "Heritage"],
     client: "Rambihari Palace A Luxury Hotel",
     duration: "1 Week",
-    challenge: "To showcase the grandeur of the palace without making it feel inaccessible or intimidating to the younger demographic.",
-    solution: "We focused on 'Royal Warmth'—capturing not just the architecture, but the personalized service and intimate moments within the grand spaces.",
-    results: ["50% Increase in Website Engagement", "Viral Campaign on Instagram"],
+   challenge:
+    "To conduct an objective evaluation of the palace’s facilities, service standards, wellness potential, and guest experience from a European perspective — while staying as actual guests, understanding cultural expectations, quality benchmarks, and retreat viability in a heritage hospitality context.",
+  solution:
+    "We spent 2 nights and 3 days at the property with our foreign guest, assessing key elements including room comfort, service quality, wellness offerings, food experience, ambiance, natural surroundings, and overall suitability for a wellness retreat. Through structured on-site observation, interviews with staff, lifestyle photography, and cinematic video coverage, we produced a detailed evaluation report and visual assets for the client’s strategic planning.",
+  results: [
+    "Documented comprehensive guest experience report aligned with international wellness standards",
+    "Captured high-quality visuals of architecture, spaces, amenities, and environment",
+    "Provided actionable recommendations for retreat potential & guest comfort enhancement"
+  ],
     testimonial: {
       text: "The team's attention to detail is unmatched. They managed to balance the heritage with a modern aesthetic perfectly.",
       author: "Mr. Ram Kaushik",
       role: "Owner"
     },
-    gallery: ["/images/portfolio/Rambihari/Screenshot 2025-12-26 092042.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 094141.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091627.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091646.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091702.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091718.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091730.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091754.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091815.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091831.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091854.png",, "/images/portfolio/Rambihari/Screenshot 2025-12-26 091911.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091922.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091935.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091952.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 092008.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 092029.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091500.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 092051.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 092106.png"],
+    gallery: ["/images/portfolio/Rambihari/Screenshot 2025-12-26 092042.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 094141.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091627.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091646.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091702.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091718.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091730.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091754.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091815.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091831.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091854.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091911.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091922.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091935.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091952.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 092008.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 092029.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091500.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 092051.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 092106.png"],
     youtubeIds: []
   },
   {
     id: "Dadikar Fort",
     title: "Dadikar Fort",
     location: "Dadikar, Rajasthan",
-    category: "Luxury Fort Shoot",
-    description: "An evocative outdoor shoot capturing the golden hour at the majestic Dadikar Fort, designed to promote destination weddings and cultural tourism.",
+    category: "Heritage Hospitality & Luxury Fort Shoot",
+    description: "Creation of a comprehensive business and digital marketing strategy to evaluate and scale the property for destination weddings and wellness tourism. Our team produced cinematic promotional material through strategic outdoor shoots, supported by SEO and GEO optimization. We are the digital scale-up partners, guiding its expansion for international retreat and wedding audiences.",
     image: "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-01 123815.png",
     mediaStats: { photos: 10, videos: 2 },
-    tags: ["Travel", "Culture", "Luxury", "Outdoor"],
+    tags: ["Heritage", "Wellness", "Hospitality", "Lifestyle",],
     client: "Dadhikar Fort & Resorts Private Limited",
     duration: "1 Week",
-    challenge: "To promote Dadikar Fort as a premier wedding destination while respecting its cultural heritage.",
-    solution: "We utilized natural lighting during golden hour to create a romantic, dream-like atmosphere, integrating traditional attire with the historic backdrop.",
-    results: ["Top Trending Travel Reel in India", "15% Rise in Pre-wedding Shoot Inquiries"],
-    gallery: [],
-    youtubeIds: [ 
-        "https://assets.mixkit.co/videos/preview/mixkit-woman-walking-on-a-beach-at-sunset-4638-large.mp4"
-    ]
+     challenge:
+    "To evaluate whether this historic fort-hotel — with roots tracing back to the 9th–10th century and now restored with modern hospitality — meets international wellness retreat benchmarks while capturing its historic essence, cultural value, and guest comfort levels within a limited timeframe.",  
+  solution:
+    "Our team conducted a detailed on-site assessment over the stay, exploring accommodation quality, guest services, interaction with local cultural elements, hospitality standards, wellness potential (tranquility, nature access, amenities), and overall guest experience. We paired this with cinematic videography and curated photography that presents the property’s heritage charm, modern amenities, and retreat suitability in a compelling, professional format.",  
+  results: [
+    "Delivered a comprehensive European-standard wellness evaluation report",
+    "Captured rich visual storytelling of history, hospitality, and serene landscapes",
+    "Provided actionable recommendations for retreat positioning and guest experience enhancement"
+  ],
+    gallery: ["/images/portfolio/Dadikar_Fort/Group.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 150805.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 150905.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 150927.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 150939.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 150954.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 151006.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 151015.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 151028.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 152002.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 152140.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 152155.png"],
+    youtubeIds: []
   },
   {
     id: "Bamboo Saa Resort & Spa",
     title: "Bamboo Saa Resort & Spa",
     location: "Jaipur, Rajasthan",
-    category: "Wellness Retreat Marketing",
-    description: "High-energy event coverage for Jaipur's premier wellness retreat, delivering real-time social media content.",
+    category: "Wellness Hospitality Assessment & Collaboration",
+    description:  "A stay-and-audit project to benchmark the wellness retreat experience against European hospitality and comfort standards. We delivered strategy-aligned promotional shoots and digital assets for wellness-focused platform scale-up. Partnership advisory backed by SEO and GEO recommendations to enhance global wellness search visibility and retreat positioning.",
     image: "/images/portfolio/BambooSa-Sunrise-Resort/Screenshot 2026-01-01 123528.png",
     mediaStats: { photos: 10, videos: 2 },
-    tags: ["Wellness", "Nature", "Amenities"],
+    tags: ["Wellness", "Resort", "Spa", "Hospitality", "Retreat"],
     client: "Mr. V.K. Agarwal",
     duration: "1 Week",
-    challenge: "Capturing the nature in a resort based in the capital of Rajasthan and delivering edited content in near real-time for social media.",
-    solution: "We deployed a 5-person team with on-site editors. Ensuring maximum social buzz.",
-    results: ["5M+ Hashtag Reach", "Live Stream viewed by 50k people"],
+    challenge:
+    "To benchmark an existing wellness retreat against European wellness tourism expectations while staying as real guests, ensuring our feedback captured practicality, cultural compatibility, business potential, and partnership scope without disrupting ongoing retreat operations.",
+  solution:
+    "We conducted an immersive, unbiased assessment covering wellness programs, spa services, food quality, staff behavior, hygiene protocols, ambiance, sustainability, silence zones, nature integration, accessibility, and guest comfort. After evaluation, we delivered a structured suggestion brief to the owner and discussed potential collaboration and long-term partnership opportunities.",
+  results: [
+    "Validated the property as an exceptional wellness retreat with international appeal",
+    "Shared European-standard recommendations for future retreat expansion and operations",
+    "Initiated partnership conversations for collaboration in retreat experience & international guest programs"
+  ],
     gallery: ["/images/portfolio/BambooSa-Sunrise-Resort/Screenshot 2026-01-01 122527.png", "/images/portfolio/BambooSa-Sunrise-Resort/Screenshot 2026-01-01 122621.png", "/images/portfolio/BambooSa-Sunrise-Resort/Screenshot 2026-01-01 122640.png", "/images/portfolio/BambooSa-Sunrise-Resort/Screenshot 2026-01-01 122658.png", "/images/portfolio/BambooSa-Sunrise-Resort/Screenshot 2026-01-01 122710.png"]
   }
 ];
@@ -569,9 +590,9 @@ export const testimonialsData: Testimonial[] = [
   {
     rating: 5,
     text: "Their social media team is outstanding. They captured our brand voice perfectly and engaged our community in ways we couldn't have imagined.",
-    name: "Albert Flores",
-    role: "Founder, GreenLife",
-    image: "https://randomuser.me/api/portraits/men/32.jpg"
+    name: "Sahil Gupta",
+    role: "Youtuber",
+    image: "https://randomuser.me/api/portraits/men/1.jpg"
   },
   {
     rating: 4,

@@ -83,7 +83,7 @@ export const Contact: React.FC = () => {
                 <div className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-primary dark:text-secondary shadow-sm">
                   <Mail size={20} />
                 </div>
-                <span className="text-primary dark:text-gray-200 font-bold">info@gkwebtech.cloud</span>
+                <span className="text-primary dark:text-gray-200 font-bold">Gajkesriwebtech@gmail.com</span>
               </div>
 
               <div className="flex items-start gap-4">
@@ -99,7 +99,15 @@ export const Contact: React.FC = () => {
                   <MapPin size={20} />
                 </div>
                 <span className="text-primary dark:text-gray-200 font-bold leading-tight items-start">
-                  100 webster avenue, Mt Roskill, Auckland 1041, Netherlands
+                  100 webster avenue, Mt Roskill, Auckland 1041, New Zealand
+                </span>
+              </div>
+              <div className="flex items-start gap-4 items-center">
+                <div className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-primary dark:text-secondary shadow-sm flex-shrink-0">
+                  <MapPin size={20} />
+                </div>
+                <span className="text-primary dark:text-gray-200 font-bold leading-tight items-start">
+                  Giekerkstraat 60 5043MK, Tilburg, Netherlands 
                 </span>
               </div>
             </div>

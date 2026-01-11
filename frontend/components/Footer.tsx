@@ -79,15 +79,19 @@ export const Footer: React.FC = () => {
                  </li>
               <li className="flex items-start gap-3">
                  <span className="font-bold text-secondary">E:</span>
-                 <a href="mailto:info@gkwebtech.cloud" className="hover:text-secondary transition-colors">info@gkwebtech.cloud</a>
+                 <a href="mailto:info@gkwebtech.cloud" className="hover:text-secondary transition-colors">Gajkesriwebtech@gmail.com</a>
               </li>
               <li className="flex items-start gap-3">
-                 <span className="font-bold text-secondary flex-shrink-0 mt-1">A:</span>
+                 <span className="font-bold text-secondary flex-shrink-0 mt-0.5">A:</span>
                  <span className="leading-relaxed">Tiwari Clinic, Mahatma Jyotiba Fule Circle, Sch. No. 7, Alwar 301001, Rajasthan, India</span>
               </li>
               <li className="flex items-start gap-3">
-                 <span className="font-bold text-secondary flex-shrink-0 mt-1">A:</span>
+                 <span className="font-bold text-secondary flex-shrink-0 mt-0.5">A:</span>
                  <span className="leading-relaxed">100 webster avenue, Mt Roskill, Auckland 1041, Netherlands</span>
+              </li>
+              <li className="flex items-start gap-3">
+                 <span className="font-bold text-secondary flex-shrink-0 mt-0.5">A:</span>
+                 <span className="leading-relaxed">Giekerkstraat 60 5043MK, Tilburg, Netherlands</span>
               </li>
             </ul>
           </div>
