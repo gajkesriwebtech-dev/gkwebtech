@@ -43,67 +43,36 @@ Additional contact details and forms are available on the Contact section of the
 
 ---
 
-## Project Structure
+## Services
 
-This repo is structured as a full‑stack app:
-
-- `frontend/` – React + TypeScript + Vite single‑page application
-  - Home sections: Hero, Services (GKTech & GKInstitute), About, Portfolio, Blog, FAQ, Contact
-  - Static data for services, projects, courses, blogs and team in `data.ts`
-  - Tailwind CSS for styling and React Router for routing
-
-- `backend/` – Node.js + Express + MongoDB API
-  - Handles contact/lead submissions and data models
-  - Uses Mongoose for MongoDB access
-
-For more detail:
-
-- [Frontend README](frontend/README.md)
-- [Backend README](backend/README.md)
+- Search Engine Optimization (SEO) and content strategy
+- Social media marketing, creative ad design, reels & shorts
+- Google & Meta ads, campaign planning and analytics
+- Web development, WordPress management and performance
+- Corporate training, internship‑based learning and courses
 
 ---
 
-## Local Development
+## Industries We Serve
 
-Clone the repository and install dependencies for frontend and backend.
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-- Runs a Vite dev server (typically at `http://localhost:5173/`).
-- Uses the React SPA with sections for services, portfolio, blogs, tools and contact.
-
-### Backend
-
-```bash
-cd backend
-npm install
-npm start
-```
-
-- Starts the Express API (default `http://localhost:4000/`).
-- Make sure `backend/.env` has a valid `MONGODB_URI` and `FRONTEND_URL` (see backend README).
+- Heritage and hospitality (palaces, forts, resorts, retreats)
+- NGOs and social impact organisations
+- Lifestyle, wellness and healthcare
+- Creators and high‑growth businesses
 
 ---
 
-## Deployment Overview
+## Addresses
 
-The production site is deployed on a **Hostinger VPS** using **Dokploy OS with panel**:
+- India: Tiwari Clinic, Mahatma Jyotiba Fule Circle, Sch. No. 7, Alwar 301001, Rajasthan, India
+- New Zealand: 100 Webster Avenue, Mt Roskill, Auckland 1041, New Zealand
+- Netherlands: Giekerkstraat 60, 5043MK, Tilburg, Netherlands
 
-- Frontend:
-  - Built from `frontend/` using `npm run build`.
-  - Served from the generated `dist/` directory behind Dokploy’s reverse proxy.
-  - Domain `https://www.gajkesari.com` points to the Dokploy‑managed app.
+---
 
-- Backend:
-  - Deployed from `backend/` as a Node app or Docker container.
-  - Environment variables configured in Dokploy (MongoDB URI, PORT, FRONTEND_URL).
-  - Exposes an API consumed by the frontend (e.g. `/api/contact`).
+## Social Profiles
 
-DNS records point to the Hostinger VPS, and Dokploy manages routing and SSL certificates.
-
+- YouTube: https://www.youtube.com/@GK-Web-Tech
+- X (Twitter): https://x.com/gkwtech
+- Instagram: https://www.instagram.com/gkweb_tech/
+- LinkedIn: https://www.linkedin.com/company/gajkesri-webtech/
