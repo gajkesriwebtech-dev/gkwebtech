@@ -85,7 +85,7 @@ export const BlogDetail: React.FC = () => {
                 dangerouslySetInnerHTML={{ __html: blog.content }}
               ></div>
 
-              {/* Tags and Share */}
+              {/* Tags and Share 
               <div className="mt-12 pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-6">
                  <div className="flex flex-wrap gap-2">
                     {blog.tags?.map((tag, idx) => (
@@ -109,7 +109,8 @@ export const BlogDetail: React.FC = () => {
                        <Linkedin size={16} />
                     </button>
                  </div>
-              </div>
+              </div>*/}
+              
 
            </div>
         </div>
