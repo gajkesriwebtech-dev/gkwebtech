@@ -1,35 +1,71 @@
-# Gajkesari Webtech – Digital Marketing Agency Website
+# Gajkesari Webtech – Official Website Repository
 
-This repository contains the full source code for the Gajkesari Webtech website – a digital marketing agency platform with portfolio, blog, courses and lead‑generation flows.
+This repository contains the official website for **Gajkesari Webtech**, a digital marketing and training company focused on:
 
-The project is split into:
+- SEO and content strategy
+- Social media and creative campaigns
+- Google & Meta ads and analytics
+- Web development and WordPress management
+- Corporate training and internship‑driven courses
 
-- `frontend/` – React + TypeScript + Vite single‑page application
-- `backend/` – Node.js + Express + MongoDB API
-
-Production is deployed on a **Hostinger VPS** using **Dokploy OS with panel**.
+The site showcases our services, portfolio case studies, courses, blog content, tools, and lead‑generation flows.
 
 ---
 
-## Folders Overview
+## About Gajkesari Webtech
 
-- `frontend/`
-  - SPA for marketing site, portfolio, blog, courses, tools
-  - Uses React Router, Tailwind CSS and Vite
-  - Static data for services, projects, blogs and team in `data.ts`
-- `backend/`
-  - Express REST API
-  - MongoDB via Mongoose for leads and other data models
-  - Exposes endpoints like `/api/contact`
+Gajkesari Webtech is a digital marketing agency working with:
 
-See the detailed READMEs in each folder:
+- Heritage and hospitality brands
+- NGOs and impact‑driven organisations
+- High‑growth businesses and creators
+
+We combine data‑driven performance marketing with storytelling, creative production, and structured training programs (via GKTech and GKInstitute) to help brands grow traffic, leads, and long‑term equity.
+
+### Official Website
+
+- Production site: **https://www.gajkesari.com**
+
+---
+
+## Contact Information
+
+You can reach Gajkesari Webtech at:
+
+- **Phone (India)**: `+91 99719 44676`
+- **Phone (Netherlands)**: `+31 62050 8410`
+- **Email**: `Gajkesriwebtech@gmail.com`
+- **Postal Address**:  
+  Tiwari Clinic, Mahatma Jyotiba Fule Circle,  
+  Sch. No. 7, Alwar 301001, Rajasthan, India
+
+Additional contact details and forms are available on the Contact section of the website.
+
+---
+
+## Project Structure
+
+This repo is structured as a full‑stack app:
+
+- `frontend/` – React + TypeScript + Vite single‑page application
+  - Home sections: Hero, Services (GKTech & GKInstitute), About, Portfolio, Blog, FAQ, Contact
+  - Static data for services, projects, courses, blogs and team in `data.ts`
+  - Tailwind CSS for styling and React Router for routing
+
+- `backend/` – Node.js + Express + MongoDB API
+  - Handles contact/lead submissions and data models
+  - Uses Mongoose for MongoDB access
+
+For more detail:
 
 - [Frontend README](frontend/README.md)
 - [Backend README](backend/README.md)
 
 ---
 
-## Local Development – Quick Start
+## Local Development
+
+Clone the repository and install dependencies for frontend and backend.
 
 ### Frontend
 
@@ -39,7 +75,8 @@ npm install
 npm run dev
 ```
 
-The dev server typically runs at `http://localhost:5173/`.
+- Runs a Vite dev server (typically at `http://localhost:5173/`).
+- Uses the React SPA with sections for services, portfolio, blogs, tools and contact.
 
 ### Backend
 
@@ -49,45 +86,24 @@ npm install
 npm start
 ```
 
-The API runs at `http://localhost:4000/` by default (configurable with `PORT`).
-
-Ensure you have a valid MongoDB connection string in `backend/.env` (see the backend README).
-
----
-
-## Deployment – Hostinger VPS with Dokploy OS Panel
-
-The live site is hosted on a Hostinger VPS and managed via Dokploy OS:
-
-1. **Frontend**
-   - Build in `frontend/`:
-
-     ```bash
-     npm install
-     npm run build
-     ```
-
-   - Serve the contents of `frontend/dist/` via a static server or small Node server configured as an app in the Dokploy panel.
-   - Attach the main domain (for example `https://www.gajkesari.com`) to this frontend app in Dokploy and enable HTTPS (Let’s Encrypt).
-
-2. **Backend**
-   - Deploy the Node/Express API from `backend/` either:
-     - Directly as a Node app pointing to `server.js`, or
-     - As a Docker container using `backend/Dockerfile`.
-   - Configure environment variables in Dokploy:
-     - `MONGODB_URI` / `MONGO_URI`
-     - `PORT` (e.g. 4000)
-     - `FRONTEND_URL` (e.g. `https://www.gajkesari.com`)
-   - Optionally attach a subdomain like `api.gajkesari.com`, or keep it internal and call via private networking from the frontend.
-
-3. **DNS**
-   - Point your domain’s A record to the Hostinger VPS IP.
-   - Dokploy handles routing the domain to the correct app and issuing SSL certificates.
+- Starts the Express API (default `http://localhost:4000/`).
+- Make sure `backend/.env` has a valid `MONGODB_URI` and `FRONTEND_URL` (see backend README).
 
 ---
 
-## Notes
+## Deployment Overview
 
-- Frontend should not contain secrets in the built bundle.
-- Backend is responsible for all sensitive operations and database access.
+The production site is deployed on a **Hostinger VPS** using **Dokploy OS with panel**:
+
+- Frontend:
+  - Built from `frontend/` using `npm run build`.
+  - Served from the generated `dist/` directory behind Dokploy’s reverse proxy.
+  - Domain `https://www.gajkesari.com` points to the Dokploy‑managed app.
+
+- Backend:
+  - Deployed from `backend/` as a Node app or Docker container.
+  - Environment variables configured in Dokploy (MongoDB URI, PORT, FRONTEND_URL).
+  - Exposes an API consumed by the frontend (e.g. `/api/contact`).
+
+DNS records point to the Hostinger VPS, and Dokploy manages routing and SSL certificates.
 

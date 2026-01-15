@@ -32,7 +32,7 @@ Create a `.env` file in the `backend` folder with at least:
 Example:
 
 ```env
-MONGODB_URI=mongodb+srv://user:password@cluster.mongodb.net/gajkesari
+MONGODB_URI=your-mongodb-connection-string
 PORT=4000
 FRONTEND_URL=https://www.gajkesari.com
 ```
@@ -105,4 +105,3 @@ The backend can be deployed on the same Hostinger VPS where the frontend is host
 5. Expose the backend port internally (e.g. 4000) and, if needed, attach a subdomain (e.g. `api.gajkesari.com`) through Dokploy and DNS.
 
 The frontend should call this backend via the configured domain or internal URL within the VPS.
-
