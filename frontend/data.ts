@@ -1,4 +1,5 @@
 import { Service, BlogPost, Project, TeamMember, Testimonial } from './types';
+import { cld } from "./utils/cloudinary";
 
 export const servicesData: Service[] = [
   {
@@ -307,7 +308,6 @@ export const coursesData = [
   }
 ];
 
-
 export const blogsData: BlogPost[] = [
   {
     id: "future-of-seo-ai",
@@ -447,8 +447,8 @@ export const projectsData: Project[] = [
     location: "Dadikar, Rajasthan",
     category: "Event ",
     description: "A cinematic event coverage for an 8-day NGO-organized art initiative (World Art Mela, 1–8 December, 2025), where artists from across India created live artwork and raised donations for social causes. We are the digital partener of Nirvanavan Foundation .",
-    image: "/images/portfolio/Nirvanan-Foundation/Group.jpeg",
-    mediaStats: { photos: 10, videos: 1 },
+    image: cld("WhatsApp_Image_2026-01-13_at_6.23.58_PM_1_kih29k"),
+    mediaStats: { photos: 3, videos: 0 },
     tags: ["Video", "Photography", "Art", "NGO", "Event Coverage"],
     client: "Nirvanan Foundation",
     duration: "1 Week",
@@ -465,7 +465,7 @@ export const projectsData: Project[] = [
       author: "Nirvanan Bodhisattva",
       role: "Founder of Nirvanan Foundation"
     },
-    gallery: [],
+    gallery: [cld("WhatsApp_Image_2026-01-13_at_6.23.59_PM_cnasnv"), cld("WhatsApp_Image_2026-01-13_at_6.24.01_PM_kyguhh"), cld("WhatsApp_Image_2026-01-13_at_6.24.16_PM_vpk3mm")],
     youtubeIds: []
 
   },
@@ -475,8 +475,8 @@ export const projectsData: Project[] = [
     location: "Kishanpur, Alwar, Rajasthan",
     category: "Hospitality & Luxury Palace Shoot",
     description: "A creation of a comprehensive stay-and-evaluate project at the heritage Rambihari Palace in Alwar, focusing on assessing the property against European wellness retreat standards. We are the partners for digital scale up of the chain.",
-    image: "/images/portfolio/Rambihari/Screenshot 2025-12-26 091754.png",
-    mediaStats: { photos: 20, videos: 1 },
+    image: cld("20251213_230354_l2hgaz"),
+    mediaStats: { photos: 18, videos: 1 },
     tags: ["Hospitality", "Wellness", "Royality", "Lifestyle", "Heritage"],
     client: "Rambihari Palace A Luxury Hotel",
     duration: "1 Week",
@@ -494,8 +494,8 @@ export const projectsData: Project[] = [
       author: "Mr. Ram Kaushik",
       role: "Owner"
     },
-    gallery: ["/images/portfolio/Rambihari/Screenshot 2025-12-26 092042.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 094141.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091627.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091646.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091702.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091718.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091730.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091754.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091815.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091831.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091854.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091911.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091922.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091935.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091952.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 092008.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 092029.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 091500.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 092051.png", "/images/portfolio/Rambihari/Screenshot 2025-12-26 092106.png"],
-    youtubeIds: []
+    gallery: [cld("IMG_0448_mfyomu"), cld("IMG_0408_nmu61m"), cld("IMG_0437_dri1jg"), cld("IMG_0385_uygivi"), cld("IMG_0653_s9e4nv"), cld("IMG_0651_y8s52e"), cld("IMG_0551_tuqhob"), cld("IMG_0639_ifttl1"), cld("IMG_0648_cqoqcs"), cld("IMG_0435_omnunp"), cld("IMG_0654_hvew7w"), cld("IMG_0592_srab9h"), cld("IMG_0336_efugld"), cld("IMG_0633_wowjxk"), cld("20251213_224325_efvgkv"), cld("IMG_0545_lde7am"), cld("9.1_u0eyc2"), cld("6.1_ofhox5")],
+    youtubeIds: ["https://youtu.be/42aWXPvK53s?si=kplS07SGB9q3cC3r"]
   },
   {
     id: "Dadikar Fort",
@@ -503,8 +503,8 @@ export const projectsData: Project[] = [
     location: "Dadikar, Rajasthan",
     category: "Heritage Hospitality & Luxury Fort Shoot",
     description: "Creation of a comprehensive business and digital marketing strategy to evaluate and scale the property for destination weddings and wellness tourism. Our team produced cinematic promotional material through strategic outdoor shoots, supported by SEO and GEO optimization. We are the digital scale-up partners, guiding its expansion for international retreat and wedding audiences.",
-    image: "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-01 123815.png",
-    mediaStats: { photos: 10, videos: 2 },
+    image: cld("511c8d9a_oopq2y"),
+    mediaStats: { photos: 11, videos: 0 },
     tags: ["Heritage", "Wellness", "Hospitality", "Lifestyle",],
     client: "Dadhikar Fort & Resorts Private Limited",
     duration: "1 Week",
@@ -517,7 +517,7 @@ export const projectsData: Project[] = [
     "Captured rich visual storytelling of history, hospitality, and serene landscapes",
     "Provided actionable recommendations for retreat positioning and guest experience enhancement"
   ],
-    gallery: ["/images/portfolio/Dadikar_Fort/Group.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 150805.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 150905.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 150927.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 150939.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 150954.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 151006.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 151015.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 151028.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 152002.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 152140.png", "/images/portfolio/Dadikar_Fort/Screenshot 2026-01-08 152155.png"],
+    gallery: [cld("Group_ab3s76"), cld("20251217_122441_ccans2"), cld("DDF7_1_uzekib"), cld("DDF1_mlh0dl"), cld("DDF4_jf6kgn"), cld("20251217_062041_mmwdr2"), cld("20251216_194812_ljxyr2"), cld("20251217_061903_yw55mk"), cld("20251216_194935_rrdkhk"), cld("DDF8_m6tz4c"), cld("DDF3_1_qxt0en")],
     youtubeIds: []
   },
   {
@@ -526,8 +526,8 @@ export const projectsData: Project[] = [
     location: "Jaipur, Rajasthan",
     category: "Wellness Hospitality Assessment & Collaboration",
     description:  "A stay-and-audit project to benchmark the wellness retreat experience against European hospitality and comfort standards. We delivered strategy-aligned promotional shoots and digital assets for wellness-focused platform scale-up. Partnership advisory backed by SEO and GEO recommendations to enhance global wellness search visibility and retreat positioning.",
-    image: "/images/portfolio/BambooSa-Sunrise-Resort/Screenshot 2026-01-01 123528.png",
-    mediaStats: { photos: 10, videos: 2 },
+    image: cld("download_mopedx"),
+    mediaStats: { photos: 5, videos: 0 },
     tags: ["Wellness", "Resort", "Spa", "Hospitality", "Retreat"],
     client: "Mr. V.K. Agarwal",
     duration: "1 Week",
@@ -540,24 +540,44 @@ export const projectsData: Project[] = [
     "Shared European-standard recommendations for future retreat expansion and operations",
     "Initiated partnership conversations for collaboration in retreat experience & international guest programs"
   ],
-    gallery: ["/images/portfolio/BambooSa-Sunrise-Resort/Screenshot 2026-01-01 122527.png", "/images/portfolio/BambooSa-Sunrise-Resort/Screenshot 2026-01-01 122621.png", "/images/portfolio/BambooSa-Sunrise-Resort/Screenshot 2026-01-01 122640.png", "/images/portfolio/BambooSa-Sunrise-Resort/Screenshot 2026-01-01 122658.png", "/images/portfolio/BambooSa-Sunrise-Resort/Screenshot 2026-01-01 122710.png"]
+    gallery: [cld("IMG_1348_o3w5o8"), cld("IMG_1349_iizzwv"), cld("IMG_1389_w1cim0"), cld("IMG_1368_umg7in"), cld("IMG_1406_gbkjp1")]
   }
 ];
 
 export const teamData: TeamMember[] = [
   {
     name: "Dr. Anuj Tiwari",
-    education: "PhD from Netherlands",
+    education: "PhD, Erasmus Uni., Netherlands",
     role: "Founder & Director",
-    image: "/images/team/Founder.png",
+    country: "Netherlands",
+    image: cld("Founder_kwgszb"),
     linkedin: "https://www.linkedin.com/in/atal-s-03570938a/",
+    github: "#"
+  },
+  {
+    name: "Preeti Tiwari ",
+    education: "Phd, Auckland Uni., New Zealand",
+    role: "Managing Director",
+    country: "New Zealand",
+    image: cld("Preeti_kyad0g"),
+    linkedin: "https://www.linkedin.com/in/preetitiwari2025/",
+    github: "#"
+  },
+  {
+    name: "J. E. Spek",
+    education: "",
+    role: "Advisor",
+    country: "Netherlands",
+    image: cld("judith_aruw3a"),
+    linkedin: "https://www.linkedin.com/in/judithspek/",
     github: "#"
   },
   {
     name: "Utkarsh Sharma",
     education: "",   
     role: "Chief Technical Officer",
-    image: "/images/team/Utkarsh1.JPG",
+    country: "India",
+    image: cld("Utkarsh1_yiat7m"),
     linkedin: "https://www.linkedin.com/in/utkarsh-sharma-2b9110362",
     github: "https://github.com/Utkarsh9571"
   },
@@ -565,16 +585,9 @@ export const teamData: TeamMember[] = [
     name: "Vanshika Joshi",
     education: "",
     role: "Chief Managing Officer",
-    image: "/images/team/Vanshika.png",
+    country: "India",
+    image: cld("Vanshika_hji2lk"),
     linkedin: "https://www.linkedin.com/in/vanshika-joshi-599247251/",
-    github: "#"
-  },
-  {
-    name: "Vansh Joshi",
-    education: "",
-    role: "Operations Manager",
-    image: "/images/team/Vansh.png",
-    linkedin: "#",
     github: "#"
   }
 ];

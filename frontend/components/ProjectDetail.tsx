@@ -21,6 +21,7 @@ export const ProjectDetail: React.FC = () => {
   if (!project) return null;
 
   const galleryImages = project?.gallery || [];
+  const youtubeIds = project.youtubeIds || [];
 
   const openFullScreenImage = (img: string) => {
     const index = galleryImages.indexOf(img);
@@ -112,14 +113,14 @@ export const ProjectDetail: React.FC = () => {
         </div>
 
         {/* ▶ Video Gallery (Logo centered + fullscreen on logo click) */}
-        {project.youtubeIds.length > 0 && (
+        {youtubeIds.length > 0 && (
           <div className="container mx-auto px-4 md:px-6 mt-16">
             <h2 className="text-3xl font-bold text-primary dark:text-white mb-6">
               Video Highlights
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {project.youtubeIds.map((url, idx) => {
+              {youtubeIds.map((url, idx) => {
                 const videoId = url.includes("watch?v=")
                   ? url.split("watch?v=")[1].split("&")[0]
                   : url.replace("https://youtu.be/", "").split("?")[0];
@@ -156,26 +157,45 @@ export const ProjectDetail: React.FC = () => {
 
         {/* Sidebar */}
         <div className="container mx-auto px-4 md:px-6 mt-16">
-          <div className="flex justify-center">
-            <TiltCard className="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-800 sticky top-24">
-              <h3 className="text-lg font-bold text-primary dark:text-white mb-6 border-b border-gray-200 dark:border-gray-800 pb-4">Project Details</h3>
-
-              <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
-                <h4 className="font-bold text-primary dark:text-white mb-4 text-sm uppercase">Key Results</h4>
-                <ul className="space-y-3">
-                  {project.results?.map((result, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
-                      <CheckCircle className="text-secondary flex-shrink-0 mt-0.5" size={16} />
-                      <span>{result}</span>
-                    </li>
-                  ))}
-                </ul>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-center">
+            {project.testimonial && (
+              <div className="flex justify-center">
+                <TiltCard className="bg-white rounded-3xl p-8 shadow-lg shadow-primary border border-transparent sticky top-24 w-full text-primary">
+                  <h3 className="text-lg font-bold text-primary mb-6 border-b border-primary/20 pb-4 text-center">Client Testimonial</h3>
+                  <div className="mt-2 text-center min-h-[18rem] flex flex-col items-center justify-center">
+                    <div className="flex flex-col items-center gap-4">
+                      <Quote className="text-primary" size={28} />
+                      <p className="text-primary italic leading-relaxed">
+                        {project.testimonial.text}
+                      </p>
+                    </div>
+                    <div className="mt-6">
+                      <p className="font-semibold text-primary">{project.testimonial.author}</p>
+                      <p className="text-sm text-primary/80">{project.testimonial.role}</p>
+                    </div>
+                  </div>
+                </TiltCard>
               </div>
-
-              <button onClick={handleStartProjectClick} className="w-full mt-8 bg-secondary text-primary py-3 rounded-full font-bold hover:bg-primary hover:text-white transition-colors shadow-lg">
-                Start Similar Project
-              </button>
-            </TiltCard>
+            )}
+            <div className="flex justify-center">
+              <TiltCard className="bg-primary text-white rounded-3xl p-8 shadow-lg shadow-primary border border-transparent sticky top-24 w-full">
+                <h3 className="text-lg font-bold mb-6 border-b border-white/20 pb-4">Project Details</h3>
+                <div className="mt-8 pt-6 border-t border-white/20">
+                  <h4 className="font-bold mb-4 text-sm uppercase">Key Results</h4>
+                  <ul className="space-y-3">
+                    {project.results?.map((result, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm text-white/90">
+                        <CheckCircle className="text-secondary flex-shrink-0 mt-0.5" size={16} />
+                        <span>{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <button onClick={handleStartProjectClick} className="w-full mt-8 bg-secondary text-primary py-3 rounded-full font-bold hover:bg-white hover:text-primary transition-colors shadow-lg">
+                  Start Similar Project
+                </button>
+              </TiltCard>
+            </div>
           </div>
         </div>
 

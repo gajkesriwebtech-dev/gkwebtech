@@ -70,6 +70,7 @@ export interface TeamMember {
   education: string;
   role: string;
   image: string;
+  country: string;
   linkedin: string;
   github: string;
 }

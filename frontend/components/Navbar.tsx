@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Flower, ChevronDown, Sun, Moon, Menu } from "lucide-react";
 
 const LOGO_SRC = "/images/logo.png";
@@ -12,6 +12,7 @@ export const Navbar: React.FC = () => {
   const [serviceOpen, setServiceOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -52,6 +53,8 @@ export const Navbar: React.FC = () => {
     if (location.pathname === "/") {
       const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/", { state: { scrollTo: id } });
     }
     setIsOpen(false);
     setServiceOpen(false);
@@ -101,8 +104,20 @@ export const Navbar: React.FC = () => {
                     </div>
                   )}
                 </div>
+              ) : link.id ? (
+                <button
+                  key={idx}
+                  onClick={() => scrollToSection(link.id)}
+                  className="text-sm font-medium text-gray-300 hover:text-[#FDB827] hover:underline transition bg-transparent border-none cursor-pointer"
+                >
+                  {link.name}
+                </button>
               ) : (
-                <Link key={idx} to={link.path || "/"} onClick={() => link.id && scrollToSection(link.id)} className="text-sm font-medium text-gray-300 hover:text-[#FDB827] hover:underline transition bg-transparent border-none cursor-pointer">
+                <Link
+                  key={idx}
+                  to={link.path || "/"}
+                  className="text-sm font-medium text-gray-300 hover:text-[#FDB827] hover:underline transition bg-transparent border-none cursor-pointer"
+                >
                   {link.name}
                 </Link>
               )
@@ -143,8 +158,21 @@ export const Navbar: React.FC = () => {
                     <button onClick={() => handleTabRedirect("tech")} className="block w-full text-left px-2 py-1 text-gray-300 hover:text-[#FDB827]">GKTech</button>
                     <button onClick={() => handleTabRedirect("institute")} className="block w-full text-left px-2 py-1 text-gray-300 hover:text-[#FDB827]">GKInstitute</button>
                   </div>
+                ) : link.id ? (
+                  <button
+                    key={idx}
+                    onClick={() => scrollToSection(link.id)}
+                    className="font-medium text-lg text-gray-300 hover:text-[#FDB827] hover:underline transition-all text-left"
+                  >
+                    {link.name}
+                  </button>
                 ) : (
-                  <Link key={idx} to={link.path || "/"} onClick={() => setIsOpen(false)} className="font-medium text-lg text-gray-300 hover:text-[#FDB827] hover:underline transition-all text-left">
+                  <Link
+                    key={idx}
+                    to={link.path || "/"}
+                    onClick={() => setIsOpen(false)}
+                    className="font-medium text-lg text-gray-300 hover:text-[#FDB827] hover:underline transition-all text-left"
+                  >
                     {link.name}
                   </Link>
                 )
