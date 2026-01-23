@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from './Button';
 import { ArrowUpRight } from 'lucide-react';
+import { getUnsplashUrl } from '../utils/unsplash';
 
 export const Hero: React.FC = () => {
   const scrollToContact = (e: React.MouseEvent) => {
@@ -46,8 +47,9 @@ export const Hero: React.FC = () => {
                  
                  {/* Main Image */}
                  <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" 
+                    src={getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 1400)} 
                     alt="Gajkeri Webtech" 
+                    fetchPriority="high"
                     className="relative z-10 w-full h-full object-cover rounded-b-full object-top mask-image-bottom"
                     style={{ maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)' }}
                  />

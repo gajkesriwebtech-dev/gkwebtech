@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { getUnsplashUrl } from '../utils/unsplash';
 
 export const About: React.FC = () => {
   const scrollToContact = () => {
@@ -18,8 +19,9 @@ export const About: React.FC = () => {
            <div className="relative flex-shrink-0 mx-auto justify-self-center">
               <div className="w-72 h-72 md:w-96 md:h-96 rounded-full border-4 border-secondary p-2 relative z-10">
                  <img 
-                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" 
+                   src={getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 800)} 
                    alt="ri Webtech" 
+                   loading="lazy"
                    className="w-full h-full rounded-full object-cover border-4 border-primary"
                  />
                  

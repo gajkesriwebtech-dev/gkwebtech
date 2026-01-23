@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Flower, ChevronDown, Sun, Moon, Menu } from "lucide-react";
 
-const LOGO_SRC = "/images/logo.png";
+const LOGO_SRC = "/images/logo.webp";
 
 export const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -81,7 +81,12 @@ export const Navbar: React.FC = () => {
           
           {/* Logo */}
           <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex w-1/6 items-center gap-3 group cursor-pointer">
-            <img src={LOGO_SRC} alt="GK Logo" className="h-14 w-auto object-contain transition-transform group-hover:scale-105 duration-300"/>
+            <img 
+                  src={LOGO_SRC} 
+                  alt="GK Logo" 
+                  loading="lazy"
+                  className="h-14 w-auto object-contain transition-transform group-hover:scale-105 duration-300"
+                />
           </Link>
 
           {/* Desktop Menu */}

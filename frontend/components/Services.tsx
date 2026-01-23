@@ -12,6 +12,7 @@ const CardContent: React.FC<{ item: any; activeTab: string }> = ({ item, activeT
         <img
           src={item.image}
           alt={item.title}
+          loading="lazy"
           className="w-full h-full object-cover transition-transform duration-700"
         />
       </div>

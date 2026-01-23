@@ -26,7 +26,7 @@ export const Team: React.FC = () => {
               <div className="absolute top-0 w-full h-24 bg-primary opacity-5 dark:opacity-20"></div>
               
               <div className="w-40 h-40 rounded-full overflow-hidden mb-6 border-4 border-secondary p-1 bg-white dark:bg-gray-700 relative z-10 shadow-md">
-                <img src={founder.image} alt={founder.name} className="w-full h-full rounded-full object-cover" />
+                <img src={founder.image} alt={founder.name} loading="lazy" className="w-full h-full rounded-full object-cover" />
               </div>
 
               {/* Name + Role Section (takes equal vertical space always) */}
@@ -58,7 +58,7 @@ export const Team: React.FC = () => {
             <TiltCard key={idx} className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-xl dark:shadow-none border border-gray-300 dark:border-gray-700 flex flex-col items-center text-center group hover:border-secondary transition-colors relative z-0 hover:z-10 h-[320px]">
               
               <div className="w-32 h-32 rounded-full overflow-hidden mb-5 border-2 border-gray-100 dark:border-gray-700 group-hover:border-secondary transition-colors relative shadow-inner">
-                <img src={member.image} alt={member.name} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                <img src={member.image} alt={member.name} loading="lazy" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
               </div>
 
               {/* Name + Role Section (forced equal alignment) */}

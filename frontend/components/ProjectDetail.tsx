@@ -13,15 +13,36 @@ export const ProjectDetail: React.FC = () => {
   const galleryScrollRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
+  const project = projectsData.find(p => p.id === id);
+  const galleryImages = project?.gallery || [];
+  const youtubeIds = project?.youtubeIds || [];
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
 
-  const project = projectsData.find(p => p.id === id);
-  if (!project) return null;
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!fullScreenMedia) return;
 
-  const galleryImages = project?.gallery || [];
-  const youtubeIds = project.youtubeIds || [];
+      if (e.key === 'Escape') {
+        setFullScreenMedia(null);
+      }
+
+      if (fullScreenMedia.type === 'image' && galleryImages.length > 1) {
+        if (e.key === 'ArrowLeft') {
+          setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+        } else if (e.key === 'ArrowRight') {
+          setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [fullScreenMedia, galleryImages]);
+
+  if (!project) return null;
 
   const openFullScreenImage = (img: string) => {
     const index = galleryImages.indexOf(img);
@@ -131,7 +152,7 @@ export const ProjectDetail: React.FC = () => {
                   <div key={idx} className="relative w-full h-64 md:h-72 rounded-2xl overflow-hidden shadow-lg group border border-gray-200 dark:border-gray-800">
 
                     {/* Thumbnail */}
-                    <img src={thumb} alt={`Video ${idx}`} className="w-full h-full object-cover"/>
+                    <img src={thumb} alt={`Video ${idx}`} loading="lazy" className="w-full h-full object-cover"/>
 
                     {/* 🔴 Center Clickable YouTube Red Transparent Logo */}
                     <button
@@ -142,8 +163,9 @@ export const ProjectDetail: React.FC = () => {
                       className="absolute inset-0 flex items-center justify-center transition-all hover:scale-125 z-20"
                     >
                       <img
-                        src="/images/youtube-red-transparent.png"
+                        src="/images/youtube-red-transparent.webp"
                         alt="youtube video indicator"
+                        loading="lazy"
                         className="w-28 opacity-100 drop-shadow-2xl transition-all duration-300 group-hover:opacity-100"
                       />
                     </button>
@@ -203,61 +225,61 @@ export const ProjectDetail: React.FC = () => {
 
       {/* ▶ Fullscreen Modal (Autoplay + close on outside click, unchanged behavior) */}
       {/* ▶ Fullscreen Modal */}
-{fullScreenMedia && (
-  <div
-    className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-6"
-    onClick={() => setFullScreenMedia(null)}
-  >
-    <div className="relative max-w-[95vw] max-h-[95vh]" onClick={(e) => e.stopPropagation()}>
-
-      {/* 🖼 IMAGE FULLSCREEN */}
-      {fullScreenMedia.type === "image" && (
-        <img
-          src={galleryImages[currentImageIndex]}
-          alt="Fullscreen"
-          className="max-w-[95vw] max-h-[90vh] object-contain rounded-xl shadow-2xl"
-        />
-      )}
-
-      {/* ▶ VIDEO FULLSCREEN */}
-      {fullScreenMedia.type === "video" && (
-        <iframe
-          src={`https://www.youtube.com/embed/${fullScreenMedia.url}?autoplay=1&controls=1`}
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-          className="w-[90vw] md:w-[80vw] h-[85vh] rounded-xl shadow-2xl border-0"
-        />
-      )}
-
-      {/* ❌ Close button */}
-      <button
-        onClick={() => setFullScreenMedia(null)}
-        className="absolute top-4 right-4 text-white bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all z-50"
-      >
-        <X size={32} />
-      </button>
-
-      {/* ⬅➡ Image navigation (only for images) */}
-      {fullScreenMedia.type === "image" && galleryImages.length > 1 && (
-        <>
+      {fullScreenMedia && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-6"
+          onClick={() => setFullScreenMedia(null)}
+        >
+          {/* ❌ Close button - Fixed to screen */}
           <button
-            onClick={prevImage}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full"
+            onClick={(e) => { e.stopPropagation(); setFullScreenMedia(null); }}
+            className="absolute top-6 right-6 text-white bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all z-[110]"
           >
-            <ChevronLeft size={28} />
+            <X size={32} />
           </button>
 
-          <button
-            onClick={nextImage}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full"
-          >
-            <ChevronRight size={28} />
-          </button>
-        </>
+          {/* ⬅➡ Image navigation - Fixed to screen sides */}
+          {fullScreenMedia.type === "image" && galleryImages.length > 1 && (
+            <>
+              <button
+                onClick={prevImage}
+                className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full z-[110]"
+              >
+                <ChevronLeft size={28} />
+              </button>
+
+              <button
+                onClick={nextImage}
+                className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full z-[110]"
+              >
+                <ChevronRight size={28} />
+              </button>
+            </>
+          )}
+
+          <div className="relative max-w-[95vw] max-h-[95vh]" onClick={(e) => e.stopPropagation()}>
+
+            {/* 🖼 IMAGE FULLSCREEN */}
+            {fullScreenMedia.type === "image" && (
+              <img
+                src={galleryImages[currentImageIndex]}
+                alt="Fullscreen"
+                className="max-w-[95vw] max-h-[90vh] object-contain rounded-xl shadow-2xl"
+              />
+            )}
+
+            {/* ▶ VIDEO FULLSCREEN */}
+            {fullScreenMedia.type === "video" && (
+              <iframe
+                src={`https://www.youtube.com/embed/${fullScreenMedia.url}?autoplay=1&controls=1`}
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                className="w-[90vw] md:w-[80vw] h-[85vh] rounded-xl shadow-2xl border-0"
+              />
+            )}
+          </div>
+        </div>
       )}
-    </div>
-  </div>
-)}
 
 
     </>

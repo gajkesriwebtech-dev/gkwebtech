@@ -25,6 +25,7 @@ export const Footer: React.FC = () => {
                 <img 
                   src={LOGO_SRC} 
                   alt="Gajkesri Webtech" 
+                  loading="lazy"
                   className="h-20 w-auto object-contain" 
                 />
              </div>

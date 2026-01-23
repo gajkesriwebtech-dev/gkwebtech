@@ -1,140 +1,72 @@
-import React, { useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
-import { servicesData } from '../data';
-import { ArrowLeft, Check, Download, ArrowRight, Mail } from 'lucide-react';
-import { BrochureModal } from './BrochureModal';
-import { TiltCard } from './TiltCard';
+import React, { useRef } from "react";
+import { Link } from "react-router-dom";
+import { SectionHeader } from "./SectionHeader";
+import { ArrowRight } from "lucide-react";
+import { coursesData } from "../data";
 
-export const ServiceDetail: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const navigate = useNavigate();
-  
-  const service = servicesData.find(s => s.id === id);
-
-  const handleContactClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    navigate('/', { state: { scrollTo: 'contact' } });
-  };
-
-  if (!service) {
-    return (
-      <div className="min-h-screen pt-32 flex flex-col items-center justify-center text-center px-4">
-        <h2 className="text-4xl font-bold text-primary dark:text-white mb-4">Service Not Found</h2>
-        <Link to="/" className="text-secondary hover:underline">Return Home</Link>
-      </div>
-    );
-  }
+export const Courses: React.FC = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   return (
-    <>
-      <div className="pt-24 pb-20 bg-bg-light dark:bg-gray-950 min-h-screen">
-        {/* Hero Header */}
-        <div className="relative h-[60vh] w-full overflow-hidden">
-          <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <img 
-            src={service.detailImage} 
-            alt={service.title} 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 z-20 flex items-center justify-center">
-             <div className="container mx-auto px-4 text-center">
-               <Link to="/#services" className="inline-flex items-center gap-2 text-white/80 hover:text-secondary mb-6 transition-colors">
-                 <ArrowLeft size={20} />
-                 <span>Back to Services</span>
-               </Link>
-               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 max-w-4xl mx-auto">{service.title}</h1>
-             </div>
-          </div>
+    <section className="py-20 bg-gray-100 dark:bg-gray-950 transition-colors" id="courses">
+      <div className="container mx-auto px-4 md:px-6">
+
+        {/* Header */}
+        <div className="flex flex-col md:flex-row justify-between items-center mb-12">
+          <SectionHeader label="Our Courses" title="Courses We" subtitle="Offer" />
+
+          <Link
+            to="/courses"
+            className="flex items-center gap-2 text-[#1F4037] dark:text-[#FDB827] font-bold hover:underline"
+          >
+            <span>View All Courses</span>
+            <ArrowRight size={20} />
+          </Link>
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 -mt-20 relative z-30">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            {/* Main Content */}
-            <div className="lg:col-span-2 space-y-8">
-              <div className="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 dark:border-gray-800">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary dark:text-white mb-6">Overview</h2>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-8">
-                  {service.fullDescription}
+        {/* Horizontal Scroll Container */}
+        <div className="relative group">
+          <div
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {coursesData.map((course) => (
+              <div
+                key={course.id}
+                className="min-w-[300px] md:min-w-[350px] snap-center bg-white dark:bg-gray-900 p-6 rounded-3xl shadow-xl border border-gray-300 dark:border-gray-800 transition hover:shadow-2xl flex flex-col h-full"
+              >
+                <div className="w-full h-48 rounded-2xl mb-6 overflow-hidden border border-gray-100 dark:border-gray-700">
+                  <img
+                    src={course.image}
+                    alt={course.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+
+                <h3 className="text-xl font-bold text-[#1F4037] dark:text-white mb-3 line-clamp-1">
+                  {course.title}
+                </h3>
+
+                <p className="text-gray-700 dark:text-gray-400 mb-6 text-sm leading-relaxed line-clamp-3 flex-grow">
+                  {course.description}
                 </p>
-                
-                <h3 className="text-xl font-bold text-primary dark:text-white mb-6">Key Features & Benefits</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                      <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check size={14} className="text-primary" strokeWidth={3} />
-                      </div>
-                      <span className="text-gray-700 dark:text-gray-200 font-medium text-sm">{feature}</span>
-                    </div>
-                  ))}
+
+                <div className="mt-auto">
+                  <Link
+                    to={`/course/${course.id}`}
+                    className="inline-flex items-center gap-2 text-[#1F4037] dark:text-[#FDB827] font-semibold text-sm hover:underline"
+                  >
+                    <span>View Syllabus</span>
+                    <ArrowRight size={16} />
+                  </Link>
                 </div>
               </div>
-
-              {/* Gallery / Visuals Placeholder */}
-              <div className="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800">
-                 <div className="grid grid-cols-2 h-64 md:h-80">
-                    <div className="h-full">
-                       <img src={service.image} className="w-full h-full object-cover" alt="Detail 1" />
-                    </div>
-                    <div className="h-full bg-secondary/10 flex items-center justify-center p-8 text-center">
-                       <div>
-                          <h4 className="text-4xl font-bold text-primary dark:text-white mb-2">100%</h4>
-                          <p className="text-sm font-medium text-gray-500">Client Satisfaction Guaranteed</p>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-            </div>
-
-            {/* Sidebar */}
-            <div className="lg:col-span-1 space-y-6">
-              
-              {/* CTA Card */}
-              <TiltCard className="bg-primary text-white rounded-3xl p-8 relative overflow-hidden">
-                 <div className="absolute top-0 right-0 w-32 h-32 bg-secondary rounded-full blur-[50px] opacity-20"></div>
-                 <h3 className="text-2xl font-bold mb-4">Ready to grow?</h3>
-                 <p className="text-gray-300 mb-8 text-sm">Get a custom strategy tailored to your business needs today.</p>
-                 
-                 <div className="space-y-4">
-                   <button 
-                     onClick={handleContactClick}
-                     className="bg-secondary text-primary w-full py-3 px-6 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-white transition-colors"
-                   >
-                     <span>Contact Us</span>
-                     <Mail size={18} />
-                   </button>
-                   
-                   <button 
-                      onClick={() => setIsModalOpen(true)}
-                      className="bg-white/10 border border-white/20 text-white w-full py-3 px-6 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-white/20 transition-colors"
-                    >
-                     <span>Download Brochure</span>
-                     <Download size={18} />
-                   </button>
-                 </div>
-              </TiltCard>
-
-              {/* Need Help Card */}
-              <TiltCard className="bg-white dark:bg-gray-900 rounded-3xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm">
-                 <h3 className="text-lg font-bold text-primary dark:text-white mb-2">Need immediate help?</h3>
-                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">Call our support team 24/7</p>
-                 <a href="tel:+919971944676" className="text-2xl font-bold text-secondary hover:underline">
-                   +91 99719 44676
-                 </a>
-              </TiltCard>
-
-            </div>
+            ))}
           </div>
         </div>
       </div>
-      
-      <BrochureModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
-        serviceName={service.title}
-      />
-    </>
+    </section>
   );
 };
