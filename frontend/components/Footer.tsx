@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
                  <Instagram size={18} />
                </a>
                {/* LinkedIn */}
-               <a href="https://www.linkedin.com/company/gajkesri-webtech/" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 text-primary dark:text-white flex items-center justify-center hover:bg-secondary hover:text-primary transition-all">
+               <a href="https://www.linkedin.com/company/gk-webtech/" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 text-primary dark:text-white flex items-center justify-center hover:bg-secondary hover:text-primary transition-all">
                  <Linkedin size={18} />
                </a>
              </div>
