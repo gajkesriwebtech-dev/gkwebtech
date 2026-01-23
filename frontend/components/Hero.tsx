@@ -38,7 +38,7 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Right Image */}
-          <div className="flex-1 relative animate-fade-in-up opacity-0" style={{ animationDelay: '0.9s' }}>
+          <div className="flex-1 relative">
             <div className="relative z-10 w-full max-w-lg mx-auto">
                <div className="aspect-[4/5] relative">
                  {/* Yellow background shape */}
@@ -46,13 +46,15 @@ export const Hero: React.FC = () => {
                  <div className="absolute right-10 bottom-0 w-64 h-64 bg-secondary rounded-full z-0"></div>
                  
                  {/* Main Image */}
-                 <img 
-                    src={getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 1400)} 
-                    alt="Gajkeri Webtech" 
-                    fetchPriority="high"
-                    className="relative z-10 w-full h-full object-cover rounded-b-full object-top mask-image-bottom"
-                    style={{ maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)' }}
-                 />
+                 <img
+                  src={getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 1400)}
+                  alt="Gajkeri Webtech"
+                  width={700}
+                  height={875}
+                  fetchPriority="high"
+                  className="relative z-10 w-full h-full object-cover rounded-b-full object-top mask-image-bottom"
+                  style={{ maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)' }}
+                />
 
                  {/* Floating Badges */}
                  <div className="absolute top-1/2 -right-4 md:-right-12 z-20 animate-bounce" style={{ animationDuration: '3s' }}>
