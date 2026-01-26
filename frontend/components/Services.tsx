@@ -132,7 +132,7 @@ export const Services: React.FC = () => {
         <div className="relative group">
           <button
             onClick={() => scroll("left")}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white rounded-full shadow-lg opacity-0 group-hover:opacity-100"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white rounded-full shadow-lg opacity-0 group-hover:opacity-100 flex items-center justify-center"
           >
             <ChevronLeft size={24} />
           </button>
@@ -165,7 +165,7 @@ export const Services: React.FC = () => {
 
           <button
             onClick={() => scroll("right")}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white rounded-full shadow-lg opacity-0 group-hover:opacity-100"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white rounded-full shadow-lg opacity-0 group-hover:opacity-100 flex items-center justify-center"
           >
             <ChevronRight size={24} />
           </button>
