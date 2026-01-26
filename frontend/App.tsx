@@ -32,7 +32,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-bg-light dark:bg-gray-950 font-sans text-text-dark dark:text-gray-100 selection:bg-secondary selection:text-primary transition-colors duration-300 xl:px-8 2xl:px-16">
+      <div className="min-h-screen bg-bg-light dark:bg-gray-950 font-sans text-text-dark dark:text-gray-100 selection:bg-secondary selection:text-primary transition-colors duration-300 xl:px-8 2xl:px-16 overflow-x-hidden">
         <ScrollToTop />
         <Routes>
           {/* Brochure Route - No Navbar/Footer */}

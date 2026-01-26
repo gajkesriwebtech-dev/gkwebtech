@@ -59,13 +59,14 @@
             },
             animation: {
               'spin-slow': 'spin 12s linear infinite',
-              'marquee': 'marquee 25s linear infinite',
+              'marquee': 'marquee 60s linear infinite',
+              'marquee-fast': 'marquee 60s linear infinite',
               'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
             },
             keyframes: {
               marquee: {
                 '0%': { transform: 'translateX(0%)' },
-                '100%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(-33.333%)' },
               },
               fadeInUp: {
                 '0%': { opacity: '0', transform: 'translateY(20px)' },

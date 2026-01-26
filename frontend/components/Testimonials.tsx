@@ -26,13 +26,12 @@ export const Testimonials: React.FC = () => {
         />
 
         <div className="relative max-w-6xl mx-auto mt-12">
-        <div className="flex flex-col md:flex-row gap-6 overflow-hidden">
-            {/* We display all testimonials in a grid for simplicity in this implementation, 
-                or mapping a slice if we want carousel logic.
-                Here we stick to the grid layout used in previous version but with dynamic data. */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+        {/* Mobile: Horizontal Swipe, Desktop: Grid */}
+        <div className="flex flex-col md:block">
+            <div className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-8 md:pb-0 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
                 {testimonialsData.map((item, idx) => (
-                <TiltCard key={idx} className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl dark:shadow-none border border-gray-300 dark:border-gray-700 relative group hover:-translate-y-2 transition-all duration-300 h-full">
+                <div key={idx} className="min-w-[85vw] md:min-w-0 snap-center h-full">
+                  <TiltCard className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl dark:shadow-none border border-gray-300 dark:border-gray-700 relative group active:scale-95 md:hover:-translate-y-2 transition-all duration-300 h-full">
                     <div className="absolute top-8 right-8 opacity-10">
                     <Quote size={64} className="text-primary dark:text-white fill-current" />
                     </div>
@@ -52,7 +51,8 @@ export const Testimonials: React.FC = () => {
                         <p className="text-xs text-gray-400">{item.role}</p>
                     </div>
                     </div>
-                </TiltCard>
+                  </TiltCard>
+                </div>
                 ))}
             </div>
         </div>

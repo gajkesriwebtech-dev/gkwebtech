@@ -24,20 +24,22 @@ export const Portfolio: React.FC = () => {
           </div>
         </div>
 
-        <div className="space-y-16">
+        {/* Mobile: Horizontal Swipe, Desktop: Vertical Stack */}
+        <div className="flex md:block overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-8 md:pb-0 gap-4 md:gap-0 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide">
         {displayedProjects.map((project, idx) => (
-            <Link to={`/portfolio/${project.id}`} key={idx} className="block group">
-            <TiltCard className="group relative bg-white dark:bg-gray-800 rounded-[2.5rem] p-4 shadow-xl dark:shadow-none hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-300 dark:border-gray-700">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div key={idx} className="min-w-[90vw] md:min-w-0 snap-center md:mb-16 last:mb-0">
+            <Link to={`/portfolio/${project.id}`} className="block group h-full">
+            <TiltCard className="group relative bg-white dark:bg-gray-800 rounded-[2.5rem] p-4 shadow-xl dark:shadow-none md:hover:shadow-2xl active:scale-[0.98] transition-all duration-500 overflow-hidden border border-gray-300 dark:border-gray-700 h-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full">
                 
                 {/* Image Section */}
                 <div className="relative rounded-[2rem] overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[400px]">
-                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors z-10"></div>
+                    <div className="absolute inset-0 bg-black/10 md:group-hover:bg-black/0 transition-colors z-10"></div>
                     <img 
                     src={project.image} 
                     alt={project.title} 
                     loading="lazy"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover transform md:group-hover:scale-105 transition-transform duration-700"
                     />
                     
                     {/* Floating Media Badges */}
@@ -54,13 +56,13 @@ export const Portfolio: React.FC = () => {
                 </div>
 
                 {/* Content Section */}
-                <div className="p-4 lg:pr-8">
+                <div className="p-4 lg:pr-8 flex flex-col justify-center">
                     <div className="flex items-center gap-2 text-secondary font-semibold text-sm mb-3">
                     <MapPin size={16} />
                     <span>{project.location}</span>
                     </div>
                     
-                    <h3 className="text-3xl md:text-4xl font-bold text-text-dark dark:text-white mb-4 group-hover:text-primary dark:group-hover:text-secondary transition-colors">
+                    <h3 className="text-3xl md:text-4xl font-bold text-text-dark dark:text-white mb-4 md:group-hover:text-primary dark:md:group-hover:text-secondary transition-colors">
                     {project.title}
                     </h3>
                     
@@ -76,16 +78,17 @@ export const Portfolio: React.FC = () => {
                     {project.description}
                     </p>
 
-                    <div className="flex items-center gap-4">
-                    <button className="bg-primary text-white rounded-full w-14 h-14 flex items-center justify-center group-hover:bg-secondary group-hover:text-primary transition-colors">
+                    <div className="flex items-center gap-4 mt-auto">
+                    <button className="bg-primary text-white rounded-full w-14 h-14 flex items-center justify-center md:group-hover:bg-secondary md:group-hover:text-primary transition-colors">
                         <ArrowRight size={24} />
                     </button>
-                    <span className="font-medium text-sm text-gray-400 dark:text-gray-500 group-hover:text-secondary transition-colors">View Project Case Study</span>
+                    <span className="font-medium text-sm text-gray-400 dark:text-gray-500 md:group-hover:text-secondary transition-colors">View Project Case Study</span>
                     </div>
                 </div>
                 </div>
             </TiltCard>
             </Link>
+            </div>
         ))}
         </div>
       </div>

@@ -51,7 +51,7 @@ export const BlogsPage: React.FC = () => {
           {blogsData.map((blog, index) => (
             <div key={blog.id} className="animate-fade-in-up h-full" style={{ animationDelay: `${index * 0.1}s` }}>
                <Link to={`/blog/${blog.id}`} className="block h-full group">
-                  <TiltCard className="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-2xl hover:border-secondary dark:hover:border-secondary transition-all duration-300 h-full flex flex-col">
+                  <TiltCard className="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 active:shadow-2xl md:hover:shadow-2xl active:border-secondary md:hover:border-secondary transition-all duration-300 h-full flex flex-col active:scale-[0.98]">
                     
                     {/* Image */}
                     <div className="relative aspect-[4/3] overflow-hidden">
@@ -59,7 +59,7 @@ export const BlogsPage: React.FC = () => {
                          src={blog.image} 
                          alt={blog.title} 
                          loading="lazy"
-                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" 
+                         className="w-full h-full object-cover transform md:group-hover:scale-110 transition-transform duration-700" 
                        />
                        <div className="absolute top-4 left-4 bg-secondary text-primary px-3 py-1 rounded-full text-xs font-bold shadow-md">
                           {blog.category}
@@ -78,7 +78,7 @@ export const BlogsPage: React.FC = () => {
                           </span>
                        </div>
 
-                       <h3 className="text-xl font-bold text-text-dark dark:text-white mb-3 line-clamp-2 leading-tight group-hover:text-primary dark:group-hover:text-secondary transition-colors">
+                       <h3 className="text-xl font-bold text-text-dark dark:text-white mb-3 line-clamp-2 leading-tight group-active:text-primary md:group-hover:text-primary dark:group-active:text-secondary dark:md:group-hover:text-secondary transition-colors">
                           {blog.title}
                        </h3>
                        
@@ -86,7 +86,7 @@ export const BlogsPage: React.FC = () => {
                           {blog.excerpt}
                        </p>
 
-                       <div className="flex items-center text-primary dark:text-secondary font-semibold text-sm mt-auto group-hover:underline decoration-2 underline-offset-4">
+                       <div className="flex items-center text-primary dark:text-secondary font-semibold text-sm mt-auto group-active:underline md:group-hover:underline decoration-2 underline-offset-4">
                           Read Full Article <ArrowRight size={16} className="ml-2" />
                        </div>
                     </div>

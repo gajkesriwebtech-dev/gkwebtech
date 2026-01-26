@@ -140,12 +140,12 @@ export const Services: React.FC = () => {
           <div
             ref={scrollRef}
             onScroll={handleScroll}
-            className="flex gap-6 overflow-x-auto hide-scrollbar pb-12 pt-4 px-4"
+            className="flex gap-6 overflow-x-auto scrollbar-hide pb-12 pt-4 px-4 snap-x snap-mandatory"
           >
             {items.map((item, i) => (
               <div
                 key={`${item.id}-${i}`}
-                className="shrink-0 w-[85vw] sm:w-[45vw] md:w-[30vw] xl:w-[23vw]"
+                className="shrink-0 w-[85vw] sm:w-[45vw] md:w-[30vw] xl:w-[23vw] snap-center"
               >
                 <Link
                   to={`/${activeTab === "tech" ? "service" : "course"}/${item.id}`}

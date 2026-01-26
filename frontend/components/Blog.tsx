@@ -20,14 +20,14 @@ export const Blog: React.FC = () => {
            </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex md:grid md:grid-cols-3 gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-8 md:pb-0 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
           {displayedBlogs.map((blog, idx) => (
-            <div key={idx} className="animate-fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
-              <Link to={`/blog/${blog.id}`} className="block group cursor-pointer bg-white dark:bg-gray-900 rounded-3xl p-5 shadow-xl dark:shadow-none border border-gray-300 dark:border-gray-800 hover:border-secondary transition-all duration-300">
+            <div key={idx} className="min-w-[85vw] md:min-w-0 snap-center h-full animate-fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
+              <Link to={`/blog/${blog.id}`} className="block group cursor-pointer bg-white dark:bg-gray-900 rounded-3xl p-5 shadow-xl dark:shadow-none border border-gray-300 dark:border-gray-800 active:border-secondary md:hover:border-secondary transition-all duration-300 h-full active:scale-[0.98]">
                 <div className="rounded-2xl overflow-hidden mb-6 relative aspect-[4/3]">
-                   <img src={blog.image} alt={blog.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                   <img src={blog.image} alt={blog.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-500 md:group-hover:scale-110" />
                    {/* Floating arrow on hover or static */}
-                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-secondary rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-secondary rounded-full flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
                       <span className="text-primary font-bold text-xl">↗</span>
                    </div>
                 </div>
@@ -35,13 +35,13 @@ export const Blog: React.FC = () => {
                   <span className="bg-secondary/20 text-primary dark:text-secondary px-3 py-1 rounded-full">{blog.category}</span>
                   <span className="bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-300 px-3 py-1 rounded-full">{blog.date}</span>
                 </div>
-                <h3 className="text-xl font-bold text-text-dark dark:text-white mb-3 line-clamp-2 leading-tight group-hover:text-primary dark:group-hover:text-secondary transition-colors">
+                <h3 className="text-xl font-bold text-text-dark dark:text-white mb-3 line-clamp-2 leading-tight group-active:text-primary md:group-hover:text-primary dark:group-active:text-secondary dark:md:group-hover:text-secondary transition-colors">
                   {blog.title}
                 </h3>
                 <p className="text-gray-700 dark:text-gray-500 text-sm mb-4 line-clamp-2">
                    {blog.excerpt}
                 </p>
-                <span className="text-primary dark:text-secondary font-semibold text-sm underline underline-offset-4 decoration-secondary group-hover:no-underline">Read More</span>
+                <span className="text-primary dark:text-secondary font-semibold text-sm underline underline-offset-4 decoration-secondary group-active:no-underline md:group-hover:no-underline">Read More</span>
               </Link>
             </div>
           ))}

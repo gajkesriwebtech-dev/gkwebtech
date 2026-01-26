@@ -34,7 +34,7 @@ export const Courses: React.FC = () => {
             {coursesData.map((course) => (
               <div
                 key={course.id}
-                className="min-w-[300px] md:min-w-[350px] snap-center bg-white dark:bg-gray-900 p-6 rounded-3xl shadow-xl border border-gray-300 dark:border-gray-800 transition hover:shadow-2xl flex flex-col h-full"
+                className="min-w-[300px] md:min-w-[350px] snap-center bg-white dark:bg-gray-900 p-6 rounded-3xl shadow-xl border border-gray-300 dark:border-gray-800 transition hover:shadow-2xl flex flex-col h-full active:scale-95 duration-200"
               >
                 <div className="w-full h-48 rounded-2xl mb-6 overflow-hidden border border-gray-100 dark:border-gray-700">
                   <img

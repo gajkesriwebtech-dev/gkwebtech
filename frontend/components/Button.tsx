@@ -7,7 +7,7 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'dark';
   icon?: 'arrow' | 'play';
   className?: string;
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler<HTMLElement>;
   href?: string;
 }
 

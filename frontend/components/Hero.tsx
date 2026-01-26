@@ -22,7 +22,7 @@ export const Hero: React.FC = () => {
             <div className="inline-block relative mb-6 animate-fade-in-up opacity-0" style={{ animationDelay: '0.1s' }}>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-text-dark dark:text-white leading-tight mb-6 animate-fade-in-up opacity-0 transition-colors" style={{ animationDelay: '0.3s' }}>
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-text-dark dark:text-white leading-tight mb-6 animate-fade-in-up opacity-0 transition-colors" style={{ animationDelay: '0.3s' }}>
               <span className="text-secondary decoration-secondary decoration-4">Gajkesri Webtech,</span><br/>
               Digital Marketing<br/>
               Agency With Global Presence.
