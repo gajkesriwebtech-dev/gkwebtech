@@ -89,11 +89,11 @@ export const Services: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <SectionHeader label="Our Offerings" title="Solutions We" subtitle="Provide" />
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             <div className="bg-white dark:bg-gray-800 p-1 rounded-full shadow-md flex border border-gray-200 dark:border-gray-700">
               <button
                 onClick={() => setActiveTab("tech")}
-                className={`px-6 py-2 rounded-full font-bold text-sm ${
+                className={`px-4 py-2 rounded-full font-bold text-sm ${
                   activeTab === "tech"
                     ? "bg-[#1F4037] text-white"
                     : "text-gray-500"
@@ -104,7 +104,7 @@ export const Services: React.FC = () => {
 
               <button
                 onClick={() => setActiveTab("institute")}
-                className={`px-6 py-2 rounded-full font-bold text-sm ${
+                className={`px-4 py-2 rounded-full font-bold text-sm ${
                   activeTab === "institute"
                     ? "bg-[#FDB827] text-[#1F4037]"
                     : "text-gray-500"
