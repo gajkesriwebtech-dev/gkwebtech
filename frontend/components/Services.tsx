@@ -13,6 +13,9 @@ const CardContent: React.FC<{ item: any; activeTab: string }> = ({ item, activeT
           src={item.image}
           alt={item.title}
           loading="lazy"
+          decoding="async" /* Performance: Decode off main thread */
+          width="400"
+          height="192"
           className="w-full h-full object-cover transition-transform duration-700"
         />
       </div>
@@ -140,7 +143,7 @@ export const Services: React.FC = () => {
           <div
             ref={scrollRef}
             onScroll={handleScroll}
-            className="flex gap-6 overflow-x-auto scrollbar-hide pb-12 pt-4 px-4 snap-x snap-mandatory"
+            className="flex gap-6 overflow-x-auto hide-scrollbar pb-12 pt-4 px-4 snap-x snap-mandatory"
           >
             {items.map((item, i) => (
               <div
@@ -152,7 +155,7 @@ export const Services: React.FC = () => {
                   className="block h-full"
                 >
                   {tiltEnabled ? (
-                    <TiltCard className="h-full">
+                    <TiltCard className="h-full" enableScale={false}>
                       <CardContent item={item} activeTab={activeTab} />
                     </TiltCard>
                   ) : (

@@ -22,6 +22,9 @@ export const About: React.FC = () => {
                    src={getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 800)} 
                    alt="ri Webtech" 
                    loading="lazy"
+                   decoding="async"
+                   width="800"
+                   height="800"
                    className="w-full h-full rounded-full object-cover border-4 border-primary"
                  />
                  

@@ -43,7 +43,15 @@ export const BlogDetail: React.FC = () => {
       {/* Article Header Background */}
       <div className="w-full h-[40vh] md:h-[50vh] relative overflow-hidden">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <img src={blog.image} alt={blog.title} className="w-full h-full object-cover" />
+        <img 
+          src={blog.image} 
+          alt={blog.title} 
+          fetchPriority="high"
+          loading="eager" /* LCP Optimization */
+          width="1920"
+          height="1080"
+          className="w-full h-full object-cover" 
+        />
         <div className="absolute inset-0 z-20 flex items-center justify-center">
              <div className="container mx-auto px-4 text-center">
                  <Link to="/blogs" className="inline-flex items-center gap-2 text-white/80 hover:text-secondary mb-6 transition-colors backdrop-blur-sm bg-black/20 px-4 py-2 rounded-full">

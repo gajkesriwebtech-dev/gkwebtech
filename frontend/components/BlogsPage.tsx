@@ -59,6 +59,9 @@ export const BlogsPage: React.FC = () => {
                          src={blog.image} 
                          alt={blog.title} 
                          loading="lazy"
+                         decoding="async"
+                         width="400"
+                         height="300"
                          className="w-full h-full object-cover transform md:group-hover:scale-110 transition-transform duration-700" 
                        />
                        <div className="absolute top-4 left-4 bg-secondary text-primary px-3 py-1 rounded-full text-xs font-bold shadow-md">

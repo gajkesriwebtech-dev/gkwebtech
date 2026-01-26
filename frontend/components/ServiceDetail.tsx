@@ -52,6 +52,8 @@ export const ServiceDetail: React.FC = () => {
           <img 
             src={service.detailImage} 
             alt={service.title} 
+            fetchPriority="high"
+            loading="eager" /* LCP Optimization */
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 z-20 flex items-center justify-center">
@@ -93,7 +95,7 @@ export const ServiceDetail: React.FC = () => {
               <div className="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800">
                  <div className="grid grid-cols-2 h-64 md:h-80">
                     <div className="h-full">
-                       <img src={service.image} className="w-full h-full object-cover" alt="Detail 1" loading="lazy" />
+                       <img src={service.image} className="w-full h-full object-cover" alt="Detail 1" loading="lazy" decoding="async" width="600" height="400" />
                     </div>
                     <div className="h-full bg-secondary/10 flex items-center justify-center p-8 text-center">
                        <div>

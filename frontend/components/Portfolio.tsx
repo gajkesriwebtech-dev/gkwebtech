@@ -39,6 +39,9 @@ export const Portfolio: React.FC = () => {
                     src={project.image} 
                     alt={project.title} 
                     loading="lazy"
+                    decoding="async" /* Performance: Decode off main thread */
+                    width="800"
+                    height="600"
                     className="w-full h-full object-cover transform md:group-hover:scale-105 transition-transform duration-700"
                     />
                     

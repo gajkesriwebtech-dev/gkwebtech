@@ -26,6 +26,9 @@ export const Footer: React.FC = () => {
                   src={LOGO_SRC} 
                   alt="Gajkesri Webtech" 
                   loading="lazy"
+                  decoding="async"
+                  width="300"
+                  height="80"
                   className="h-20 w-auto object-contain" 
                 />
              </div>

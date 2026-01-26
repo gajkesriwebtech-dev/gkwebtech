@@ -52,6 +52,10 @@ const CourseDetail: React.FC = () => {
         <img 
           src={course.detailImage} 
           alt={course.title} 
+          fetchPriority="high"
+          loading="eager" /* LCP Optimization */
+          width="1920"
+          height="1080"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 z-20 flex items-center justify-center">

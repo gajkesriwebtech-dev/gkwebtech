@@ -119,7 +119,15 @@ export const ProjectDetail: React.FC = () => {
         {/* Hero */}
         <div className="w-full h-[50vh] md:h-[60vh] relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 z-10"></div>
-          <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+          <img 
+            src={project.image} 
+            alt={project.title} 
+            className="w-full h-full object-cover" 
+            width="1920" 
+            height="1080"
+            fetchPriority="high"
+            loading="eager"
+          />
           <div className="absolute inset-0 z-20 flex flex-col justify-end pb-12">
             <div className="container mx-auto px-4 md:px-6">
               <Link to="/portfolio" className="inline-flex items-center gap-2 text-white/80 hover:text-secondary mb-6 transition-colors backdrop-blur-sm bg-white/10 px-4 py-2 rounded-full border border-white/10 w-fit">
@@ -197,6 +205,9 @@ export const ProjectDetail: React.FC = () => {
                         src="/images/youtube-red-transparent.webp"
                         alt="youtube video indicator"
                         loading="lazy"
+                        decoding="async"
+                        width="112"
+                        height="112"
                         className="w-28 opacity-100 drop-shadow-2xl transition-all duration-300 group-hover:opacity-100"
                       />
                     </button>

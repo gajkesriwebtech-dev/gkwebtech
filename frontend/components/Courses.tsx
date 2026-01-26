@@ -41,6 +41,9 @@ export const Courses: React.FC = () => {
                     src={course.image}
                     alt={course.title}
                     loading="lazy"
+                    decoding="async" /* Performance: Decode off main thread */
+                    width="400"
+                    height="192"
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>

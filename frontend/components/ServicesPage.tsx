@@ -52,6 +52,9 @@ export const ServicesPage: React.FC = () => {
                                     src={service.image} 
                                     alt={service.title} 
                                     loading="lazy"
+                                    decoding="async"
+                                    width="400"
+                                    height="256"
                                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" 
                                 />
                                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300"></div>

@@ -41,6 +41,9 @@ export const BrochureTemplate: React.FC = () => {
              <img 
                src={LOGO_SRC} 
                alt="Gajkesri Webtech" 
+               width="350"
+               height="100"
+               loading="eager" /* Ensure logo is ready for print */
                className="h-24 w-auto object-contain"
              />
           </div>

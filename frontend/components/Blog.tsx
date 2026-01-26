@@ -25,7 +25,15 @@ export const Blog: React.FC = () => {
             <div key={idx} className="min-w-[85vw] md:min-w-0 snap-center h-full animate-fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
               <Link to={`/blog/${blog.id}`} className="block group cursor-pointer bg-white dark:bg-gray-900 rounded-3xl p-5 shadow-xl dark:shadow-none border border-gray-300 dark:border-gray-800 active:border-secondary md:hover:border-secondary transition-all duration-300 h-full active:scale-[0.98]">
                 <div className="rounded-2xl overflow-hidden mb-6 relative aspect-[4/3]">
-                   <img src={blog.image} alt={blog.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-500 md:group-hover:scale-110" />
+                   <img 
+                     src={blog.image} 
+                     alt={blog.title} 
+                     loading="lazy" 
+                     decoding="async" /* Performance: Decode off main thread */
+                     width="800"
+                     height="600"
+                     className="w-full h-full object-cover transition-transform duration-500 md:group-hover:scale-110" 
+                   />
                    {/* Floating arrow on hover or static */}
                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-secondary rounded-full flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
                       <span className="text-primary font-bold text-xl">↗</span>

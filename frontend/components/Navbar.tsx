@@ -84,7 +84,10 @@ export const Navbar: React.FC = () => {
             <img 
                   src={LOGO_SRC} 
                   alt="GK Logo" 
-                  loading="lazy"
+                  width="200"
+                  height="56"
+                  fetchPriority="high"
+                  loading="eager" /* LCP Optimization: Ensure logo loads immediately */
                   className="h-14 w-auto object-contain transition-transform group-hover:scale-105 duration-300"
                 />
           </Link>

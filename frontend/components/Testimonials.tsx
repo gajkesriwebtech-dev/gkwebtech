@@ -45,7 +45,15 @@ export const Testimonials: React.FC = () => {
                     {item.text}
                     </p>
                     <div className="flex items-center gap-4">
-                    <img src={item.image} alt={item.name} loading="lazy" className="w-12 h-12 rounded-full object-cover ring-2 ring-gray-100 dark:ring-gray-700" />
+                    <img 
+                      src={item.image} 
+                      alt={item.name} 
+                      loading="lazy" 
+                      decoding="async"
+                      width="48"
+                      height="48"
+                      className="w-12 h-12 rounded-full object-cover ring-2 ring-gray-100 dark:ring-gray-700" 
+                    />
                     <div>
                         <h4 className="font-bold text-text-dark dark:text-white text-sm">{item.name}</h4>
                         <p className="text-xs text-gray-400">{item.role}</p>

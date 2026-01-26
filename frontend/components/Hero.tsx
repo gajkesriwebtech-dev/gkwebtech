@@ -48,10 +48,18 @@ export const Hero: React.FC = () => {
                  {/* Main Image */}
                  <img
                   src={getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 1400)}
+                  srcSet={`
+                    ${getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 640)} 640w,
+                    ${getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 768)} 768w,
+                    ${getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 1024)} 1024w,
+                    ${getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 1400)} 1400w
+                  `}
+                  sizes="(max-width: 640px) 100vw, 512px"
                   alt="Gajkeri Webtech"
                   width={700}
                   height={875}
                   fetchPriority="high"
+                  loading="eager" /* LCP Optimization: Priority load for hero image */
                   className="relative z-10 w-full h-full object-cover rounded-b-full object-top mask-image-bottom"
                   style={{ maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)' }}
                 />
