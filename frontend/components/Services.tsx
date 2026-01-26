@@ -5,7 +5,10 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { TiltCard } from "./TiltCard";
 import { servicesData, coursesData } from "../data";
 
-const CardContent: React.FC<{ item: any; activeTab: string }> = ({ item, activeTab }) => {
+const CardContent: React.FC<{ item: any; activeTab: string }> = ({
+  item,
+  activeTab,
+}) => {
   return (
     <div className="bg-white dark:bg-gray-900 p-6 rounded-3xl shadow-xl border border-gray-300 transition cursor-pointer h-full flex flex-col">
       <div className="w-full h-48 rounded-2xl mb-6 overflow-hidden border border-gray-100">
@@ -13,7 +16,7 @@ const CardContent: React.FC<{ item: any; activeTab: string }> = ({ item, activeT
           src={item.image}
           alt={item.title}
           loading="lazy"
-          decoding="async" /* Performance: Decode off main thread */
+          decoding="async"
           width="400"
           height="192"
           className="w-full h-full object-cover transition-transform duration-700"
@@ -38,6 +41,9 @@ const CardContent: React.FC<{ item: any; activeTab: string }> = ({ item, activeT
 
 export const Services: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const isTouching = useRef(false);
+  const rafLock = useRef(false);
+
   const [activeTab, setActiveTab] = useState<"tech" | "institute">("tech");
 
   const baseItems = activeTab === "tech" ? servicesData : coursesData;
@@ -59,18 +65,29 @@ export const Services: React.FC = () => {
     el.scrollLeft = middle;
   }, [activeTab]);
 
-  // ✅ seamless infinite loop
+  // ✅ flicker-free infinite loop logic
   const handleScroll = () => {
     const el = scrollRef.current;
-    if (!el) return;
+    if (!el || rafLock.current) return;
 
     const third = el.scrollWidth / 3;
 
-    if (el.scrollLeft < third * 0.5) {
-      el.scrollLeft += third;
-    } else if (el.scrollLeft > third * 1.5) {
-      el.scrollLeft -= third;
-    }
+    rafLock.current = true;
+
+    requestAnimationFrame(() => {
+      const x = el.scrollLeft;
+
+      // 🔥 only teleport when user is NOT actively touching
+      if (!isTouching.current) {
+        if (x < third * 0.5) {
+          el.scrollLeft = x + third;
+        } else if (x > third * 1.5) {
+          el.scrollLeft = x - third;
+        }
+      }
+
+      rafLock.current = false;
+    });
   };
 
   const scroll = (dir: "left" | "right") => {
@@ -78,6 +95,7 @@ export const Services: React.FC = () => {
     if (!el) return;
 
     const amount = el.clientWidth * 0.8;
+
     el.scrollBy({
       left: dir === "right" ? amount : -amount,
       behavior: "smooth",
@@ -85,12 +103,18 @@ export const Services: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-100 dark:bg-gray-950 transition-colors" id="services">
+    <section
+      className="py-20 bg-gray-100 dark:bg-gray-950 transition-colors"
+      id="services"
+    >
       <div className="container mx-auto px-4 md:px-6">
-
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-          <SectionHeader label="Our Offerings" title="Solutions We" subtitle="Provide" />
+          <SectionHeader
+            label="Our Offerings"
+            title="Solutions We"
+            subtitle="Provide"
+          />
 
           <div className="flex items-center gap-2">
             <div className="bg-white dark:bg-gray-800 p-1 rounded-full shadow-md flex border border-gray-200 dark:border-gray-700">
@@ -122,7 +146,9 @@ export const Services: React.FC = () => {
               className="bg-[#1F4037] text-white rounded-full pl-6 pr-2 py-2 flex items-center gap-3 shadow-md"
             >
               <span className="font-medium">
-                {activeTab === "tech" ? "View All Services" : "View All Courses"}
+                {activeTab === "tech"
+                  ? "View All Services"
+                  : "View All Courses"}
               </span>
               <span className="w-8 h-8 rounded-full bg-[#FDB827] text-[#1F4037] flex items-center justify-center">
                 <ArrowRight size={16} strokeWidth={3} />
@@ -143,23 +169,37 @@ export const Services: React.FC = () => {
           <div
             ref={scrollRef}
             onScroll={handleScroll}
-            className="flex gap-6 overflow-x-auto hide-scrollbar pb-12 pt-4 px-4 snap-x snap-mandatory"
+            onTouchStart={() => (isTouching.current = true)}
+            onTouchEnd={() => {
+              isTouching.current = false;
+              handleScroll();
+            }}
+            className="flex gap-6 overflow-x-auto hide-scrollbar pb-12 pt-4 px-4 snap-x snap-mandatory touch-pan-x overscroll-x-contain"
+            style={{ scrollBehavior: "auto" }}
           >
             {items.map((item, i) => (
               <div
                 key={`${item.id}-${i}`}
-                className="shrink-0 w-[85vw] sm:w-[45vw] md:w-[30vw] xl:w-[23vw] snap-center"
+                className="shrink-0 w-[85vw] sm:w-[45vw] md:w-[30vw] xl:w-[23vw] snap-center transform-gpu"
               >
                 <Link
-                  to={`/${activeTab === "tech" ? "service" : "course"}/${item.id}`}
+                  to={`/${
+                    activeTab === "tech" ? "service" : "course"
+                  }/${item.id}`}
                   className="block h-full"
                 >
                   {tiltEnabled ? (
                     <TiltCard className="h-full" enableScale={false}>
-                      <CardContent item={item} activeTab={activeTab} />
+                      <CardContent
+                        item={item}
+                        activeTab={activeTab}
+                      />
                     </TiltCard>
                   ) : (
-                    <CardContent item={item} activeTab={activeTab} />
+                    <CardContent
+                      item={item}
+                      activeTab={activeTab}
+                    />
                   )}
                 </Link>
               </div>
@@ -173,7 +213,6 @@ export const Services: React.FC = () => {
             <ChevronRight size={24} />
           </button>
         </div>
-
       </div>
     </section>
   );

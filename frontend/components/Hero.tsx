@@ -47,12 +47,12 @@ export const Hero: React.FC = () => {
                  
                  {/* Main Image */}
                  <img
-                  src={getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 1400)}
+                  src="/images/hero-lcp-1400.webp"
                   srcSet={`
-                    ${getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 640)} 640w,
-                    ${getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 768)} 768w,
-                    ${getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 1024)} 1024w,
-                    ${getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 1400)} 1400w
+                    /images/hero-lcp-640.webp 640w,
+                    /images/hero-lcp-768.webp 768w,
+                    /images/hero-lcp-1024.webp 1024w,
+                    /images/hero-lcp-1400.webp 1400w
                   `}
                   sizes="(max-width: 640px) 100vw, 512px"
                   alt="Gajkeri Webtech"
