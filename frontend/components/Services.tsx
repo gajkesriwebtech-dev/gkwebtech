@@ -46,15 +46,26 @@ export const Services: React.FC = () => {
 
   const [activeTab, setActiveTab] = useState<"tech" | "institute">("tech");
 
+  /** 🔥 Tilt allowed ONLY on fine pointer + hover devices */
+  const [allowTilt, setAllowTilt] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const mq = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+    const update = () => setAllowTilt(mq.matches);
+
+    update();
+    mq.addEventListener("change", update);
+
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
   const baseItems = activeTab === "tech" ? servicesData : coursesData;
 
   // ✅ duplicate on both sides for infinite feel
   const items = [...baseItems, ...baseItems, ...baseItems];
-
-  const tiltEnabled =
-    typeof window !== "undefined" &&
-    window.innerWidth > 1024 &&
-    window.matchMedia("(hover: hover)").matches;
 
   // ✅ start from middle copy
   useEffect(() => {
@@ -188,7 +199,7 @@ export const Services: React.FC = () => {
                   }/${item.id}`}
                   className="block h-full"
                 >
-                  {tiltEnabled ? (
+                  {allowTilt ? (
                     <TiltCard className="h-full" enableScale={false}>
                       <CardContent
                         item={item}
