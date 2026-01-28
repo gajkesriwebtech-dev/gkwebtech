@@ -31,7 +31,7 @@ export const Contact: React.FC = () => {
         setStatus('success');
         setShowPopup(true); // show popup on success
         setTimeout(() => setShowPopup(false), 4000); // auto hide popup
-        setFormData({ name: '', email: '', phone: '', service: '', details: '' });
+        setFormData({ name: '', email: '', phone: '', service: '', details: '', source: 'gkwebtech' });
         setTimeout(() => setStatus('idle'), 5000);
       } else {
         setStatus('error');
@@ -93,14 +93,6 @@ export const Contact: React.FC = () => {
                 </div>
                 <span className="text-primary dark:text-gray-200 font-bold leading-tight">
                   Tiwari Clinic, Mahatma Jyotiba Fule Circle, Sch. No. 7, Alwar 301001, Rajasthan, India
-                </span>
-              </div>
-              <div className="flex items-start gap-4 items-center">
-                <div className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-primary dark:text-secondary shadow-sm flex-shrink-0">
-                  <MapPin size={20} />
-                </div>
-                <span className="text-primary dark:text-gray-200 font-bold leading-tight items-start">
-                  100 webster avenue, Mt Roskill, Auckland 1041, New Zealand
                 </span>
               </div>
               <div className="flex items-start gap-4 items-center">

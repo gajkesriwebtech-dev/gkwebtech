@@ -551,9 +551,11 @@ export const teamData: TeamMember[] = [
     education: "PhD, Erasmus Uni., Netherlands",
     role: "Founder & Director",
     country: "Netherlands",
+    github: "#",
     image: cld("Founder_kwgszb", 200),
-    linkedin: "https://www.linkedin.com/in/atal-s-03570938a/",
-    github: "#"
+    linkedin: "https://www.linkedin.com/in/gk-webtech-03570938a/",
+    youtube: "https://www.youtube.com/@GK-Web-Tech",
+    instagram: "https://www.instagram.com/gkwebtech.cloud?utm_source=qr&igsh=MTlxemFqbG5wMGsydg%3D%3D",
   },
   {
     name: "Preeti Tiwari ",
@@ -561,8 +563,10 @@ export const teamData: TeamMember[] = [
     role: "Managing Director",
     country: "New Zealand",
     image: cld("Preeti_kyad0g", 200),
+    youtube: "#",
+    instagram: "#",
     linkedin: "https://www.linkedin.com/in/preetitiwari2025/",
-    github: "#"
+    github: "#",
   },
   {
     name: "J. E. Spek",
@@ -571,7 +575,9 @@ export const teamData: TeamMember[] = [
     country: "Netherlands",
     image: cld("judith_aruw3a", 200),
     linkedin: "https://www.linkedin.com/in/judithspek/",
-    github: "#"
+    github: "#",
+    youtube: "#",
+    instagram: "#",
   },
   {
     name: "Utkarsh Sharma",
@@ -580,7 +586,9 @@ export const teamData: TeamMember[] = [
     country: "India",
     image: cld("Utkarsh1_yiat7m", 200),
     linkedin: "https://www.linkedin.com/in/utkarsh-sharma-2b9110362",
-    github: "https://github.com/Utkarsh9571"
+    github: "https://github.com/Utkarsh9571",
+    youtube: "#",
+    instagram: "#",
   },
   {
     name: "Vanshika Joshi",
@@ -589,7 +597,9 @@ export const teamData: TeamMember[] = [
     country: "India",
     image: cld("Vanshika_hji2lk", 200),
     linkedin: "https://www.linkedin.com/in/vanshika-joshi-599247251/",
-    github: "#"
+    github: "#",
+    youtube: "#",
+    instagram: "#",
   }
 ];
 

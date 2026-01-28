@@ -1,6 +1,6 @@
 import React from 'react';
 import { SectionHeader } from './SectionHeader';
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, Youtube, Instagram } from 'lucide-react';
 import { TiltCard } from './TiltCard';
 import { teamData } from '../data';
 
@@ -52,8 +52,18 @@ export const Team: React.FC = () => {
 
               {/* Icon always at bottom */}
               <div className="flex gap-4 mt-6 md:mt-auto">
-                <a href={founder.linkedin} className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors shadow-sm">
+                {/* LinkedIn */}
+                <a href={founder.linkedin} aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors shadow-sm">
+
                   <Linkedin size={18} />
+                </a>
+                {/* YouTube */}
+                <a href={founder.youtube} aria-label="YouTube" className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors shadow-sm">
+                  <Youtube size={18} />
+                </a>
+                {/* Instagram */}
+                <a href={founder.instagram} aria-label="Instagram" className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors shadow-sm">
+                  <Instagram size={18} />
                 </a>
               </div>
             </TiltCard>

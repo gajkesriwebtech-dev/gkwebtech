@@ -73,6 +73,8 @@ export interface TeamMember {
   country: string;
   linkedin: string;
   github: string;
+  youtube: string;
+  instagram: string;
 }
 
 export interface Testimonial {
