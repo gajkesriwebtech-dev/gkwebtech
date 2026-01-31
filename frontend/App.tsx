@@ -17,7 +17,12 @@ import CourseDetail from './components/CourseDetail';
 import { CoursesPage } from './components/CoursesPage';
 import { TermsPage } from './components/TermsPage';
 import { PrivacyPage } from './components/PrivacyPage';
+import { Pricing } from './components/Pricing';
 import { AyuuChatbot } from './components/AyuuChatbot';
+import { AdminDashboard } from './components/AdminDashboard';
+
+import { Login } from './components/Login';
+import { AdminSessionHandler } from './components/AdminSessionHandler';
 
 function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -32,11 +37,13 @@ function App() {
 
   return (
     <Router>
+      <AdminSessionHandler />
       <div className="min-h-screen bg-bg-light dark:bg-gray-950 font-sans text-text-dark dark:text-gray-100 selection:bg-secondary selection:text-primary transition-colors duration-300 xl:px-8 2xl:px-16 overflow-x-hidden">
         <ScrollToTop />
         <Routes>
           {/* Brochure Route - No Navbar/Footer */}
           <Route path="/brochure-preview" element={<BrochureTemplate />} />
+          <Route path="/login" element={<Login />} />
           
           {/* Main App Routes */}
           <Route path="*" element={
@@ -56,6 +63,9 @@ function App() {
                   <Route path="/tools" element={<Tools />} />
                   <Route path="/terms" element={<TermsPage />} />
                   <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/pricing" element={<Pricing />} />
+                  {/* Internal Admin Route */}
+                  <Route path="/admin" element={<AdminDashboard />} />
                 </Routes>
               </main>
 

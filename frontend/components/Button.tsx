@@ -9,6 +9,8 @@ interface ButtonProps {
   className?: string;
   onClick?: React.MouseEventHandler<HTMLElement>;
   href?: string;
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 export const Button: React.FC<ButtonProps> = ({ 
@@ -17,9 +19,11 @@ export const Button: React.FC<ButtonProps> = ({
   icon, 
   className = '',
   onClick,
-  href
+  href,
+  disabled,
+  type = 'button'
 }) => {
-  const baseStyles = "inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 cursor-pointer";
+  const baseStyles = "inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed";
   
   const variants = {
     primary: "bg-primary text-white pl-6 pr-2 py-2 hover:bg-primary-dark",
@@ -66,7 +70,12 @@ export const Button: React.FC<ButtonProps> = ({
   }
 
   return (
-    <button className={`${baseStyles} ${variants[variant]} group ${className}`} onClick={onClick}>
+    <button 
+      type={type}
+      className={`${baseStyles} ${variants[variant]} group ${className}`} 
+      onClick={onClick}
+      disabled={disabled}
+    >
       {content}
     </button>
   );

@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Phone, Mail, MapPin, ArrowRight, Loader2, CheckCircle } from 'lucide-react';
+import { Button } from './Button';
 
 export const Contact: React.FC = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -92,7 +95,7 @@ export const Contact: React.FC = () => {
                   <MapPin size={20} />
                 </div>
                 <span className="text-primary dark:text-gray-200 font-bold leading-tight">
-                  Tiwari Clinic, Mahatma Jyotiba Fule Circle, Sch. No. 7, Alwar 301001, Rajasthan, India
+                  2nd Floor, Tiwari Clinic Building, Jyoti Rao Fule Circle, Alwar 301001, Rajasthan, India
                 </span>
               </div>
               <div className="flex items-start gap-4 items-center">
@@ -196,11 +199,11 @@ export const Contact: React.FC = () => {
                 </div>
               )}
 
-              <div>
+              <div className="space-y-4 flex items-end justify-between">
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="bg-primary dark:bg-white text-white dark:text-primary rounded-full pl-8 pr-2 py-2 flex items-center gap-4 hover:bg-primary-dark dark:hover:bg-gray-200 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="bg-primary dark:bg-white text-white dark:text-primary rounded-full pl-6 pr-2 py-2 flex items-center gap-4 hover:bg-primary-dark dark:hover:bg-gray-200 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   <span className="font-medium">
                     {status === 'loading' ? 'Sending...' : 'Send Message'}
@@ -209,6 +212,17 @@ export const Contact: React.FC = () => {
                     {status === 'loading' ? <Loader2 size={18} className="animate-spin" /> : <ArrowRight size={18} />}
                   </span>
                 </button>
+
+                <button 
+                   type="button"
+                   onClick={() => navigate('/pricing#custom-builder')}
+                   className="bg-primary dark:bg-white text-white dark:text-primary rounded-full pl-6 pr-2 py-2 flex items-center gap-4 hover:bg-primary-dark dark:hover:bg-gray-200 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed"
+                 >
+                   <span className="font-medium">Create Custom Quote</span>
+                   <span className="w-10 h-10 rounded-full bg-secondary dark:bg-primary text-primary dark:text-secondary flex items-center justify-center">
+                     <ArrowRight size={18} />
+                   </span>
+                 </button>
               </div>
             </form>
           </div>
