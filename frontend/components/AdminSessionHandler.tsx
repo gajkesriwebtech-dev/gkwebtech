@@ -11,11 +11,12 @@ export const AdminSessionHandler = () => {
 
     // Logic: If we were on /admin and are now on a different route, logout.
     if (prevPath === '/admin' && currentPath !== '/admin') {
-       const API_URL = (import.meta as any).env?.VITE_BACKEND_URL 
-        ? (import.meta as any).env.VITE_BACKEND_URL
-        : 'http://localhost:4000/api';
+       let API_URL = (import.meta as any).env?.VITE_BACKEND_URL || 'http://localhost:4000/api';
+       if (!API_URL.endsWith('/api')) {
+          API_URL = `${API_URL}/api`;
+       }
         
-       // Use sendBeacon if available for more reliable delivery on unload/navigation, 
+       // Use sendBeacon if available for more reliable delivery on unload/navigation,  
        // but for SPA navigation fetch is usually fine. 
        // We use fetch here with credentials.
        fetch(`${API_URL}/admin/logout`, { 

@@ -2,20 +2,21 @@ import express from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { protect, admin } from '../middleware/authMiddleware.js';
+import rateLimit from '../middleware/rateLimiter.js';
 
 const router = express.Router();
 
 // Generate JWT Token
 const generateToken = (res, role) => {
   const token = jwt.sign({ role }, process.env.JWT_SECRET, {
-    expiresIn: '30d',
+    expiresIn: '30m',
   });
 
   res.cookie('jwt', token, {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'strict',
-    maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
+    maxAge: 30 * 60 * 1000, // 30 minutes
   });
 
   return token;
@@ -24,7 +25,7 @@ const generateToken = (res, role) => {
 // @desc    Auth admin & get token
 // @route   POST /api/admin/login
 // @access  Public
-router.post('/login', async (req, res) => {
+router.post('/login', rateLimit({ windowMs: 15 * 60 * 1000, max: 5 }), async (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
@@ -37,6 +38,7 @@ router.post('/login', async (req, res) => {
 
   if (email === adminEmail && bcrypt.compareSync(password, adminPasswordHash)) {
     generateToken(res, 'admin');
+    console.log(`AUDIT: Admin logged in - IP: ${req.ip} - Time: ${new Date().toISOString()}`);
 
     res.json({
       success: true,
@@ -44,6 +46,7 @@ router.post('/login', async (req, res) => {
       role: 'admin',
     });
   } else {
+    console.warn(`AUDIT: Failed login attempt - Email: ${email} - IP: ${req.ip}`);
     res.status(401).json({ success: false, message: 'Invalid email or password' });
   }
 });

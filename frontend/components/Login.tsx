@@ -10,15 +10,18 @@ export const Login: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  const getApiUrl = () => {
+    const url = (import.meta as any).env?.VITE_BACKEND_URL || 'http://localhost:4000/api';
+    return url.endsWith('/api') ? url : `${url}/api`;
+  };
+
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
-    const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000';
-
     try {
-      const response = await fetch(`${backendUrl}/api/admin/login`, {
+      const response = await fetch(`${getApiUrl()}/admin/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,9 +1,11 @@
 import express from "express";
+import bcrypt from "bcryptjs";
 import connectToDatabase from "./db.js";
 import { Lead } from "./models.js";
 import { sendInternalLeadMail, sendClientConfirmationMail, transporter } from "./email.js";
 import { calculatePricing } from "./pricing-calculator.js";
 import { protect, admin } from "../middleware/authMiddleware.js";
+import rateLimit from "../middleware/rateLimiter.js";
 
 const router = express.Router();
 
@@ -59,20 +61,23 @@ router.delete("/:id", protect, admin, async (req, res) => {
 });
 
 // POST /api/contact/send-otp - Send OTP for bulk delete (Admin usage)
-router.post("/send-otp", protect, admin, async (req, res) => {
+router.post("/send-otp", protect, admin, rateLimit({ windowMs: 15 * 60 * 1000, max: 3 }), async (req, res) => {
   try {
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     
-    // Store OTP in a temporary way (e.g., global variable or simple cache for this session)
-    // For a production app, use Redis or database with expiry
-    // Since we're using simple in-memory storage for this demo:
+    // Hash OTP before storing
+    const salt = bcrypt.genSaltSync(10);
+    const hash = bcrypt.hashSync(otp, salt);
+
+    // Store OTP hash in a temporary way
     global.deleteOtp = {
-      code: otp,
+      hash: hash,
       expires: Date.now() + 5 * 60 * 1000 // 5 minutes
     };
 
+    console.log(`AUDIT: OTP generated for admin deletion - IP: ${req.ip}`);
+
     // Send email with OTP
-    
     await transporter.sendMail({
       from: process.env.EMAIL_FROM,
       to: process.env.ADMIN_EMAIL, // Send to configured admin email
@@ -113,26 +118,52 @@ router.delete("/delete-all", protect, admin, async (req, res) => {
       return res.status(400).json({ success: false, message: "OTP is required" });
     }
 
-    if (!global.deleteOtp || global.deleteOtp.code !== otp) {
-      return res.status(400).json({ success: false, message: "Invalid OTP" });
+    // Check if OTP exists and is valid
+    if (!global.deleteOtp) {
+        return res.status(400).json({ success: false, message: "OTP not requested or expired" });
     }
 
     if (Date.now() > global.deleteOtp.expires) {
+      delete global.deleteOtp;
       return res.status(400).json({ success: false, message: "OTP expired" });
     }
 
-    // OTP is valid, proceed with deletion
-    await connectToDatabase();
-    const result = await Lead.deleteMany({});
-    
-    // Clear OTP
-    delete global.deleteOtp;
+    // Verify OTP hash
+    const isMatch = bcrypt.compareSync(otp, global.deleteOtp.hash);
+    if (!isMatch) {
+        console.warn(`AUDIT: Invalid OTP attempt for delete-all - IP: ${req.ip}`);
+        return res.status(400).json({ success: false, message: "Invalid OTP" });
+    }
 
-    res.status(200).json({
-      success: true,
-      message: "All leads deleted successfully",
-      count: result.deletedCount
-    });
+    // OTP is valid, proceed with deletion
+    console.log(`AUDIT: Executing DELETE ALL LEADS - IP: ${req.ip}`);
+    
+    // Ensure DB connection
+    const db = await connectToDatabase();
+    
+    // Use try-catch specifically for DB operation
+    try {
+        const result = await Lead.deleteMany({});
+        
+        // Clear OTP
+        delete global.deleteOtp;
+
+        console.log(`AUDIT: SUCCESS DELETE ALL LEADS - Count: ${result.deletedCount}`);
+
+        res.status(200).json({
+          success: true,
+          message: "All leads deleted successfully",
+          count: result.deletedCount
+        });
+    } catch (dbError) {
+        console.error("Database error during delete-all:", dbError);
+        // Do not re-throw, handle here to avoid generic 500 without details
+        return res.status(500).json({
+          success: false,
+          message: "Database error during deletion",
+          error: dbError.message
+        });
+    }
 
   } catch (error) {
     console.error("Error deleting all leads:", error);

@@ -28,7 +28,7 @@ app.use(cors({
     }
   },
   credentials: true, // Allow cookies
-  methods: ["GET", "POST", "OPTIONS"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 }));
 app.use(express.json());
 app.use(cookieParser());

@@ -57,13 +57,49 @@ export const AdminDashboard: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Security: Validate session on load
+    checkAuth();
     fetchLeads();
+
+    // Security: Prevent indexing of admin pages
+    const meta = document.createElement('meta');
+    meta.name = "robots";
+    meta.content = "noindex";
+    document.head.appendChild(meta);
+
+    return () => {
+      if (document.head.contains(meta)) {
+        document.head.removeChild(meta);
+      }
+    };
   }, []);
 
+  const checkAuth = async () => {
+    try {
+        const API_URL = getApiUrl();
+        const res = await fetch(`${API_URL}/admin/me`, { credentials: 'include' });
+        if (res.status === 401 || res.status === 403) {
+            navigate('/login');
+        }
+    } catch (e) {
+        // If network error, we might still want to let fetchLeads try or handle it there
+        console.error("Auth check failed", e);
+    }
+  };
+
   const getApiUrl = () => {
-    return (import.meta as any).env?.VITE_BACKEND_URL 
-      ? (import.meta as any).env.VITE_BACKEND_URL
-      : 'http://localhost:4000/api';
+    const url = (import.meta as any).env?.VITE_BACKEND_URL || 'http://localhost:4000/api';
+    return url.endsWith('/api') ? url : `${url}/api`;
+  };
+
+  const maskString = (str: string, type: 'email' | 'phone') => {
+    if (!str) return '';
+    if (type === 'email') {
+      return str.replace(/(.{2})(.*)(@.*)/, '$1***$3');
+    }
+    // Simple mask for phone
+    if (str.length < 5) return str;
+    return str.substring(0, 2) + '******' + str.substring(str.length - 2);
   };
 
   const fetchLeads = async () => {
@@ -180,7 +216,7 @@ export const AdminDashboard: React.FC = () => {
         setLeads([]);
         setShowOtpModal(false);
         setOtp('');
-        alert(`Success: ${data.message}`);
+        alert(`Success: ${data.message} (${data.count} leads deleted)`);
       } else {
         setOtpError(data.message || "Invalid OTP or failed to delete");
       }
@@ -230,13 +266,6 @@ export const AdminDashboard: React.FC = () => {
             center={false}
           />
           <div className="flex gap-4">
-            <button 
-              onClick={handleRequestOtp}
-              className="flex items-center gap-2 px-4 py-2 bg-red-100 text-red-700 hover:bg-red-200 rounded-lg transition-colors text-sm font-medium border border-red-200"
-            >
-              <Trash2 size={18} />
-              Delete All Leads
-            </button>
             <Button 
               variant="outline" 
               onClick={handleLogout}
@@ -277,8 +306,13 @@ export const AdminDashboard: React.FC = () => {
                         onClick={(e) => e.stopPropagation()}
                       >
                         <Mail size={14} />
-                        {lead.email}
+                        {maskString(lead.email, 'email')}
                       </a>
+                      {lead.phone && (
+                        <div className="text-xs text-gray-500 mt-1 font-mono">
+                          {maskString(lead.phone, 'phone')}
+                        </div>
+                      )}
                       <div className="text-xs text-gray-400 mt-1">{lead.company} | {lead.country}</div>
                     </td>
 
