@@ -98,10 +98,10 @@ export const ProjectDetail: React.FC = () => {
   return (
     <>
       <Seo
-        title={`${project.title} | Gajkesri Webtech`}
+        title={`${project.title} | GKWebTech`}
         description={project.description}
         keywords={(project.tags || []).join(', ')}
-        canonical={`${window.location.origin}/portfolio/${encodeURIComponent(project.id)}`}
+        canonical={`${window.location.origin}/portfolio/${project.id}`}
         image={project.image}
         type="website"
         structuredData={{
@@ -109,7 +109,7 @@ export const ProjectDetail: React.FC = () => {
           "@type": "CreativeWork",
           "name": project.title,
           "description": project.description,
-          "url": `${window.location.origin}/portfolio/${encodeURIComponent(project.id)}`,
+          "url": `${window.location.origin}/portfolio/${project.id}`,
           "image": project.image
         }}
       />

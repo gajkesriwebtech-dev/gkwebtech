@@ -13,6 +13,7 @@ export interface Service {
   fullDescription: string; // Detailed description for the page
   features: string[]; // List of benefits/features
   detailImage: string; // Larger image for the detail page
+  updatedAt?: string; // Last modification date for SEO
 }
 
 export interface Project {
@@ -37,6 +38,7 @@ export interface Project {
   };
   gallery: string[]; // Array of image URLs
   youtubeIds?: string[]; // Array of video URLs
+  updatedAt?: string; // Last modification date for SEO
 }
 
 export interface Stat {

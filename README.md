@@ -6,7 +6,7 @@ This repository contains the official website for **Gajkesari Webtech**, a digit
 - Social media and creative campaigns
 - Google & Meta ads and analytics
 - Web development and WordPress management
-- Corporate training and internship‑driven courses
+- Training and internship‑driven courses
 
 The site showcases our services, portfolio case studies, courses, blog content, tools, and lead‑generation flows.
 
@@ -49,7 +49,7 @@ Additional contact details and forms are available on the Contact section of the
 - Social media marketing, creative ad design, reels & shorts
 - Google & Meta ads, campaign planning and analytics
 - Web development, WordPress management and performance
-- Corporate training, internship‑based learning and courses
+- Training, internship‑based learning and courses
 
 ---
 

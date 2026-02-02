@@ -13,7 +13,7 @@ export const PortfolioPage: React.FC = () => {
   return (
     <div className="pt-32 pb-20 bg-bg-light dark:bg-gray-950 min-h-screen transition-colors">
       <Seo
-        title="Portfolio | Gajkesri Webtech"
+        title="Portfolio | GKWebTech"
         description="Case studies and visual campaigns across hospitality, wellness, events, and more."
         keywords="portfolio, case studies, photography, videography, branding, hospitality, wellness"
         canonical={`${window.location.origin}/portfolio`}

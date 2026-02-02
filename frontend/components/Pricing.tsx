@@ -1014,7 +1014,7 @@ export const Pricing: React.FC = () => {
   return (
     <>
       <Seo 
-        title="Pricing Packages | Gajkesri Webtech"
+        title="Pricing Packages | GKWebTech"
         description="Transparent digital marketing packages for every stage of growth. Choose from monthly, quarterly, or annual plans."
         keywords="digital marketing pricing, seo packages, social media marketing cost, agency fees"
       />

@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.gajkesari.com/sitemap.xml
-
+Sitemap: https://gkwebtech.cloud/sitemap.xml

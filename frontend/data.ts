@@ -5,6 +5,7 @@ import { getUnsplashUrl } from "./utils/unsplash";
 export const servicesData: Service[] = [
   {
     id: "seo-optimization",
+    updatedAt: "2025-10-15",
     image: getUnsplashUrl("photo-1460925895917-afdab827c52f", 600),
     detailImage: getUnsplashUrl("photo-1571786256017-aee7a0c009b6", 1200),
     title: "SEO Optimization",
@@ -21,6 +22,7 @@ export const servicesData: Service[] = [
   },
   {
     id: "social-media-marketing",
+    updatedAt: "2025-10-20",
     image: getUnsplashUrl("photo-1611162617474-5b21e879e113", 600),
     detailImage: getUnsplashUrl("photo-1611926653458-09294b3142bf", 1200),
     title: "Social Media Marketing",
@@ -37,6 +39,7 @@ export const servicesData: Service[] = [
   },
   {
     id: "content-strategy",
+    updatedAt: "2025-10-25",
     image: getUnsplashUrl("photo-1552664730-d307ca884978", 600),
     detailImage: getUnsplashUrl("photo-1519389950473-47ba0277781c", 1200),
     title: "Content Strategy & Branding",
@@ -53,6 +56,7 @@ export const servicesData: Service[] = [
   },
   {
     id: "google-meta-ads",
+    updatedAt: "2025-11-01",
     image: getUnsplashUrl("photo-1533750516457-a7f992034fec", 600),
     detailImage: getUnsplashUrl("photo-1432888498266-38ffec3eaf0a", 1200),
     title: "Google & Meta Ads",
@@ -69,6 +73,7 @@ export const servicesData: Service[] = [
   },
   {
     id: "campaign-planning",
+    updatedAt: "2025-11-05",
     image: getUnsplashUrl("photo-1551288049-bebda4e38f71", 600),
     detailImage: getUnsplashUrl("photo-1454165804606-c3d57bc86b40", 1200),
     title: "Campaign Planning & Analytics",
@@ -85,6 +90,7 @@ export const servicesData: Service[] = [
   },
   {
     id: "website-management",
+    updatedAt: "2025-11-10",
     image: getUnsplashUrl("photo-1547658719-da2b51169166", 600),
     detailImage: getUnsplashUrl("photo-1467232004584-a241de8bcf5d", 1200),
     title: "Website Management & WordPress",
@@ -101,6 +107,7 @@ export const servicesData: Service[] = [
   },
   {
     id: "creative-design",
+    updatedAt: "2025-11-15",
     image: getUnsplashUrl("photo-1550745165-9bc0b252726f", 600),
     detailImage: getUnsplashUrl("photo-1550745165-9bc0b252726f", 1200),
     title: "Creative Ad Design & Reels",
@@ -120,6 +127,7 @@ export const servicesData: Service[] = [
 export const coursesData = [
   {
     id: "seo-optimization",
+    updatedAt: "2025-11-20",
     image: getUnsplashUrl("photo-1460925895917-afdab827c52f", 600),
     detailImage: getUnsplashUrl("photo-1571786256017-aee7a0c009b6", 1200),
     title: "SEO Optimization Training",
@@ -147,6 +155,7 @@ export const coursesData = [
   },
   {
     id: "social-media-marketing",
+    updatedAt: "2025-11-22",
     image: getUnsplashUrl("photo-1611162617474-5b21e879e113", 600),
     detailImage: getUnsplashUrl("photo-1611926653458-09294b3142bf", 1200),
     title: "Social Media Marketing Training",
@@ -174,6 +183,7 @@ export const coursesData = [
   },
   {
     id: "content-strategy",
+    updatedAt: "2025-11-25",
     image: getUnsplashUrl("photo-1552664730-d307ca884978", 600),
     detailImage: getUnsplashUrl("photo-1519389950473-47ba0277781c", 1200),
     title: "Content Strategy & Branding Training",
@@ -201,6 +211,7 @@ export const coursesData = [
   },
   {
     id: "google-meta-ads",
+    updatedAt: "2025-11-28",
     image: getUnsplashUrl("photo-1533750516457-a7f992034fec", 600),
     detailImage: getUnsplashUrl("photo-1432888498266-38ffec3eaf0a", 1200),
     title: "Google & Meta Ads Training",
@@ -228,6 +239,7 @@ export const coursesData = [
   },
   {
     id: "campaign-planning",
+    updatedAt: "2025-12-01",
     image: getUnsplashUrl("photo-1551288049-bebda4e38f71", 600),
     detailImage: getUnsplashUrl("photo-1454165804606-c3d57bc86b40", 1200),
     title: "Campaign Planning & Analytics Training",
@@ -255,6 +267,7 @@ export const coursesData = [
   },
   {
     id: "website-management",
+    updatedAt: "2025-12-05",
     image: getUnsplashUrl("photo-1547658719-da2b51169166", 600),
     detailImage: getUnsplashUrl("photo-1467232004584-a241de8bcf5d", 1200),
     title: "Website Management & WordPress Training",
@@ -282,6 +295,7 @@ export const coursesData = [
   },
   {
     id: "creative-design",
+    updatedAt: "2025-12-08",
     image: getUnsplashUrl("photo-1550745165-9bc0b252726f", 600),
     detailImage: getUnsplashUrl("photo-1550745165-9bc0b252726f", 1200),
     title: "Creative Ad Design, Reels & Video Editing Training",
@@ -443,7 +457,8 @@ export const blogsData: BlogPost[] = [
 
 export const projectsData: Project[] = [
   {
-    id: "Nirvanavan Foundation",
+    id: "nirvanavan-foundation",
+    updatedAt: "2026-01-15",
     title: "Nirvanavan Foundation",
     location: "Dadikar, Rajasthan",
     category: "Event ",
@@ -462,7 +477,7 @@ export const projectsData: Project[] = [
     "Video published on YouTube to drive long-term engagement and support"
   ],
     testimonial: {
-      text: "Gajkesri Webtech didn’t just cover an event — they captured our mission and the artists' passion beautifully. The film will help us inspire more people to contribute and connect with our cause.",
+      text: "GKWebTech didn’t just cover an event — they captured our mission and the artists' passion beautifully. The film will help us inspire more people to contribute and connect with our cause.",
       author: "Nirvanan Bodhisattva",
       role: "Founder of Nirvanan Foundation"
     },
@@ -471,7 +486,8 @@ export const projectsData: Project[] = [
 
   },
   {
-    id: "Rambihari Palace",
+    id: "rambihari-palace",
+    updatedAt: "2025-12-20",
     title: "Rambihari Palace",
     location: "Kishanpur, Alwar, Rajasthan",
     category: "Hospitality & Luxury Palace Shoot",
@@ -499,13 +515,14 @@ export const projectsData: Project[] = [
     youtubeIds: ["https://youtu.be/42aWXPvK53s?si=kplS07SGB9q3cC3r"]
   },
   {
-    id: "Dadikar Fort",
+    id: "dadikar-fort",
+    updatedAt: "2025-12-25",
     title: "Dadikar Fort",
     location: "Dadikar, Rajasthan",
     category: "Heritage Hospitality & Luxury Fort Shoot",
     description: "Creation of a comprehensive business and digital marketing strategy to evaluate and scale the property for destination weddings and wellness tourism. Our team produced cinematic promotional material through strategic outdoor shoots, supported by SEO and GEO optimization. We are the digital scale-up partners, guiding its expansion for international retreat and wedding audiences.",
     image: cld("511c8d9a_oopq2y", 1000),
-    mediaStats: { photos: 11, videos: 0 },
+    mediaStats: { photos: 11, videos: 1 },
     tags: ["Heritage", "Wellness", "Hospitality", "Lifestyle",],
     client: "Dadhikar Fort & Resorts Private Limited",
     duration: "1 Week",
@@ -519,10 +536,11 @@ export const projectsData: Project[] = [
     "Provided actionable recommendations for retreat positioning and guest experience enhancement"
   ],
     gallery: [cld("Group_ab3s76", 1000), cld("20251217_122441_ccans2", 500), cld("DDF7_1_uzekib", 500), cld("DDF1_mlh0dl", 500), cld("DDF4_jf6kgn", 500), cld("20251217_062041_mmwdr2", 500), cld("20251216_194812_ljxyr2", 500), cld("20251217_061903_yw55mk", 500), cld("20251216_194935_rrdkhk", 500), cld("DDF8_m6tz4c", 500), cld("DDF3_1_qxt0en", 500)],
-    youtubeIds: []
+    youtubeIds: ["https://youtu.be/R2gEQOMuUcI?si=LVT3fRgOaA7b4yRK"]
   },
   {
-    id: "Bamboo Saa Resort & Spa",
+    id: "bamboo-saa-resort-and-spa",
+    updatedAt: "2025-12-10",
     title: "Bamboo Saa Resort & Spa",
     location: "Jaipur, Rajasthan",
     category: "Wellness Hospitality Assessment & Collaboration",
@@ -606,7 +624,7 @@ export const teamData: TeamMember[] = [
 export const testimonialsData: Testimonial[] = [
   {
     rating: 5,
-    text: "Gajkesri Webtech completely transformed our online presence. Our organic traffic increased by 200% in just six months, and the lead quality has never been better.",
+    text: "GKWebTech completely transformed our online presence. Our organic traffic increased by 200% in just six months, and the lead quality has never been better.",
     name: "Leslie Alexander",
     role: "CMO, TechStart Inc.",
     image: cldFetch("https://randomuser.me/api/portraits/women/44.jpg", 200)

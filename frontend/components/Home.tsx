@@ -43,16 +43,16 @@ export const Home: React.FC = () => {
   return (
     <>
         <Seo
-          title="Gajkesri Webtech | Digital Marketing & Corporate Training"
+          title="GKWebTech | Digital Marketing & Training"
           description="Data-driven SEO, PPC, social media, web development, and training to scale your brand."
-          keywords="Gajkesri, digital marketing agency, SEO, PPC, social media, web development, corporate training"
+          keywords="GKWebTech, digital marketing agency, SEO, PPC, social media, web development, training"
           canonical={`${window.location.origin}/`}
           image={`${window.location.origin}/images/logo.png`}
           type="website"
           structuredData={{
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "name": "Gajkesri Webtech",
+            "name": "GKWebTech",
             "url": `${window.location.origin}/`
           }}
         />

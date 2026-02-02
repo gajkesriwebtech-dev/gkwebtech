@@ -4,7 +4,7 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
 // Embedded SVG Data URI for Gajkesri Logo
-const LOGO_SRC = "/images/logo-footer.png";
+const LOGO_SRC = "/images/logo.webp";
 
 export const Footer: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
              <div className="mb-6">
                 <img 
                   src={LOGO_SRC} 
-                  alt="Gajkesri Webtech" 
+                  alt="GKWebTech" 
                   loading="lazy"
                   decoding="async"
                   width="300"
@@ -98,7 +98,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
-           <p>Copyright © 2024 <span className="text-primary dark:text-white font-medium">Gajkesri Webtech</span>. All Rights Reserved.</p>
+           <p>Copyright © 2024 <span className="text-primary dark:text-white font-medium">GKWebTech</span>. All Rights Reserved.</p>
            <div className="flex items-center gap-6">
              <Link to="/" className="flex items-center gap-1 hover:text-secondary transition-colors" title="Download Brochure PDF">
                <FileText size={0} />

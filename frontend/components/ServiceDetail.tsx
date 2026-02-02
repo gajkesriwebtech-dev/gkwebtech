@@ -30,7 +30,7 @@ export const ServiceDetail: React.FC = () => {
   return (
     <>
       <Seo
-        title={`${service.title} | Gajkesri Webtech`}
+        title={`${service.title} | GKWebTech`}
         description={service.description}
         keywords={service.features.join(', ')}
         canonical={`${window.location.origin}/service/${service.id}`}
