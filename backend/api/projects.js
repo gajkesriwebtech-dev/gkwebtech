@@ -18,7 +18,7 @@ const seedProjects = [
     solution: "We executed a comprehensive visual rebranding campaign. Utilizing 4K drone videography to capture the scale of the fort and intimate lifestyle photography to showcase the guest experience.",
     results: ["300% Increase in Wedding Bookings", "2M+ Views on Social Media", "Featured in Travel & Leisure"],
     testimonial: {
-      text: "Gajkesri Webtech captured the soul of our property. The visuals are breathtaking and have directly contributed to our highest occupancy season ever.",
+      text: "GKWebTech captured the soul of our property. The visuals are breathtaking and have directly contributed to our highest occupancy season ever.",
       author: "Rajiv Singh",
       role: "General Manager"
     },

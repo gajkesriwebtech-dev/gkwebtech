@@ -1,0 +1,241 @@
+{
+  "brandInfo": {
+    "name": "GKWebTech",
+    "website": "https://gkwebtech.cloud",
+    "agencyType": "Full-Service Digital Marketing & Web Development Agency",
+    "primaryMarkets": [
+      "India",
+      "Netherlands",
+      "Global"
+    ],
+    "secondaryMarkets": [
+      "United States",
+      "Europe"
+    ],
+    "positioning": "Data-driven growth partners focusing on measurable ROI and scalable digital infrastructure.",
+    "tone": "Professional, Consultant, Data-Backed, Transparent, authoritative but accessible."
+  },
+  "services": {
+    "SEO Optimization": {
+      "description": "Comprehensive search engine optimization focusing on technical health, on-page content, and authoritative backlink profiles to improve organic rankings.",
+      "whoItsFor": "Businesses seeking long-term organic traffic growth and improved search visibility.",
+      "engagementModel": "Monthly Retainer",
+      "availableAsPackage": true,
+      "standaloneAvailable": true,
+      "customOnly": false
+    },
+    "Social Media Marketing": {
+      "description": "Strategic management of social platforms to build community, increase brand awareness, and drive engagement through curated content.",
+      "whoItsFor": "Brands wanting to build a loyal audience and maintain active communication channels.",
+      "engagementModel": "Monthly Retainer",
+      "availableAsPackage": true,
+      "standaloneAvailable": true,
+      "customOnly": false
+    },
+    "Content Creation": {
+      "description": "Production of high-quality assets including blogs, videos, graphics, and copy designed to educate, entertain, and convert audiences.",
+      "whoItsFor": "Companies needing consistent, high-value content for various marketing channels.",
+      "engagementModel": "Project-based or Retainer",
+      "availableAsPackage": true,
+      "standaloneAvailable": true,
+      "customOnly": false
+    },
+    "Google & Meta Ads": {
+      "description": "Paid advertising campaigns on Google (Search, Display) and Meta (Facebook, Instagram) optimized for high conversion and ROI.",
+      "whoItsFor": "Businesses looking for immediate traffic, lead generation, and sales acceleration.",
+      "engagementModel": "Retainer + Ad Spend",
+      "availableAsPackage": true,
+      "standaloneAvailable": true,
+      "customOnly": false
+    },
+    "Campaign Planning & Analytics": {
+      "description": "Strategic roadmap development and deep-dive data analysis to optimize marketing performance and budget allocation.",
+      "whoItsFor": "Organizations requiring data-backed insights to refine their marketing strategies.",
+      "engagementModel": "Project-based or Retainer",
+      "availableAsPackage": true,
+      "standaloneAvailable": true,
+      "customOnly": false
+    },
+    "Branding & Design": {
+      "description": "Creation of cohesive brand identities, including logos, visual guidelines, and marketing collateral.",
+      "whoItsFor": "Startups establishing their identity or established businesses rebranding for growth.",
+      "engagementModel": "Project-based",
+      "availableAsPackage": true,
+      "standaloneAvailable": true,
+      "customOnly": false
+    },
+    "Website Development": {
+      "description": "Custom-coded, high-performance websites built with modern technologies (Next.js, React) for speed, security, and scalability.",
+      "whoItsFor": "Businesses requiring bespoke functionality, superior performance, and unique design beyond template limitations.",
+      "engagementModel": "Project-based",
+      "availableAsPackage": false,
+      "standaloneAvailable": true,
+      "customOnly": true
+    },
+    "Website Management": {
+      "description": "Ongoing maintenance, security updates, and content management to ensure optimal website performance.",
+      "whoItsFor": "Companies wanting to outsource technical maintenance and ensure uptime.",
+      "engagementModel": "Monthly Retainer",
+      "availableAsPackage": true,
+      "standaloneAvailable": true,
+      "customOnly": false
+    },
+    "Marketing Automation": {
+      "description": "Implementation of automated workflows for email, CRM, and lead nurturing to save time and increase efficiency.",
+      "whoItsFor": "Teams looking to streamline operations and nurture leads automatically.",
+      "engagementModel": "Project-based or Retainer",
+      "availableAsPackage": true,
+      "standaloneAvailable": true,
+      "customOnly": false
+    },
+    "AI-Driven Workflows": {
+      "description": "Integration of AI tools to enhance productivity, content generation, and customer interaction processes.",
+      "whoItsFor": "Forward-thinking businesses aiming to leverage AI for competitive advantage.",
+      "engagementModel": "Project-based",
+      "availableAsPackage": true,
+      "standaloneAvailable": true,
+      "customOnly": false
+    },
+    "CRO & Funnel Optimization": {
+      "description": "Systematic testing and optimization of website elements and sales funnels to maximize conversion rates.",
+      "whoItsFor": "Businesses with existing traffic looking to increase lead volume and revenue.",
+      "engagementModel": "Project-based or Retainer",
+      "availableAsPackage": true,
+      "standaloneAvailable": true,
+      "customOnly": false
+    }
+  },
+  "pricingPhilosophy": {
+    "publicVisibility": "No fixed final prices are shown publicly to ensure accuracy and fairness.",
+    "methodology": "Transparent range-based pricing dependent on project scope, complexity, and specific deliverables.",
+    "webDevelopment": "Always custom-quoted due to the unique nature of requirements and tech stack.",
+    "addOns": "Additional features or expedited timelines will increase the base investment.",
+    "packages": "Standard packages include a defined set of base services; deviations require a custom quote.",
+    "finalization": "All final pricing is confirmed only after a strategy call and scope agreement.",
+    "billingDurations": [
+      "Monthly",
+      "Quarterly",
+      "One-time (Project-based)"
+    ],
+    "primaryCurrency": "INR",
+    "secondaryCurrencies": [
+      "EUR",
+      "USD"
+    ],
+    "bundlesVsCustom": "Bundles offer cost efficiency for standard needs; Custom solutions provide exact fit for complex requirements.",
+    "customBuilderAvailable": true
+  },
+  "packageTypes": {
+    "singleService": {
+      "purpose": "Focused solution for a specific need.",
+      "idealClient": "Businesses with a gap in a specific area (e.g., only need SEO).",
+      "includedServices": "One core service.",
+      "customizableElements": [
+        "Deliverable volume",
+        "Reporting frequency"
+      ],
+      "whenCustomQuoteRequired": "If requirements exceed standard tier limits."
+    },
+    "growthBundles": {
+      "purpose": "Integrated approach to accelerate growth using multiple channels.",
+      "idealClient": "SMEs looking for a holistic marketing push.",
+      "includedServices": "Combination of SEO, Social Media, and Content.",
+      "customizableElements": [
+        "Channel mix",
+        "Content volume"
+      ],
+      "whenCustomQuoteRequired": "When adding significant custom functionality or extra channels."
+    },
+    "multiServicePlans": {
+      "purpose": "Comprehensive digital management.",
+      "idealClient": "Brands outsourcing their entire digital marketing department.",
+      "includedServices": "Strategy, Execution, Analytics across multiple disciplines.",
+      "customizableElements": [
+        "All components"
+      ],
+      "whenCustomQuoteRequired": "Almost always, to align with business goals."
+    },
+    "enterprisePlans": {
+      "purpose": "High-volume, complex, or multi-regional campaigns.",
+      "idealClient": "Large corporations or funded startups.",
+      "includedServices": "Full-suite agency services with dedicated account management.",
+      "customizableElements": [
+        "Fully bespoke"
+      ],
+      "whenCustomQuoteRequired": "Always."
+    },
+    "customBuild": {
+      "purpose": "Unique projects not fitting standard categories.",
+      "idealClient": "Clients with specialized technical or creative needs.",
+      "includedServices": "Defined per scope of work.",
+      "customizableElements": [
+        "Everything"
+      ],
+      "whenCustomQuoteRequired": "Always."
+    }
+  },
+  "customQuoteFlow": {
+    "steps": [
+      "User submits requirements",
+      "Initial automated estimate (range)",
+      "Strategy call booking",
+      "Final proposal presentation",
+      "Contract signing"
+    ],
+    "whatUserSees": "An estimated price range based on selected options.",
+    "whatIsNotFinal": "The online calculator result is an estimate, not a binding invoice.",
+    "emailConfirmation": "User receives a breakdown of their selected preferences and the estimated range.",
+    "internalNotification": "Admin receives full lead details including selected plan and addons.",
+    "salesFollowUp": "Team reviews requirements and prepares for the strategy call."
+  },
+  "leadAndEmailSystem": {
+    "landingFormBehavior": "Captures contact details and intent; redirects to thank you/booking page.",
+    "pricingFormBehavior": "Calculates estimate; captures detailed project scope; triggers email summary.",
+    "databaseStorage": "Leads are stored in the admin database with full schema details.",
+    "internalEmailLogic": "Instant notification to agency admins with lead scoring/details.",
+    "clientConfirmationLogic": "Auto-responder confirms receipt and sets expectations for next steps.",
+    "futurePdfPlans": "Roadmap includes generating PDF proposals automatically from valid submissions."
+  },
+  "seoInfrastructure": {
+    "canonicalDomain": "https://gkwebtech.cloud",
+    "wwwRedirect": "Redirects to non-www or canonical version as configured.",
+    "httpsEnforced": "Yes, SSL is mandatory.",
+    "sitemapDeployed": "Yes, dynamically generated at /sitemap.xml",
+    "searchConsoleSubmitted": "Yes",
+    "indexedPageTypes": [
+      "Services",
+      "Courses",
+      "Portfolio",
+      "Blogs",
+      "Pricing",
+      "Legal"
+    ]
+  },
+  "faqKnowledgeBase": {
+    "How much does SEO cost": "SEO pricing varies based on competition, current site health, and goals. We provide a custom range after a quick audit.",
+    "Do you show final prices": "No. We show estimated ranges. Final pricing is confirmed after understanding your specific context to ensure fairness.",
+    "Can I customize plans": "Yes, absolutely. Our packages are starting points. We can tailor any plan to fit your specific needs.",
+    "Is website included": "Website development is a separate, custom service unless explicitly bundled in a special comprehensive growth package.",
+    "Do you work internationally": "Yes, we serve clients globally, with a strong presence in India and the Netherlands.",
+    "Which currencies accepted": "We primarily accept INR, EUR, and USD.",
+    "When will someone contact me": "Typically within 24 business hours after you submit an inquiry.",
+    "Do you provide proposals": "Yes, after our initial discovery call, we provide a detailed proposal outlining strategy, scope, and investment.",
+    "Is automation included": "Basic automation is part of some packages; complex workflows are a separate service."
+  },
+  "chatbotBehaviorRules": {
+    "neverGuessPricing": "Do not guess a price. Refer to the 'Starting at' ranges or the custom quote calculator.",
+    "neverPromiseDiscounts": "Do not authorize or promise discounts. Leave negotiation to the sales team.",
+    "alwaysExplainRanges": "Always clarify that online figures are estimates/ranges.",
+    "routeToProposalCall": "The primary goal is to get the user to book a strategy call or submit a detailed form.",
+    "askClarifyingQuestions": "If a user is vague, ask 1-2 clarifying questions to guide them to the right service.",
+    "toneGuidelines": "Helpful, professional, knowledgeable, but prudent regarding commitments.",
+    "avoidCompetitorTalk": "Focus on GKWebTech's value proposition; do not disparage competitors.",
+    "mentionPricingPage": "Direct users to the pricing page for a self-service estimate.",
+    "encourageCustomQuote": "For complex needs, strongly suggest the custom quote path."
+  },
+  "updatePolicy": {
+    "whenToUpdateFile": "Whenever service offerings, base pricing structures, or brand positioning changes.",
+    "whoMaintainsIt": "Technical Team / Marketing Lead.",
+    "howOftenReviewed": "Quarterly review recommended."
+  }
+}

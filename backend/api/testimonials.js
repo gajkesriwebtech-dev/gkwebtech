@@ -4,7 +4,7 @@ import { Testimonial } from './models.js';
 const seedTestimonials = [
   {
     rating: 5,
-    text: "Gajkesri Webtech completely transformed our online presence. Our organic traffic increased by 200% in just six months, and the lead quality has never been better.",
+    text: "GKWebTech completely transformed our online presence. Our organic traffic increased by 200% in just six months, and the lead quality has never been better.",
     name: "Leslie Alexander",
     role: "CMO, TechStart Inc.",
     image: "https://randomuser.me/api/portraits/women/44.jpg"

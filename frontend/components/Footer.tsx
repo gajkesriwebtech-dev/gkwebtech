@@ -3,7 +3,7 @@ import { Instagram, Youtube, Linkedin, FileText } from 'lucide-react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
-// Embedded SVG Data URI for Gajkesri Logo
+// Embedded SVG Data URI for GKWebTech Logo
 const LOGO_SRC = "/images/logo.webp";
 
 export const Footer: React.FC = () => {
