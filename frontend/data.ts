@@ -571,7 +571,7 @@ export const teamData: TeamMember[] = [
     country: "Netherlands",
     github: "#",
     image: cld("Founder_kwgszb", 200),
-    linkedin: "https://www.linkedin.com/in/gk-webtech-03570938a/",
+    linkedin: " https://www.linkedin.com/in/dr-a-tiwari-gkwebtech-cloud-03570938a/",
     youtube: "https://www.youtube.com/@GK-Web-Tech",
     instagram: "https://www.instagram.com/gkwebtech.cloud?utm_source=qr&igsh=MTlxemFqbG5wMGsydg%3D%3D",
   },
