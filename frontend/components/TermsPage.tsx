@@ -33,7 +33,7 @@ export const TermsPage: React.FC = () => {
           <h2>8. Policy Updates</h2>
           <p>Terms may update anytime. Continued use means acceptance.</p>
           <h3>Contact</h3>
-          <p><a href="mailto:info@gkwebtech.cloud">info@gkwebtech.cloud</a></p>
+          <p><a href="mailto:contact@gkwebtech.cloud">contact@gkwebtech.cloud</a></p>
         </div>
       </div>
     </div>

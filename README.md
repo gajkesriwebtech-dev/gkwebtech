@@ -34,7 +34,7 @@ You can reach Gajkesari Webtech at:
 
 - **Phone (India)**: `+91 99719 44676`
 - **Phone (Netherlands)**: `+31 62050 8410`
-- **Email**: `Gajkesriwebtech@gmail.com`
+- **Email**: `contact@gkwebtech.cloud`
 - **Postal Address**:  
   Tiwari Clinic, Mahatma Jyotiba Fule Circle,  
   Sch. No. 7, Alwar 301001, Rajasthan, India

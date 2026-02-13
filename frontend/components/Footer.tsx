@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
                  </li>
               <li className="flex items-start gap-3">
                  <span className="font-bold text-secondary">E:</span>
-                 <a href="mailto:info@gkwebtech.cloud" className="hover:text-secondary transition-colors">Gajkesriwebtech@gmail.com</a>
+                 <a href="mailto:contact@gkwebtech.cloud" className="hover:text-secondary transition-colors">contact@gkwebtech.cloud</a>
               </li>
               <li className="flex items-start gap-3">
                  <span className="font-bold text-secondary flex-shrink-0 mt-0.5">A:</span>

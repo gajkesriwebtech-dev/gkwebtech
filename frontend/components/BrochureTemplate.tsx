@@ -193,7 +193,7 @@ export const BrochureTemplate: React.FC = () => {
                <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-primary">
                  <Mail size={18} />
                </div>
-               <span className="font-bold">info@ayurvedastro.com</span>
+               <span className="font-bold">contact@gkwebtech.cloud</span>
             </div>
             <div className="flex items-center gap-4">
                <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-primary">
