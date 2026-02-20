@@ -13,6 +13,7 @@ const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:3000",
   "https://gkwebtech.cloud",
+  "https://www.gkwebtech.cloud",
   process.env.FRONTEND_URL
 ].filter(Boolean);
 
