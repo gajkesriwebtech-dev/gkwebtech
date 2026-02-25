@@ -40,7 +40,7 @@ export const BrochureTemplate: React.FC = () => {
           <div className="mb-6">
              <img 
                src={LOGO_SRC} 
-               alt="GKWebTech" 
+               alt="GK WebTech" 
                width="350"
                height="100"
                loading="eager" /* Ensure logo is ready for print */
@@ -86,7 +86,7 @@ export const BrochureTemplate: React.FC = () => {
           <div>
             <h4 className="text-4xl font-bold mb-6 text-text-dark">We build brands that <span className="text-secondary underline decoration-4 underline-offset-4">matter.</span></h4>
             <p className="text-gray-600 leading-relaxed mb-6">
-              GKWebTech is a premier digital marketing agency tailored for luxury, heritage, and high-growth businesses. We don't just chase metrics; we chase impact.
+              GK WebTech is a premier digital marketing agency tailored for luxury, heritage, and high-growth businesses. We don't just chase metrics; we chase impact.
             </p>
             <div className="flex gap-8 mt-8">
               <div>

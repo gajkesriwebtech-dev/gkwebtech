@@ -12,6 +12,15 @@ export const ServiceDetail: React.FC = () => {
   const navigate = useNavigate();
   
   const service = servicesData.find(s => s.id === id);
+  const serviceKeywordHeading: Record<string, string> = {
+    "seo-optimization": "SEO Services by a Digital Marketing Agency",
+    "social-media-marketing": "Social Media Marketing Agency Solutions",
+    "content-strategy": "Branding & Content Strategy for Growth",
+    "google-meta-ads": "Google Ads Agency, Meta Ads Agency, and PPC Services",
+    "campaign-planning": "Performance Strategy for a Digital Marketing Agency",
+    "website-management": "Website Management and WordPress Development",
+    "creative-design": "Creative Performance Content and Ad Production"
+  };
 
   const handleContactClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -30,8 +39,8 @@ export const ServiceDetail: React.FC = () => {
   return (
     <>
       <Seo
-        title={`${service.title} | GKWebTech`}
-        description={service.description}
+        title={`${service.title} | GK WebTech`}
+        description={`${service.description} GK WebTech delivers this service with measurable outcomes for growing businesses.`}
         keywords={service.features.join(', ')}
         canonical={`${window.location.origin}/service/${service.id}`}
         image={service.detailImage}
@@ -51,7 +60,7 @@ export const ServiceDetail: React.FC = () => {
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <img 
             src={service.detailImage} 
-            alt={service.title} 
+            alt={`${service.title} - ${serviceKeywordHeading[service.id] || 'Digital Marketing Agency Service'}`}
             fetchPriority="high"
             loading="eager" /* LCP Optimization */
             className="w-full h-full object-cover"
@@ -63,6 +72,9 @@ export const ServiceDetail: React.FC = () => {
                  <span>Back to Services</span>
                </Link>
                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 max-w-4xl mx-auto">{service.title}</h1>
+               <h2 className="text-lg md:text-2xl text-white/90 font-semibold max-w-4xl mx-auto">
+                 {serviceKeywordHeading[service.id] || "Digital Marketing Agency Service"}
+               </h2>
              </div>
           </div>
         </div>
@@ -74,6 +86,9 @@ export const ServiceDetail: React.FC = () => {
             <div className="lg:col-span-2 space-y-8">
               <div className="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 dark:border-gray-800">
                 <h2 className="text-2xl md:text-3xl font-bold text-primary dark:text-white mb-6">Overview</h2>
+                <p className="text-gray-700 dark:text-gray-200 leading-relaxed text-lg mb-4">
+                  GK WebTech is a digital marketing agency focused on performance-led execution and practical growth systems for modern brands.
+                </p>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-8">
                   {service.fullDescription}
                 </p>
@@ -95,7 +110,7 @@ export const ServiceDetail: React.FC = () => {
               <div className="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800">
                  <div className="grid grid-cols-2 h-64 md:h-80">
                     <div className="h-full">
-                       <img src={service.image} className="w-full h-full object-cover" alt="Detail 1" loading="lazy" decoding="async" width="600" height="400" />
+                       <img src={service.image} className="w-full h-full object-cover" alt={`${service.title} service workflow by GK WebTech digital marketing agency`} loading="lazy" decoding="async" width="600" height="400" />
                     </div>
                     <div className="h-full bg-secondary/10 flex items-center justify-center p-8 text-center">
                        <div>

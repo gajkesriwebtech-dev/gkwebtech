@@ -237,7 +237,7 @@ router.post("/", async (req, res) => {
 
       type: type || 'landing',
       source: sanitizedSource,
-      originSite: originSite || "gkwebtech",
+      originSite: originSite || "gk webtech",
 
       serviceInterested: serviceInterested || service || null,
       projectDetails: projectDetails || details || null,

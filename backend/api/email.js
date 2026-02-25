@@ -73,7 +73,7 @@ export const sendInternalLeadMail = async (lead) => {
           <!-- Header -->
           <div style="${styles.header}">
             <div style="${styles.logo}">
-              <span style="${styles.logoAccent}">GKWEBTECH</span>
+              <span style="${styles.logoAccent}">GK WEBTECH</span>
             </div>
             <div style="color: #E5E7EB; margin-top: 8px; font-size: 14px;">New Lead Notification System</div>
           </div>
@@ -197,7 +197,7 @@ export const sendInternalLeadMail = async (lead) => {
 
           <!-- Footer -->
           <div style="${styles.footer}">
-            <p style="${styles.footerText}">© ${new Date().getFullYear()} GKWebTech. Internal System Notification.</p>
+            <p style="${styles.footerText}">© ${new Date().getFullYear()} GK WebTech. Internal System Notification.</p>
           </div>
         </div>
       </body>
@@ -227,7 +227,7 @@ export const sendClientConfirmationMail = async (lead) => {
           <!-- Header -->
           <div style="${styles.header}">
             <div style="${styles.logo}">
-              <span style="${styles.logoAccent}">GKWEBTECH</span>
+              <span style="${styles.logoAccent}">GK WEBTECH</span>
             </div>
           </div>
 
@@ -266,7 +266,7 @@ export const sendClientConfirmationMail = async (lead) => {
 
           <!-- Footer -->
           <div style="${styles.footer}">
-            <p style="${styles.footerText}">GKWebTech Digital Marketing Agency</p>
+            <p style="${styles.footerText}">GK WebTech Digital Marketing Agency</p>
             <p style="${styles.footerText}"><a href="mailto:gajkesariwebtech@gmail.com" style="color: ${COLORS.primary}; text-decoration: none;">gajkesariwebtech@gmail.com</a></p>
             
             <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid #E5E7EB;">

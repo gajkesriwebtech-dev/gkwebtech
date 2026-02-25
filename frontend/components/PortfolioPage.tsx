@@ -13,9 +13,9 @@ export const PortfolioPage: React.FC = () => {
   return (
     <div className="pt-32 pb-20 bg-bg-light dark:bg-gray-950 min-h-screen transition-colors">
       <Seo
-        title="Portfolio | GKWebTech"
-        description="Case studies and visual campaigns across hospitality, wellness, events, and more."
-        keywords="portfolio, case studies, photography, videography, branding, hospitality, wellness"
+        title="Portfolio | GK WebTech"
+        description="Explore portfolio case studies by GK WebTech, a digital marketing agency focused on measurable brand growth."
+        keywords="GK WebTech, GKWebTech, GK Web Tech portfolio, digital marketing agency, branding, campaign results"
         canonical={`${window.location.origin}/portfolio`}
         image={`${window.location.origin}/images/logo.png`}
         type="website"

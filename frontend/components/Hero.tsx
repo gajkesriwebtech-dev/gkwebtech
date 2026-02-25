@@ -23,7 +23,7 @@ export const Hero: React.FC = () => {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-text-dark dark:text-white leading-tight mb-6 animate-fade-in-up opacity-0 transition-colors" style={{ animationDelay: '0.3s' }}>
-              <span className="text-secondary decoration-secondary decoration-4">GKWebTech,</span><br/>
+              <span className="text-secondary decoration-secondary decoration-4">GK WebTech,</span><br/>
               Digital Marketing<br/>
               Agency With Global Presence.
             </h1>
@@ -55,7 +55,7 @@ export const Hero: React.FC = () => {
                     /images/hero-lcp-1400.webp 1400w
                   `}
                   sizes="(max-width: 640px) 100vw, 512px"
-                  alt="GKWebTech"
+                  alt="GK WebTech"
                   width={700}
                   height={875}
                   fetchPriority="high"

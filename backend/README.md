@@ -1,6 +1,6 @@
-# Backend – Gajkesari Webtech API
+# Backend – GK Webtech API
 
-This folder contains the backend API for the Gajkesari Webtech website. It exposes endpoints used by the frontend to submit leads and (optionally) manage portfolio data.
+This folder contains the backend API for the GK Webtech website. It exposes endpoints used by the frontend to submit leads and (optionally) manage portfolio data.
 
 Built with:
 
@@ -27,14 +27,14 @@ Create a `.env` file in the `backend` folder with at least:
 
 - `MONGODB_URI` or `MONGO_URI` – MongoDB connection string
 - `PORT` – port for the backend server (defaults to `4000` if not set)
-- `FRONTEND_URL` – allowed CORS origin (e.g. `https://www.gajkesari.com`)
+- `FRONTEND_URL` – allowed CORS origin (e.g. `https://www.gkwebtech.cloud`)
 
 Example:
 
 ```env
 MONGODB_URI=your-mongodb-connection-string
 PORT=4000
-FRONTEND_URL=https://www.gajkesari.com
+FRONTEND_URL=https://www.gkwebtech.cloud
 ```
 
 ---
@@ -73,7 +73,7 @@ The backend can be containerized using the provided `Dockerfile`.
 Build the image:
 
 ```bash
-docker build -t gajkesari-backend .
+docker build -t gkwebtech-backend .
 ```
 
 Run the container:
@@ -82,9 +82,9 @@ Run the container:
 docker run -d \
   -p 4000:4000 \
   -e MONGODB_URI=your-mongodb-uri \
-  -e FRONTEND_URL=https://www.gajkesari.com \
-  --name gajkesari-backend \
-  gajkesari-backend
+  -e FRONTEND_URL=https://www.gkwebtech.cloud \
+  --name gkwebtech-backend \
+  gkwebtech-backend  
 ```
 
 ---
@@ -101,7 +101,7 @@ The backend can be deployed on the same Hostinger VPS where the frontend is host
 4. Configure environment variables in the Dokploy panel:
    - `MONGODB_URI` / `MONGO_URI`
    - `PORT` (e.g. `4000`)
-   - `FRONTEND_URL` (e.g. `https://www.gajkesari.com`)
-5. Expose the backend port internally (e.g. 4000) and, if needed, attach a subdomain (e.g. `api.gajkesari.com`) through Dokploy and DNS.
+   - `FRONTEND_URL` (e.g. `https://www.gkwebtech.cloud`)
+5. Expose the backend port internally (e.g. 4000) and, if needed, attach a subdomain (e.g. `api.gkwebtech.cloud`) through Dokploy and DNS.
 
 The frontend should call this backend via the configured domain or internal URL within the VPS.
