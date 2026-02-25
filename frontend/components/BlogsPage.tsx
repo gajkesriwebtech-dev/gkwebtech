@@ -14,9 +14,9 @@ export const BlogsPage: React.FC = () => {
   return (
     <div className="pt-32 pb-20 bg-bg-light dark:bg-gray-950 min-h-screen transition-colors">
       <Seo
-        title="Blog | GKWebTech"
-        description="Insights on SEO, social media, PPC, content strategy, and web development."
-        keywords="blog, SEO trends, social media, PPC, content strategy, web development"
+        title="Blog | GK WebTech"
+        description="GK WebTech shares practical insights on SEO services, social media marketing, PPC services, branding, and website performance."
+        keywords="GK WebTech, GKWebTech, GK Web Tech SEO services, social media marketing agency, PPC services, branding, website management"
         canonical={`${window.location.origin}/blogs`}
         image={`${window.location.origin}/images/logo.png`}
         type="website"

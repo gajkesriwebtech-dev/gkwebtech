@@ -1,6 +1,6 @@
-# Gajkesari Webtech – Digital Marketing Agency Website (Frontend)
+# GK Webtech – Digital Marketing Agency Website (Frontend)
 
-This is the frontend for the Gajkesari Webtech website, built with React, TypeScript and Vite. It powers the marketing site, portfolio, blog, courses and lead‑generation flows.
+This is the frontend for the GK Webtech website, built with React, TypeScript and Vite. It powers the marketing site, portfolio, blog, courses and lead‑generation flows.
 
 The production site is deployed on a Hostinger VPS using **Dokploy OS with panel**.
 
@@ -86,7 +86,7 @@ The website is deployed on a **Hostinger VPS** using **Dokploy OS** (with its we
    - Expose the port used by your frontend server (for example `3000` or `4173`).
 
 4. Attach a domain in Dokploy:
-   - Add your domain/subdomain (for example `www.gajkesari.com`) in the panel.
+   - Add your domain/subdomain (for example `www.gkwebtech.cloud`) in the panel.
    - Point DNS (A record) from your domain registrar to the Hostinger VPS IP.
    - In Dokploy, bind the domain to your frontend app.
 

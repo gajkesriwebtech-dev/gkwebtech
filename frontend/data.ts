@@ -9,8 +9,8 @@ export const servicesData: Service[] = [
     image: getUnsplashUrl("photo-1460925895917-afdab827c52f", 600),
     detailImage: getUnsplashUrl("photo-1571786256017-aee7a0c009b6", 1200),
     title: "SEO Optimization",
-    description: "Improve your search rankings and drive organic traffic with our data-driven SEO strategies.",
-    fullDescription: "Our SEO Optimization service is designed to propel your business to the top of search engine results. We go beyond basic keyword insertion to provide a comprehensive strategy that includes technical SEO audits, on-page optimization, high-quality link building, and content optimization. We analyze search intent to ensure your brand connects with the right audience at the right time.",
+    description: "Our SEO Services improve rankings and qualified traffic with a data-led strategy from a Digital Marketing Agency.",
+    fullDescription: "As a Digital Marketing Agency, we deliver SEO Services designed to move your business to the top of search results with sustainable growth. We go beyond basic keyword insertion to provide a comprehensive strategy that includes technical SEO audits, on-page optimization, high-quality link building, and content optimization. We analyze search intent to ensure your brand connects with the right audience at the right time.",
     features: [
       "Comprehensive Website Audit & Technical SEO",
       "Keyword Research & Competitor Analysis",
@@ -26,8 +26,8 @@ export const servicesData: Service[] = [
     image: getUnsplashUrl("photo-1611162617474-5b21e879e113", 600),
     detailImage: getUnsplashUrl("photo-1611926653458-09294b3142bf", 1200),
     title: "Social Media Marketing",
-    description: "Engage your audience and build brand loyalty across all major social media platforms.",
-    fullDescription: "Social media is the heartbeat of modern digital interaction. Our team creates bespoke social media strategies that amplify your brand voice, foster community engagement, and drive conversions. From Instagram Reels to LinkedIn thought leadership, we manage your presence across all relevant platforms to ensure consistent and impactful messaging.",
+    description: "Our Social Media Marketing Agency team builds engagement, community, and conversions across major social platforms.",
+    fullDescription: "Our Social Media Marketing Agency creates platform-specific campaigns that amplify brand voice, build loyal communities, and generate measurable conversions. From Instagram Reels to LinkedIn thought leadership, we manage your presence across all relevant platforms to ensure consistent and impactful messaging.",
     features: [
       "Platform-Specific Strategy (Instagram, LinkedIn, Twitter, TikTok)",
       "Content Calendar Creation & Scheduling",
@@ -43,8 +43,8 @@ export const servicesData: Service[] = [
     image: getUnsplashUrl("photo-1552664730-d307ca884978", 600),
     detailImage: getUnsplashUrl("photo-1519389950473-47ba0277781c", 1200),
     title: "Content Strategy & Branding",
-    description: "Create compelling content and a strong brand identity that resonates with your audience.",
-    fullDescription: "Content is king, but context is queen. We develop robust content strategies that align with your business goals and speak directly to your customer's pain points. Our branding services ensure that every piece of content—from blog posts to whitepapers—reflects your unique identity, establishing trust and authority in your industry.",
+    description: "Our Branding & Content Strategy service builds clear positioning and persuasive messaging for long-term growth.",
+    fullDescription: "Our Branding & Content Strategy service aligns your voice, messaging, and content planning to business outcomes across channels. We develop robust content strategies that align with your business goals and speak directly to your customers pain points. Our branding services ensure every content asset reflects your unique identity and builds trust in your industry.",
     features: [
       "Brand Voice & Identity Development",
       "Content Audits & Gap Analysis",
@@ -60,8 +60,8 @@ export const servicesData: Service[] = [
     image: getUnsplashUrl("photo-1533750516457-a7f992034fec", 600),
     detailImage: getUnsplashUrl("photo-1432888498266-38ffec3eaf0a", 1200),
     title: "Google & Meta Ads",
-    description: "Maximize ROI with targeted PPC campaigns on Google, Facebook, and Instagram.",
-    fullDescription: "Stop wasting money on vague advertising. Our paid media experts design high-conversion campaigns on Google Ads and Meta (Facebook/Instagram). We utilize advanced targeting, retargeting pixels, and A/B testing to lower your Cost Per Acquisition (CPA) while maximizing your Return on Ad Spend (ROAS).",
+    description: "Run profitable campaigns with our Google Ads Agency, Meta Ads Agency, and conversion-focused PPC Services.",
+    fullDescription: "Our Google Ads Agency and Meta Ads Agency specialists deliver PPC Services that reduce waste and increase qualified conversions. We design high-conversion campaigns on Google Ads and Meta (Facebook/Instagram). We utilize advanced targeting, retargeting pixels, and A/B testing to lower your Cost Per Acquisition (CPA) while maximizing your Return on Ad Spend (ROAS).",
     features: [
       "Google Search & Display Ads Management",
       "Facebook & Instagram Ad Campaigns",
@@ -77,8 +77,8 @@ export const servicesData: Service[] = [
     image: getUnsplashUrl("photo-1551288049-bebda4e38f71", 600),
     detailImage: getUnsplashUrl("photo-1454165804606-c3d57bc86b40", 1200),
     title: "Campaign Planning & Analytics",
-    description: "Strategic planning and in-depth analytics to optimize every aspect of your marketing.",
-    fullDescription: "Data without insight is just noise. We provide end-to-end campaign planning backed by rigorous analytics. Whether you are launching a new product or looking to scale, our team maps out the entire customer journey. We set clear KPIs and use advanced analytics tools to track performance, ensuring every dollar spent contributes to your bottom line.",
+    description: "Data-driven campaign planning and analytics support from a Digital Marketing Agency focused on performance.",
+    fullDescription: "As a Digital Marketing Agency, we provide end-to-end campaign planning and analytics that turn data into accountable growth decisions. Whether you are launching a new product or looking to scale, our team maps out the entire customer journey. We set clear KPIs and use advanced analytics tools to track performance, ensuring every dollar spent contributes to your bottom line.",
     features: [
       "Full-Funnel Campaign Strategy",
       "Customer Journey Mapping",
@@ -94,8 +94,8 @@ export const servicesData: Service[] = [
     image: getUnsplashUrl("photo-1547658719-da2b51169166", 600),
     detailImage: getUnsplashUrl("photo-1467232004584-a241de8bcf5d", 1200),
     title: "Website Management & WordPress",
-    description: "Secure, fast, and optimized website management services specialized in WordPress.",
-    fullDescription: "Your website is your digital storefront. We offer comprehensive WordPress management services to keep your site secure, fast, and up-to-date. From plugin updates and security patches to speed optimization and minor design tweaks, we handle the technical details so you can focus on running your business.",
+    description: "Reliable Website Management and WordPress Development support to keep your site secure, fast, and conversion-ready.",
+    fullDescription: "Our Website Management and WordPress Development team handles technical operations, performance, and upkeep so your site drives growth consistently. From plugin updates and security patches to speed optimization and minor design tweaks, we handle the technical details so you can focus on running your business.",
     features: [
       "WordPress Theme & Plugin Updates",
       "Site Speed Optimization (Core Web Vitals)",
@@ -477,7 +477,7 @@ export const projectsData: Project[] = [
     "Video published on YouTube to drive long-term engagement and support"
   ],
     testimonial: {
-      text: "GKWebTech didn’t just cover an event — they captured our mission and the artists' passion beautifully. The film will help us inspire more people to contribute and connect with our cause.",
+      text: "GK WebTech didn’t just cover an event — they captured our mission and the artists' passion beautifully. The film will help us inspire more people to contribute and connect with our cause.",
       author: "Nirvanan Bodhisattva",
       role: "Founder of Nirvanan Foundation"
     },
@@ -624,7 +624,7 @@ export const teamData: TeamMember[] = [
 export const testimonialsData: Testimonial[] = [
   {
     rating: 5,
-    text: "GKWebTech completely transformed our online presence. Our organic traffic increased by 200% in just six months, and the lead quality has never been better.",
+    text: "GK WebTech completely transformed our online presence. Our organic traffic increased by 200% in just six months, and the lead quality has never been better.",
     name: "Leslie Alexander",
     role: "CMO, TechStart Inc.",
     image: cldFetch("https://randomuser.me/api/portraits/women/44.jpg", 200)
@@ -644,3 +644,4 @@ export const testimonialsData: Testimonial[] = [
     image: cldFetch("https://randomuser.me/api/portraits/women/68.jpg", 200)
   }
 ];
+

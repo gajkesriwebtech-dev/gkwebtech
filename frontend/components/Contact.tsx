@@ -11,7 +11,7 @@ export const Contact: React.FC = () => {
     phone: '',
     service: '',
     details: '',
-    source: "gkwebtech"
+    source: "gk webtech"
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [showPopup, setShowPopup] = useState(false);
@@ -34,7 +34,7 @@ export const Contact: React.FC = () => {
         setStatus('success');
         setShowPopup(true); // show popup on success
         setTimeout(() => setShowPopup(false), 4000); // auto hide popup
-        setFormData({ name: '', email: '', phone: '', service: '', details: '', source: 'gkwebtech' });
+        setFormData({ name: '', email: '', phone: '', service: '', details: '', source: 'gk webtech' });
         setTimeout(() => setStatus('idle'), 5000);
       } else {
         setStatus('error');
@@ -237,7 +237,7 @@ export const Contact: React.FC = () => {
               <CheckCircle size={36} className="text-green-600 mb-3" />
               <h3 className="text-lg font-bold text-gray-900 dark:text-white">Submission Received</h3>
               <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
-                Thanks for contacting GKWebTech. We'll reach out shortly.
+                Thanks for contacting GK WebTech. We'll reach out shortly.
               </p>
               <button
                 onClick={() => setShowPopup(false)}

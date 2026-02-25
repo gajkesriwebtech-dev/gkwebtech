@@ -24,10 +24,10 @@ export const BlogDetail: React.FC = () => {
   return (
     <div className="pt-24 pb-20 bg-bg-light dark:bg-gray-950 min-h-screen transition-colors">
       <Seo
-        title={`${blog.title} | GKWebTech`}
-        description={blog.excerpt}
+        title={`${blog.title} | GK WebTech`}
+        description={`${blog.excerpt} Published by GK WebTech, a performance-driven digital marketing agency.`}
         keywords={(blog.tags || []).join(', ')}
-        canonical={window.location.href}
+        canonical={`${window.location.origin}/blog/${blog.id}`}
         image={blog.image}
         type="article"
         structuredData={{
