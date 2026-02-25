@@ -28,7 +28,7 @@ const LeadSchema = new mongoose.Schema({
 
   originSite: { 
     type: String, 
-    default: "gkwebtech" 
+    default: "gk webtech" 
   },
 
   // ---- Landing Form Fields ----

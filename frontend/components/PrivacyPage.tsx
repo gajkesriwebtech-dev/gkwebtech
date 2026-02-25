@@ -5,15 +5,15 @@ export const PrivacyPage: React.FC = () => {
   return (
     <div className="pt-32 pb-20 bg-bg-light dark:bg-gray-950 min-h-screen transition-colors">
       <Seo
-        title="Privacy Policy | GKWebTech"
-        description="Learn how we collect, use, and protect your data, and your rights regarding communication and deletion."
+        title="Privacy Policy | GK WebTech"
+        description="GK WebTech explains how we collect, use, and protect your data and communication preferences."
         keywords="privacy policy, data protection, user rights, cookies, analytics"
         canonical={`${window.location.origin}/privacy`}
         image={`${window.location.origin}/images/logo.png`}
         type="website"
-      /> 
+      />
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-        <h1 className="text-4xl font-bold text-primary dark:text-white mb-6">Privacy Policy — GKWebTech</h1>
+        <h1 className="text-4xl font-bold text-primary dark:text-white mb-6">Privacy Policy - GK WebTech</h1>
         <div className="prose dark:prose-invert max-w-none leading-relaxed text-gray-700 dark:text-gray-300">
           <p>Your privacy matters to us. This policy explains how we collect, use, and protect your data.</p>
           <h2>1. Data We Collect</h2>
@@ -53,4 +53,4 @@ export const PrivacyPage: React.FC = () => {
       </div>
     </div>
   );
-}
+};

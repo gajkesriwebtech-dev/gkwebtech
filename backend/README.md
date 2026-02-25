@@ -1,6 +1,6 @@
-# Backend – GKWebtech API
+# Backend – GK Webtech API
 
-This folder contains the backend API for the GKWebtech website. It exposes endpoints used by the frontend to submit leads and (optionally) manage portfolio data.
+This folder contains the backend API for the GK Webtech website. It exposes endpoints used by the frontend to submit leads and (optionally) manage portfolio data.
 
 Built with:
 

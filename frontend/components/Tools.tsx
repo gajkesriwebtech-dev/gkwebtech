@@ -5,8 +5,8 @@ export const Tools: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100 dark:bg-gray-900 text-center">
       <Seo
-        title="Tools & Downloads | GKWebTech"
-        description="Download resources and tools to accelerate your marketing performance."
+        title="Tools & Downloads | GK WebTech"
+        description="Explore upcoming tools and resources from GK WebTech, a performance-driven digital marketing agency."
         keywords="tools, downloads, resources, marketing tools"
         canonical={`${window.location.origin}/tools`}
         image={`${window.location.origin}/images/logo.png`}

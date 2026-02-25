@@ -14,9 +14,9 @@ export const ServicesPage: React.FC = () => {
   return (
     <div className="pt-32 pb-20 bg-bg-light dark:bg-gray-950 min-h-screen transition-colors">
       <Seo
-        title="Services | GKWebTech"
-        description="SEO, social media, content strategy, Google & Meta ads, analytics, WordPress, and creative design."
-        keywords="services, SEO, social media, PPC, analytics, WordPress, creative design"
+        title="Services | GK WebTech"
+        description="GK WebTech offers SEO Services, Social Media Marketing Agency support, Google Ads Agency and Meta Ads Agency campaigns, PPC Services, Website Management, and WordPress Development."
+        keywords="GK WebTech, GKWebTech, GK Web Tech digital marketing agency, SEO services, social media marketing agency, Google Ads agency, Meta Ads agency, PPC services, WordPress development"
         canonical={`${window.location.origin}/services`}
         image={`${window.location.origin}/images/logo.png`}
         type="website"
@@ -33,10 +33,10 @@ export const ServicesPage: React.FC = () => {
             <span className="h-0.5 w-4 bg-secondary"></span>
            </div>
            <h1 className="text-4xl md:text-5xl font-bold text-text-dark dark:text-white mb-6">
-             All <span className="text-secondary">Services</span>
+             Digital Marketing Agency <span className="text-secondary">Services</span>
            </h1>
            <p className="text-gray-700 dark:text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-             We offer a comprehensive suite of digital marketing solutions designed to elevate your brand, drive traffic, and convert leads into loyal customers.
+             Explore our SEO Services, Social Media Marketing Agency execution, Google Ads Agency and Meta Ads Agency campaigns, PPC Services, Website Management, WordPress Development, and Branding & Content Strategy.
            </p>
         </div>
 
@@ -50,7 +50,7 @@ export const ServicesPage: React.FC = () => {
                             <div className="w-full h-64 bg-gray-50 dark:bg-gray-800 rounded-2xl mb-6 shadow-sm group-hover:shadow-md transition-all overflow-hidden border border-gray-100 dark:border-gray-700 relative flex-shrink-0">
                                 <img 
                                     src={service.image} 
-                                    alt={service.title} 
+                                    alt={`${service.title} service by GK WebTech digital marketing agency`} 
                                     loading="lazy"
                                     decoding="async"
                                     width="400"

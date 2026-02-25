@@ -113,7 +113,7 @@ export const AyuuChatbot: React.FC = () => {
             setMessages([
               {
                 from: "bot",
-                text: "Hi 👋 I’m Ayuu. Ask me anything about GKWebtech.",
+                text: "Hi 👋 I’m Ayuu. Ask me anything about GK Webtech.",
               },
             ]);
           }

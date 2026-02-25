@@ -54,7 +54,7 @@ export const About: React.FC = () => {
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Who is <span className="text-secondary">GKWebTech?</span>
+                Who is <span className="text-secondary">GK WebTech?</span>
               </h2>
               <p className="text-gray-300 mb-10 leading-relaxed max-w-xl">
                 We are a full-service digital marketing agency dedicated to growing your business. From small startups to large enterprises, we tailor our strategies to meet your unique goals and deliver measurable results.

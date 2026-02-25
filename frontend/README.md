@@ -1,6 +1,6 @@
-# GKWebtech – Digital Marketing Agency Website (Frontend)
+# GK Webtech – Digital Marketing Agency Website (Frontend)
 
-This is the frontend for the GKWebtech website, built with React, TypeScript and Vite. It powers the marketing site, portfolio, blog, courses and lead‑generation flows.
+This is the frontend for the GK Webtech website, built with React, TypeScript and Vite. It powers the marketing site, portfolio, blog, courses and lead‑generation flows.
 
 The production site is deployed on a Hostinger VPS using **Dokploy OS with panel**.
 
