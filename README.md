@@ -1,6 +1,6 @@
-# Gajkesari Webtech – Official Website Repository
+# GKWebtech – Official Website Repository
 
-This repository contains the official website for **Gajkesari Webtech**, a digital marketing and training company focused on:
+This repository contains the official website for **GKWebtech**, a digital marketing and training company focused on: 
 
 - SEO and content strategy
 - Social media and creative campaigns
@@ -12,9 +12,9 @@ The site showcases our services, portfolio case studies, courses, blog content, 
 
 ---
 
-## About Gajkesari Webtech
+## About GKWebtech
 
-Gajkesari Webtech is a digital marketing agency working with:
+GKWebtech is a digital marketing agency working with:
 
 - Heritage and hospitality brands
 - NGOs and impact‑driven organisations
@@ -24,13 +24,13 @@ We combine data‑driven performance marketing with storytelling, creative produ
 
 ### Official Website
 
-- Production site: **https://www.gajkesari.com**
+- Production site: **https://www.gkwebtech.cloud**
 
 ---
 
 ## Contact Information
 
-You can reach Gajkesari Webtech at:
+You can reach GKWebtech at:
 
 - **Phone (India)**: `+91 99719 44676`
 - **Phone (Netherlands)**: `+31 62050 8410`
