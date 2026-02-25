@@ -5,15 +5,15 @@ export const TermsPage: React.FC = () => {
   return (
     <div className="pt-32 pb-20 bg-bg-light dark:bg-gray-950 min-h-screen transition-colors">
       <Seo
-        title="Terms & Conditions | GKWebTech"
-        description="Read the terms and conditions governing services, training, communication consent, payments, and liability."
+        title="Terms & Conditions | GK WebTech | GKWebTech"
+        description="Read the terms governing services, training, communication consent, payments, and liability at GK WebTech. GKWebTech helps businesses grow online."
         keywords="terms, conditions, policy, payments, liability, internship, training"
         canonical={`${window.location.origin}/terms`}
         image={`${window.location.origin}/images/logo.png`}
         type="website"
       />
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-        <h1 className="text-4xl font-bold text-primary dark:text-white mb-6">Terms and Conditions — GKWebTech</h1>
+        <h1 className="text-4xl font-bold text-primary dark:text-white mb-6">Terms and Conditions — GK WebTech</h1>
         <div className="prose dark:prose-invert max-w-none leading-relaxed text-gray-700 dark:text-gray-300">
           <p>By accessing and using this website and our services, you agree to the following terms.</p>
           <h2>1. Services</h2>

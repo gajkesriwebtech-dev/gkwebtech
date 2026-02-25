@@ -30,8 +30,8 @@ export const ServiceDetail: React.FC = () => {
   return (
     <>
       <Seo
-        title={`${service.title} | GKWebTech`}
-        description={service.description}
+        title={`${service.title} | GK WebTech | GKWebTech`}
+        description={`${service.description} Provided by GK WebTech with a performance-first approach. GKWebTech helps businesses grow online.`}
         keywords={service.features.join(', ')}
         canonical={`${window.location.origin}/service/${service.id}`}
         image={service.detailImage}

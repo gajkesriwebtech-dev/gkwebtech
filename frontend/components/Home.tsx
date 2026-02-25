@@ -43,8 +43,8 @@ export const Home: React.FC = () => {
   return (
     <>
         <Seo
-          title="GKWebTech | Digital Marketing & Training"
-          description="Data-driven SEO, PPC, social media, web development, and training to scale your brand."
+          title="GK WebTech | Digital Marketing Agency | GKWebTech"
+          description="GK WebTech is a performance-driven digital marketing agency offering SEO, PPC, and branding solutions. GKWebTech helps businesses grow online."
           keywords="GKWebTech, digital marketing agency, SEO, PPC, social media, web development, training"
           canonical={`${window.location.origin}/`}
           image={`${window.location.origin}/images/logo.png`}
@@ -52,7 +52,8 @@ export const Home: React.FC = () => {
           structuredData={{
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "name": "GKWebTech",
+            "name": "GK WebTech",
+            "alternateName": "GKWebTech",
             "url": `${window.location.origin}/`
           }}
         />

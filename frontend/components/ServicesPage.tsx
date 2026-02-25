@@ -14,8 +14,8 @@ export const ServicesPage: React.FC = () => {
   return (
     <div className="pt-32 pb-20 bg-bg-light dark:bg-gray-950 min-h-screen transition-colors">
       <Seo
-        title="Services | GKWebTech"
-        description="SEO, social media, content strategy, Google & Meta ads, analytics, WordPress, and creative design."
+        title="Services | GK WebTech | GKWebTech"
+        description="GK WebTech provides SEO, social media, Google Ads, Meta Ads, analytics, and WordPress services. GKWebTech helps businesses grow online."
         keywords="services, SEO, social media, PPC, analytics, WordPress, creative design"
         canonical={`${window.location.origin}/services`}
         image={`${window.location.origin}/images/logo.png`}

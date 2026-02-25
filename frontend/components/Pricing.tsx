@@ -1014,8 +1014,8 @@ export const Pricing: React.FC = () => {
   return (
     <>
       <Seo 
-        title="Pricing Packages | GKWebTech"
-        description="Transparent digital marketing packages for every stage of growth. Choose from monthly, quarterly, or annual plans."
+        title="Pricing Packages | GK WebTech | GKWebTech"
+        description="Compare transparent digital marketing pricing from GK WebTech across growth stages. GKWebTech helps businesses grow online."
         keywords="digital marketing pricing, seo packages, social media marketing cost, agency fees"
       />
       
@@ -1526,7 +1526,7 @@ export const Pricing: React.FC = () => {
            </div>
         </section>
 
-        {/* 6) Why GKWebTech (Redesigned) */}
+        {/* 6) Why GK WebTech (Redesigned) */}
         <section className="container mx-auto px-4 md:px-6 mb-24">
            <div className="bg-[#1F4037] rounded-[3rem] p-8 md:p-16 relative overflow-hidden shadow-2xl">
              {/* Decorative Gradients */}
@@ -1538,7 +1538,7 @@ export const Pricing: React.FC = () => {
              <div className="relative z-10 max-w-7xl mx-auto">
                <div className="text-center mb-16">
                  <h2 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight">
-                   Why <span className="text-secondary">GKWebTech ?</span>
+                   Why <span className="text-secondary">GK WebTech ?</span>
                  </h2>
                  <p className="text-xl text-gray-300 max-w-2xl mx-auto font-medium leading-relaxed">
                    Automation-first, performance-driven, and built for scale.

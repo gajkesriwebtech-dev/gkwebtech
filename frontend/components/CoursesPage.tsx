@@ -15,8 +15,8 @@ export const CoursesPage: React.FC = () => {
   return (
     <div className="pt-32 pb-20 bg-[#F9FAFB] dark:bg-gray-950 min-h-screen transition-colors" id="courses-page">
       <Seo
-        title="Courses | GKWebTech"
-        description="Industry-grade training with live internships in SEO, social media, PPC, content, and WordPress."
+        title="Courses | GK WebTech | GKWebTech"
+        description="GK WebTech offers industry-grade training in SEO, social media, PPC, content, and WordPress. GKWebTech helps businesses grow online."
         keywords="courses, training, internship, SEO training, PPC training, social media training, content strategy training, WordPress training"
         canonical={`${window.location.origin}/courses`}
         image={`${window.location.origin}/images/logo.png`}

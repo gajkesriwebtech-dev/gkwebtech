@@ -477,7 +477,7 @@ export const projectsData: Project[] = [
     "Video published on YouTube to drive long-term engagement and support"
   ],
     testimonial: {
-      text: "GKWebTech didn’t just cover an event — they captured our mission and the artists' passion beautifully. The film will help us inspire more people to contribute and connect with our cause.",
+      text: "GK WebTech didn’t just cover an event — they captured our mission and the artists' passion beautifully. The film will help us inspire more people to contribute and connect with our cause.",
       author: "Nirvanan Bodhisattva",
       role: "Founder of Nirvanan Foundation"
     },
@@ -624,7 +624,7 @@ export const teamData: TeamMember[] = [
 export const testimonialsData: Testimonial[] = [
   {
     rating: 5,
-    text: "GKWebTech completely transformed our online presence. Our organic traffic increased by 200% in just six months, and the lead quality has never been better.",
+    text: "GK WebTech completely transformed our online presence. Our organic traffic increased by 200% in just six months, and the lead quality has never been better.",
     name: "Leslie Alexander",
     role: "CMO, TechStart Inc.",
     image: cldFetch("https://randomuser.me/api/portraits/women/44.jpg", 200)

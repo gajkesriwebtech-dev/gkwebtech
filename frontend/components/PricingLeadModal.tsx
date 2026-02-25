@@ -208,7 +208,7 @@ export const PricingLeadModal: React.FC<PricingLeadModalProps> = ({
                      <CheckCircle size={14} className="absolute left-0.5 top-0.5 text-white opacity-0 peer-checked:opacity-100 pointer-events-none" />
                    </div>
                    <span className="text-sm text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
-                     I agree to be contacted by GKWebTech regarding my inquiry. I understand my data will be processed in accordance with the Privacy Policy.
+                     I agree to be contacted by GK WebTech regarding my inquiry. I understand my data will be processed in accordance with the Privacy Policy.
                    </span>
                  </label>
 

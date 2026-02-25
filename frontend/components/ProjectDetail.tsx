@@ -98,8 +98,8 @@ export const ProjectDetail: React.FC = () => {
   return (
     <>
       <Seo
-        title={`${project.title} | GKWebTech`}
-        description={project.description}
+        title={`${project.title} | GK WebTech | GKWebTech`}
+        description={`${project.description} Delivered by GK WebTech for measurable digital outcomes. GKWebTech helps businesses grow online.`}
         keywords={(project.tags || []).join(', ')}
         canonical={`${window.location.origin}/portfolio/${project.id}`}
         image={project.image}

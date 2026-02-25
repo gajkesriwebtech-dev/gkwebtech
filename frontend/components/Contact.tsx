@@ -237,7 +237,7 @@ export const Contact: React.FC = () => {
               <CheckCircle size={36} className="text-green-600 mb-3" />
               <h3 className="text-lg font-bold text-gray-900 dark:text-white">Submission Received</h3>
               <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
-                Thanks for contacting GKWebTech. We'll reach out shortly.
+                Thanks for contacting GK WebTech. We'll reach out shortly.
               </p>
               <button
                 onClick={() => setShowPopup(false)}
