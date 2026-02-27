@@ -93,8 +93,11 @@ export const Team: React.FC = () => {
                 <h4 className="text-lg font-bold text-text-dark dark:text-white mb-1 min-h-[48px] flex items-center justify-center">
                   {member.name}
                 </h4>
-                <p className="text-gray-700 dark:text-gray-400 text-sm mb-5 font-medium min-h-[28px] flex items-center justify-center">
+                <p className="text-gray-800 dark:text-gray-400 text-sm mb-1 font-medium min-h-[28px] flex items-center justify-center">
                   {member.role}
+                </p>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-2 font-medium min-h-[28px] flex items-center justify-center">
+                  {member.country}
                 </p>
               </div>
 
