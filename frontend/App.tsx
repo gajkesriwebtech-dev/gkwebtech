@@ -23,9 +23,23 @@ import { AdminDashboard } from './components/AdminDashboard';
 
 import { Login } from './components/Login';
 import { AdminSessionHandler } from './components/AdminSessionHandler';
+import { CookieConsentModal } from './components/cookies/CookieConsentModal';
+import { useCookieConsent } from './hooks/useCookieConsent';
 
 function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const { consent } = useCookieConsent();
+
+  useEffect(() => {
+    if (consent.analytics) {
+      console.log('📊 Analytics Cookies Enabled - Loading Analytics Scripts...');
+      // Logic to load Google Analytics, etc.
+    }
+    if (consent.marketing) {
+      console.log('🎯 Marketing Cookies Enabled - Loading Ad Pixels...');
+      // Logic to load Facebook Pixel, etc.
+    }
+  }, [consent]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -44,7 +58,7 @@ function App() {
           {/* Brochure Route - No Navbar/Footer */}
           <Route path="/brochure-preview" element={<BrochureTemplate />} />
           <Route path="/login" element={<Login />} />
-          
+
           {/* Main App Routes */}
           <Route path="*" element={
             <>
@@ -87,7 +101,8 @@ function App() {
                 />
               </a>
 
-              <AyuuChatbot/>
+              <AyuuChatbot />
+              <CookieConsentModal />
 
               {showScrollTop && (
                 <button
