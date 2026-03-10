@@ -13,6 +13,7 @@ import { Testimonials } from './Testimonials';
 import { Blog } from './Blog';
 import { FAQ } from './FAQ';
 import { Seo } from './Seo';
+import { GKInstitute } from './GKInstitute';
 
 export const Home: React.FC = () => {
   const location = useLocation();
@@ -42,33 +43,34 @@ export const Home: React.FC = () => {
 
   return (
     <>
-        <Seo
-          title="GK WebTech | Digital Marketing Agency | GKWebTech"
-          description="GK WebTech is a performance-driven digital marketing agency offering SEO, PPC, and branding solutions. GKWebTech helps businesses grow online."
-          keywords="GKWebTech, digital marketing agency, SEO, PPC, social media, web development, training"
-          canonical={`${window.location.origin}/`}
-          image={`${window.location.origin}/images/logo.png`}
-          type="website"
-          structuredData={{
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "GK WebTech",
-            "alternateName": "GKWebTech",
-            "url": `${window.location.origin}/`
-          }}
-        />
-        <Hero />
-        <Ticker />
-        <Services />
-        <About />
-        <WhyChooseUs />
-        <Team />
-        <Techstack />
-        <Portfolio />
-        <Testimonials />
-        <Blog />
-        <FAQ />
-        <Contact />
+      <Seo
+        title="GK WebTech | Digital Marketing Agency | GKWebTech"
+        description="GK WebTech is a performance-driven digital marketing agency offering SEO, PPC, and branding solutions. GKWebTech helps businesses grow online."
+        keywords="GKWebTech, digital marketing agency, SEO, PPC, social media, web development, training"
+        canonical={`${window.location.origin}/`}
+        image={`${window.location.origin}/images/logo.png`}
+        type="website"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "GK WebTech",
+          "alternateName": "GKWebTech",
+          "url": `${window.location.origin}/`
+        }}
+      />
+      <Hero />
+      <Ticker />
+      <Services />
+      <About />
+      <WhyChooseUs />
+      <Team />
+      <Techstack />
+      <Portfolio />
+      <Testimonials />
+      <Blog />
+      <FAQ />
+      <GKInstitute />
+      <Contact />
     </>
   );
 };

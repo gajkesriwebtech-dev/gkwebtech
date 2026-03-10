@@ -32,7 +32,7 @@ const CardContent: React.FC<{ item: any; activeTab: string }> = ({
       </p>
 
       <div className="flex items-center gap-2 text-[#1F4037] dark:text-[#FDB827] font-semibold text-sm mt-auto">
-        <span>{activeTab === "tech" ? "Learn More" : "View Syllabus"}</span>
+        <span>Learn More</span>
         <ArrowRight size={16} />
       </div>
     </div>
@@ -62,7 +62,7 @@ export const Services: React.FC = () => {
     return () => mq.removeEventListener("change", update);
   }, []);
 
-  const baseItems = activeTab === "tech" ? servicesData : coursesData;
+  const baseItems = servicesData;
 
   // ✅ duplicate on both sides for infinite feel
   const items = [...baseItems, ...baseItems, ...baseItems];
@@ -130,36 +130,46 @@ export const Services: React.FC = () => {
           <div className="flex items-center gap-2">
             <div className="bg-white dark:bg-gray-800 p-1 rounded-full shadow-md flex border border-gray-200 dark:border-gray-700">
               <button
-                onClick={() => setActiveTab("tech")}
-                className={`px-4 py-2 rounded-full font-bold text-sm ${
-                  activeTab === "tech"
-                    ? "bg-[#1F4037] text-white"
-                    : "text-gray-500"
-                }`}
+                onClick={() => {
+                  setActiveTab("tech");
+                  // Optional: scroll to services if needed, but usually clicking tech just shows tech cards
+                }}
+                className={`px-4 py-2 rounded-full font-bold text-sm ${activeTab === "tech"
+                  ? "bg-[#1F4037] text-white"
+                  : "text-gray-500"
+                  }`}
               >
                 GKTech
               </button>
 
               <button
-                onClick={() => setActiveTab("institute")}
-                className={`px-4 py-2 rounded-full font-bold text-sm ${
-                  activeTab === "institute"
-                    ? "bg-[#FDB827] text-[#1F4037]"
-                    : "text-gray-500"
-                }`}
+                onClick={() => {
+                  setActiveTab("institute");
+                  const element = document.getElementById("gk-institute-section");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                  // Reset back to tech after a delay or keep as is? 
+                  // Requirements say "Keep the toggle buttons", usually implying state.
+                  // But since cards never change now, maybe keep GKTech active by default.
+                  // Let's keep it highlighted for a moment or until they scroll back?
+                  // Better: keep state but cards are always services.
+                }}
+                className={`px-4 py-2 rounded-full font-bold text-sm ${activeTab === "institute"
+                  ? "bg-[#FDB827] text-[#1F4037]"
+                  : "text-gray-500"
+                  }`}
               >
                 GKInstitute
               </button>
             </div>
 
             <Link
-              to={activeTab === "tech" ? "/services" : "/courses"}
+              to="/services"
               className="bg-[#1F4037] text-white rounded-full pl-6 pr-2 py-2 flex items-center gap-3 shadow-md"
             >
               <span className="font-medium">
-                {activeTab === "tech"
-                  ? "View All Services"
-                  : "View All Courses"}
+                View All Services
               </span>
               <span className="w-8 h-8 rounded-full bg-[#FDB827] text-[#1F4037] flex items-center justify-center">
                 <ArrowRight size={16} strokeWidth={3} />
@@ -194,9 +204,7 @@ export const Services: React.FC = () => {
                 className="shrink-0 w-[85vw] sm:w-[45vw] md:w-[30vw] xl:w-[23vw] snap-center transform-gpu"
               >
                 <Link
-                  to={`/${
-                    activeTab === "tech" ? "service" : "course"
-                  }/${item.id}`}
+                  to={`/service/${item.id}`}
                   className="block h-full"
                 >
                   {allowTilt ? (
