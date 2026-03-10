@@ -88,7 +88,7 @@ export const Team: React.FC = () => {
                 />
               </div>
 
-              {/* Name + Role Section (forced equal alignment) */}
+              {/* Name + Role Section + Country (forced equal alignment) */}
               <div className="flex-1 flex flex-col justify-center w-full">
                 <h4 className="text-lg font-bold text-text-dark dark:text-white mb-1 min-h-[48px] flex items-center justify-center">
                   {member.name}
