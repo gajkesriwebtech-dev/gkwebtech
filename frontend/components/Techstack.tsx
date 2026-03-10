@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Tool } from '../types';
 import { SectionHeader } from './SectionHeader';
 
@@ -12,16 +13,18 @@ const tools: Tool[] = [
 ];
 
 export const Techstack: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-20 bg-white dark:bg-gray-950 transition-colors">
       <div className="container mx-auto px-4 md:px-6">
-        <SectionHeader 
-          label="Our Tech Stack" 
-          title="Tools We Use to" 
-          subtitle="Drive Growth"
-          center 
+        <SectionHeader
+          label={t("techstack.label", "Our Tech Stack")}
+          title={t("techstack.title", "Tools We Use to")}
+          subtitle={t("techstack.subtitle", "Drive Growth")}
+          center
         />
-        
+
         <div className="flex flex-wrap justify-center gap-8 md:gap-12 mt-12">
           {tools.map((tool, index) => (
             <div key={index} className="flex flex-col items-center group">
@@ -52,7 +55,7 @@ export const Techstack: React.FC = () => {
                   />
                 </svg>
                 {/* Icon Placeholder */}
-                <div 
+                <div
                   className="w-12 h-12 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md z-10 transform group-hover:scale-110 transition-transform duration-300"
                   style={{ backgroundColor: tool.color }}
                 >

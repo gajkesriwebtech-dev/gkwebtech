@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Home } from './components/Home';
 import { Footer } from './components/Footer';
@@ -52,74 +52,116 @@ function App() {
   return (
     <Router>
       <AdminSessionHandler />
-      <div className="min-h-screen bg-bg-light dark:bg-gray-950 font-sans text-text-dark dark:text-gray-100 selection:bg-secondary selection:text-primary transition-colors duration-300 xl:px-8 2xl:px-16 overflow-x-hidden">
+      <div className="min-h-screen bg-bg-light dark:bg-gray-950 font-sans text-text-dark dark:text-gray-100 selection:bg-secondary selection:text-primary transition-colors duration-300 overflow-x-hidden">
         <ScrollToTop />
         <Routes>
           {/* Brochure Route - No Navbar/Footer */}
           <Route path="/brochure-preview" element={<BrochureTemplate />} />
+          <Route path="/:lang/brochure-preview" element={<BrochureTemplate />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/:lang/login" element={<Login />} />
 
           {/* Main App Routes */}
-          <Route path="*" element={
-            <>
-              <Navbar />
-              <main>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/service/:id" element={<ServiceDetail />} />
-                  <Route path="/courses" element={<CoursesPage />} />
-                  <Route path="/course/:id" element={<CourseDetail />} />
-                  <Route path="/portfolio" element={<PortfolioPage />} />
-                  <Route path="/portfolio/:id" element={<ProjectDetail />} />
-                  <Route path="/blogs" element={<BlogsPage />} />
-                  <Route path="/blog/:id" element={<BlogDetail />} />
-                  <Route path="/tools" element={<Tools />} />
-                  <Route path="/terms" element={<TermsPage />} />
-                  <Route path="/privacy" element={<PrivacyPage />} />
-                  <Route path="/pricing" element={<Pricing />} />
-                  {/* Internal Admin Route */}
-                  <Route path="/admin" element={<AdminDashboard />} />
-                </Routes>
-              </main>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Home />} />
+            <Route path="services" element={<ServicesPage />} />
+            <Route path="service/:id" element={<ServiceDetail />} />
+            <Route path="courses" element={<CoursesPage />} />
+            <Route path="course/:id" element={<CourseDetail />} />
+            <Route path="portfolio" element={<PortfolioPage />} />
+            <Route path="portfolio/:id" element={<ProjectDetail />} />
+            <Route path="blogs" element={<BlogsPage />} />
+            <Route path="blog/:id" element={<BlogDetail />} />
+            <Route path="tools" element={<Tools />} />
+            <Route path="terms" element={<TermsPage />} />
+            <Route path="privacy" element={<PrivacyPage />} />
+            <Route path="pricing" element={<Pricing />} />
+            <Route path="admin" element={<AdminDashboard />} />
+          </Route>
 
-              {/* Floating WhatsApp CTA goes here, OUTSIDE of Routes */}
-              <a
-                href="https://wa.me/+919971944676?text=Hi,%20I%20want%20to%20discuss%20digital%20marketing%20services."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="z-50 fixed bottom-5 left-4 flex items-center justify-center bg-white dark:bg-gray-900 rounded-full shadow-lg hover:scale-110 transition"
-              >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                  alt="WhatsApp"
-                  loading="lazy"
-                  decoding="async"
-                  width="48"
-                  height="48"
-                  className="w-12 h-12"
-                />
-              </a>
-
-              <AyuuChatbot />
-              <CookieConsentModal />
-
-              {showScrollTop && (
-                <button
-                  aria-label="Scroll to top"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="z-50 fixed bottom-20 right-5 bg-black text-white rounded-full shadow-lg hover:scale-105 transition p-3"
-                >
-                  <ArrowUp className="w-5 h-5" />
-                </button>
-              )}
-
-              <Footer />
-            </>
-          } />
+          <Route path="/:lang" element={<MainLayout />}>
+            <Route index element={<Home />} />
+            <Route path="services" element={<ServicesPage />} />
+            <Route path="service/:id" element={<ServiceDetail />} />
+            <Route path="courses" element={<CoursesPage />} />
+            <Route path="course/:id" element={<CourseDetail />} />
+            <Route path="portfolio" element={<PortfolioPage />} />
+            <Route path="portfolio/:id" element={<ProjectDetail />} />
+            <Route path="blogs" element={<BlogsPage />} />
+            <Route path="blog/:id" element={<BlogDetail />} />
+            <Route path="tools" element={<Tools />} />
+            <Route path="terms" element={<TermsPage />} />
+            <Route path="privacy" element={<PrivacyPage />} />
+            <Route path="pricing" element={<Pricing />} />
+            <Route path="admin" element={<AdminDashboard />} />
+          </Route>
         </Routes>
       </div>
     </Router>
+  );
+}
+
+function MainLayout() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const { consent } = useCookieConsent();
+
+  useEffect(() => {
+    if (consent.analytics) {
+      console.log('📊 Analytics Cookies Enabled - Loading Analytics Scripts...');
+    }
+    if (consent.marketing) {
+      console.log('🎯 Marketing Cookies Enabled - Loading Ad Pixels...');
+    }
+  }, [consent]);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Outlet />
+      </main>
+
+      {/* Floating WhatsApp CTA */}
+      <a
+        href="https://wa.me/+919971944676?text=Hi,%20I%20want%20to%20discuss%20digital%20marketing%20services."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="z-50 fixed bottom-5 left-4 flex items-center justify-center bg-white dark:bg-gray-900 rounded-full shadow-lg hover:scale-110 transition"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+          loading="lazy"
+          decoding="async"
+          width="48"
+          height="48"
+          className="w-12 h-12"
+        />
+      </a>
+
+      <AyuuChatbot />
+      <CookieConsentModal />
+
+      {showScrollTop && (
+        <button
+          aria-label="Scroll to top"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="z-50 fixed bottom-20 right-5 bg-black text-white rounded-full shadow-lg hover:scale-105 transition p-3"
+        >
+          <ArrowUp className="w-5 h-5" />
+        </button>
+      )}
+
+      <Footer />
+    </>
   );
 }
 

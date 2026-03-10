@@ -977,9 +977,9 @@ export const Pricing: React.FC = () => {
     return (
         <>
             <Seo
-                title={t('seo.pricing.title', 'Pricing | GK WebTech | GKWebTech')}
-                description={t('seo.pricing.description', 'Transparent and competitive pricing for our digital marketing services, including SEO, PPC, and website management.')}
-                keywords={t('seo.pricing.keywords', 'pricing, digital marketing cost, SEO packages, PPC management fees')}
+                title={t("pricing.title", "Pricing Packages") + " | GK WebTech"}
+                description={t("pricing.description", "Compare transparent digital marketing pricing from GK WebTech across growth stages.")}
+                keywords="digital marketing pricing, seo packages, social media marketing cost, agency fees"
             />
 
             <DetailModal
@@ -1020,8 +1020,8 @@ export const Pricing: React.FC = () => {
                                     key={cat.id}
                                     onClick={() => handleCategoryClick(cat.id)}
                                     className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all border whitespace-nowrap ${selectedCategory === cat.id && cat.id !== 'web'
-                                        ? 'bg-[#1F4037] text-white border-[#1F4037] shadow-md transform scale-105'
-                                        : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-800 hover:border-secondary hover:text-[#1F4037] dark:hover:text-white'
+                                            ? 'bg-[#1F4037] text-white border-[#1F4037] shadow-md transform scale-105'
+                                            : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-800 hover:border-secondary hover:text-[#1F4037] dark:hover:text-white'
                                         }`}
                                 >
                                     {t(`pricing.categories.${cat.id}`, cat.label)}
@@ -1042,8 +1042,8 @@ export const Pricing: React.FC = () => {
                                     key={cur}
                                     onClick={() => setCurrency(cur)}
                                     className={`relative z-10 px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 ${currency === cur
-                                        ? 'bg-secondary dark:bg-gray-700 text-[#1F4037] dark:text-white shadow-md transform scale-105'
-                                        : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+                                            ? 'bg-secondary dark:bg-gray-700 text-[#1F4037] dark:text-white shadow-md transform scale-105'
+                                            : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
                                         }`}
                                 >
                                     {cur}
@@ -1208,8 +1208,8 @@ export const Pricing: React.FC = () => {
                                         <label
                                             key={service}
                                             className={`flex items-center justify-center p-4 rounded-xl border-2 cursor-pointer transition-all text-center font-medium text-sm ${builderServices.includes(service)
-                                                ? 'border-secondary bg-secondary/10 text-[#1F4037] dark:text-white shadow-sm'
-                                                : 'border-gray-200 dark:border-gray-700 hover:border-secondary/50 text-gray-600 dark:text-gray-400'
+                                                    ? 'border-secondary bg-secondary/10 text-[#1F4037] dark:text-white shadow-sm'
+                                                    : 'border-gray-200 dark:border-gray-700 hover:border-secondary/50 text-gray-600 dark:text-gray-400'
                                                 }`}
                                         >
                                             <input

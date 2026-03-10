@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Hero } from './Hero';
 import { Ticker } from './Ticker';
 import { Services } from './Services';
@@ -17,6 +18,7 @@ import { GKInstitute } from './GKInstitute';
 
 export const Home: React.FC = () => {
   const location = useLocation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     // Check if we need to scroll to a specific section based on state or hash
@@ -28,8 +30,6 @@ export const Home: React.FC = () => {
           element.scrollIntoView({ behavior: 'smooth' });
         }, 100);
       }
-      // Clear state to prevent scrolling on subsequent renders if needed
-      // window.history.replaceState({}, document.title);
     } else if (location.hash) {
       const targetId = location.hash.replace('#', '');
       const element = document.getElementById(targetId);
@@ -44,9 +44,9 @@ export const Home: React.FC = () => {
   return (
     <>
       <Seo
-        title="GK WebTech | Digital Marketing Agency | GKWebTech"
-        description="GK WebTech is a performance-driven digital marketing agency offering SEO, PPC, and branding solutions. GKWebTech helps businesses grow online."
-        keywords="GKWebTech, digital marketing agency, SEO, PPC, social media, web development, training"
+        title={t('seo.home.title', 'GK WebTech | Digital Marketing Agency | GKWebTech')}
+        description={t('seo.home.description', 'GK WebTech is a performance-driven digital marketing agency offering SEO, PPC, and branding solutions. GKWebTech helps businesses grow online.')}
+        keywords={t('seo.home.keywords', 'GKWebTech, digital marketing agency, SEO, PPC, social media, web development, training')}
         canonical={`${window.location.origin}/`}
         image={`${window.location.origin}/images/logo.png`}
         type="website"

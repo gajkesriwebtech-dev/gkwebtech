@@ -1,0 +1,477 @@
+{
+    "portfolio_page": {
+        "work": "Ons Werk",
+        "title_prefix": "Vastleggen",
+        "title_highlight": "Erfgoed & Luxe",
+        "description": "Ontdek ons diverse portfolio van digitale campagnes, visuele storytelling en merktransformaties."
+    },
+    "nav": {
+        "home": "Home",
+        "services": "Diensten",
+        "courses": "Cursussen",
+        "portfolio": "Portfolio",
+        "blogs": "Blogs",
+        "tools": "Tools",
+        "pricing": "Prijzen"
+    },
+    "hero": {
+        "title_prefix": "GK WebTech,",
+        "title_main": "Online Marketing",
+        "title_suffix": "Bureau Met Wereldwijde Aanwezigheid.",
+        "subtitle": "Laat uw bedrijf groeien met een online marketing bureau. Wij helpen merken schalen met datagestuurde strategieën, SEO en creatieve campagnes.",
+        "cta_book": "Boek Consultatie",
+        "results_label": "Resultaten",
+        "roi_value": "300% ROI",
+        "marketing_partners": "Marketingpartners",
+        "cta_primary": "Aan de slag",
+        "cta_secondary": "Bekijk Diensten"
+    },
+    "seo": {
+        "home": {
+            "title": "GK WebTech | Online Marketing Bureau",
+            "description": "GK WebTech is een online marketing bureau dat bedrijven helpt groeien met SEO, Google Ads en social media marketing. GKWebTech zorgt voor meetbare resultaten.",
+            "keywords": "online marketing bureau, SEO bureau, digital marketing bureau, Google Ads bureau, social media marketing bureau, digitale marketing diensten"
+        },
+        "services": {
+            "title": "Diensten | GK WebTech | Online Marketing Specialist",
+            "description": "GK WebTech biedt digitale marketing diensten zoals SEO, Google Ads, social media marketing en website beheer door een online marketing specialist.",
+            "keywords": "digitale marketing diensten, online marketing specialist, SEO specialist, Google Ads specialist, website beheer"
+        },
+        "portfolio": {
+            "title": "Portfolio | GK WebTech | Casestudies",
+            "description": "Bekijk ons portfolio van online marketing successen, cinematografische verslagen en luxe merktransformaties beheerd door GK WebTech.",
+            "keywords": "marketing portfolio, casestudies, online marketing resultaten, visuele storytelling"
+        },
+        "blogs": {
+            "title": "Blogs | GK WebTech | Marketing Tips",
+            "description": "Blijf op de hoogte van de laatste online marketing trends, SEO tips en branche-inzichten van het team van GK WebTech.",
+            "keywords": "marketing blogs, SEO trends 2024, online marketing tips"
+        },
+        "pricing": {
+            "title": "Prijzen | GK WebTech | Marketing Pakketten",
+            "description": "Transparante en concurrerende prijzen voor onze digitale marketing diensten, inclusief SEO, Google Ads en website beheer.",
+            "keywords": "online marketing kosten, SEO pakketten, Google Ads prijzen"
+        },
+        "contact": {
+            "title": "Contact | GK WebTech | Advies",
+            "description": "Neem contact op met GK WebTech voor deskundig online marketing advies en diensten om uw bedrijf online te laten groeien.",
+            "keywords": "contact online marketing bureau, marketing advies"
+        },
+        "tools": {
+            "title": "Gratis Tools | GK WebTech | SEO Hulpmiddelen",
+            "description": "Gebruik gratis online marketing tools en SEO hulpmiddelen van GK WebTech om uw online aanwezigheid te optimaliseren.",
+            "keywords": "gratis SEO tools, marketing hulpmiddelen"
+        },
+        "detail_suffix": {
+            "service": "Geleverd door GK WebTech met een prestatiegerichte aanpak. GKWebTech helpt bedrijven online groeien.",
+            "project": "Gerealiseerd door GK WebTech voor meetbare digitale resultaten. GKWebTech helpt bedrijven online groeien.",
+            "blog": "Deskundige inzichten van het GK WebTech-team over digitale groei. GKWebTech helpt bedrijven online groeien."
+        }
+    },
+    "about": {
+        "tag": "Over Ons",
+        "title_prefix": "Wie is",
+        "title_highlight": "GK WebTech?",
+        "description": "Wij zijn een full-service digitaal marketingbureau dat zich toelegt op de groei van uw bedrijf. Van kleine startups tot grote ondernemingen, wij stemmen onze strategieën af op uw unieke doelen en leveren meetbare resultaten.",
+        "stats": {
+            "campaigns": "Campagnes Geleverd",
+            "industries": "Sectoren Bediend",
+            "excellence": "Jaren van Uitmuntendheid"
+        },
+        "contact_btn": "Neem Contact Op",
+        "tags": {
+            "strategy": "Digitale Strategie",
+            "seo": "SEO Analyse",
+            "lead_gen": "Lead Gen",
+            "ppc": "PPC Advertenties"
+        }
+    },
+    "services": {
+        "seo-optimization": {
+            "title": "SEO Bureau voor Bedrijven",
+            "description": "Verbeter uw zoekresultaten en genereer organisch verkeer met onze datagestuurde strategiëen van ons SEO bureau.",
+            "fullDescription": "Als gespecialiseerd SEO bureau helpen wij uw bedrijf naar de top van de zoekmachineresultaten te stuwen. Onze SEO specialist biedt een uitgebreide strategie met technische SEO-audits, on-page optimalisatie en hoogwaardige linkbuilding.",
+            "features": [
+                "Uitgebreide Website Audit & Technische SEO",
+                "Zoekwoordonderzoek & Concurrentieanalyse",
+                "On-Page Optimalisatie door een SEO specialist",
+                "Off-Page Linkbuilding & Autoriteitsgroei",
+                "Lokale SEO voor Geografische Targeting",
+                "Maandelijkse Prestatierapportage & Tracking"
+            ]
+        },
+        "social-media-marketing": {
+            "title": "Social Media Marketing Bureau",
+            "description": "Betrek uw publiek en bouw merkloyaliteit met ons social media marketing bureau.",
+            "fullDescription": "Als social media marketing bureau creëren wij op maat gemaakte strategiëen die uw merkstem versterken en betrokkenheid bevorderen op alle relevante platforms.",
+            "features": [
+                "Platformspecifieke Strategie (Instagram, LinkedIn, Twitter, TikTok)",
+                "Contentkalender & Plannen",
+                "Community Management & Engagement",
+                "Influencer Partnership Management",
+                "Social Listening & Trendanalyse",
+                "Integratie van Betaalde Sociale Campagnes"
+            ]
+        },
+        "content-strategy": {
+            "title": "Contentstrategie & Branding",
+            "description": "Creëer boeiende content en een sterke merkidentiteit die resoneert met uw publiek.",
+            "fullDescription": "Content is koning, maar context is koningin. Wij ontwikkelen robuuste contentstrategieën die aansluiten bij uw bedrijfsdoelen en rechtstreeks spreken over de pijnpunten van uw klant. Onze brandingservices zorgen ervoor dat elk stukje content—van blogposts tot whitepapers—uw unieke identiteit weerspiegelt, waardoor vertrouwen en autoriteit in uw branche worden gevestigd.",
+            "features": [
+                "Ontwikkeling van Merkstem & Identiteit",
+                "Content Audits & Gap-analyse",
+                "Blogschrijven & Long-form Content",
+                "Copywriting voor Web & Advertentiecreaties",
+                "Visual Storytelling & Infographics",
+                "Nieuwsbrief & E-mail Marketing Content"
+            ]
+        },
+        "google-meta-ads": {
+            "title": "Google Ads Bureau voor Bedrijfsgroei",
+            "description": "Maximaliseer de ROI met gerichte campagnes van ons Google Ads bureau op Google, Facebook en Instagram.",
+            "fullDescription": "Ons Google Ads bureau ontwerpt campagnes met een hoge conversie. Onze Google Ads specialist maakt gebruik van geavanceerde targeting en retargeting om uw ROI te maximaliseren.",
+            "features": [
+                "Beheer door een Google Ads specialist",
+                "Facebook & Instagram Advertentiecampagnes",
+                "Retargeting & Lookalike Audiences",
+                "A/B-testen voor Advertentiecreaties",
+                "Instellen van Conversietracking",
+                "Real-time Budgetoptimalisatie"
+            ]
+        },
+        "campaign-planning": {
+            "title": "Campagneplanning & Analytics",
+            "description": "Strategische planning en diepgaande analyses om elk aspect van uw marketing te optimaliseren.",
+            "fullDescription": "Data zonder inzicht is alleen maar ruis. Wij bieden end-to-end campagneplanning ondersteund door rigoureuze analyses. Of u nu een nieuw product lanceert of wilt opschalen, ons team brengt het hele klanttraject in kaart. We stellen duidelijke KPI's in en gebruiken geavanceerde analysetools om de prestaties bij te houden, zodat elke uitgegeven dollar bijdraagt aan uw bedrijfsresultaat.",
+            "features": [
+                "Full-Funnel Campagnestrategie",
+                "Customer Journey Mapping",
+                "Google Analytics 4 (GA4) Setup & Audit",
+                "Creatie van Aangepaste Dashboards",
+                "Conversieratio Optimalisatie (CRO)",
+                "Concurrentiebenchmarking"
+            ]
+        },
+        "website-management": {
+            "title": "Websitebeheer & WordPress",
+            "description": "Veilige, snelle en geoptimaliseerde websitebeheerdiensten gespecialiseerd in WordPress.",
+            "fullDescription": "Uw website is uw digitale etalage. Wij bieden uitgebreide WordPress-beheerdiensten om uw site veilig, snel en up-to-date te houden. Van plugin-updates en beveiligingspatches tot snelheidsoptimalisatie en kleine ontwerpaanpassingen, wij regelen de technische details zodat u zich kunt concentreren op het runnen van uw bedrijf.",
+            "features": [
+                "Updates voor WordPress-thema's & Plugins",
+                "Snelheidsoptimalisatie van de Site (Core Web Vitals)",
+                "Dagelijkse Back-ups & Beveiligingsmonitoring",
+                "Malwareverwijdering & Bescherming",
+                "Contentupdates & Layoutfixes",
+                "Hostingbeheer & Migratie"
+            ]
+        },
+        "creative-design": {
+            "title": "Creatief Advertentie-ontwerp & Reels",
+            "description": "Opvallende beelden en korte video-inhoud die is ontworpen om viraal te gaan.",
+            "fullDescription": "In een druk digitaal landschap zijn visuals uw eerste indruk. Onze creatieve studio produceert verbluffende grafische ontwerpen en energieke korte video's (Reels/TikToks) die onmiddellijk de aandacht trekken. We combineren esthetiek met psychologie om advertenties te maken die er niet alleen goed uitzien, maar ook aanzetten tot actie.",
+            "features": [
+                "Social Media Graphics & Templates",
+                "Korte Videoproductie (Reels/Shorts)",
+                "Display Advertentiebanners & Creaties",
+                "Motion Graphics & Animatie",
+                "Videobewerking & Postproductie",
+                "Ontwerp van Thumbnails"
+            ]
+        }
+    },
+    "gkinstitute": {
+        "title": "GK Instituut voor Digitale Marketing",
+        "subtitle": "Studenten empoweren met praktijkgerichte digitale marketingvaardigheden.",
+        "description": "Bij het GK Instituut overbruggen we de kloof tussen academische kennis en de vereisten van de industrie. Onze cursussen zijn ontworpen door experts om praktische ervaring te bieden en u voor te bereiden op een succesvolle carrière in digitale marketing.",
+        "join_us": "Sluit je aan bij GK Instituut"
+    },
+    "blogs": {
+        "seo-trends-2024": {
+            "title": "SEO-trends om in de gaten te houden in 2024",
+            "excerpt": "Ontdek de nieuwste SEO-trends die het digitale landschap in 2024 zullen domineren en hoe u voorop kunt blijven lopen.",
+            "content": "<p>Het SEO-landschap evolueert voortdurelijk. In 2024 zien we een aanzienlijke verschuiving naar door AI geïntegreerde zoekervaringen en een hernieuwde focus op E-E-A-T (Experience, Expertise, Authoritativeness, en Trustworthiness).</p><h4>Belangrijkste trends:</h4><ul><li><strong>Door AI gegenereerde content:</strong> Google wordt beter in het identificeren van hoogwaardige AI-content, maar een menselijke touch blijft essentieel.</li><li><strong>Search Generative Experience (SGE):</strong> Hoe te optimaliseren voor AI-snapshots bovenaan de zoekresultaten.</li><li><strong>Zero-Click zoekopdrachten:</strong> Onmiddellijke waarde bieden in meta-beschrijvingen om de aandacht te trekken, zelfs zonder klik.</li></ul>"
+        },
+        "social-media-growth": {
+            "title": "Groeistrategieën voor Sociale Media",
+            "excerpt": "Praktische tips en strategieën om de aanwezigheid van uw merk op sociale mediaplatforms effectief te vergroten.",
+            "content": "<p>Groeien op sociale media in 2024 vereist meer dan alleen consistent posten. Het vereist een diepgaand begrip van algoritmeveranderingen en een community-first benadering.</p><h4>Topstrategieën:</h4><ul><li><strong>Short-Form Video:</strong> Reels, Shorts en TikToks blijven de meeste betrokkenheid stimuleren.</li><li><strong>Authentieke Storytelling:</strong> Afstappen van hoogwaardig gecureerde feeds naar 'achter de schermen' content.</li><li><strong>Betrokkenheid boven bereik:</strong> Waarom reageren op opmerkingen belangrijker is dan viraal gaan.</li></ul>"
+        },
+        "ppc-roi-optimization": {
+            "title": "Maximaliseer de ROI op PPC-campagnes",
+            "excerpt": "Leer hoe u uw PPC-campagnes kunt optimaliseren om het beste rendement op uw investering te krijgen voor uw marketinguitgaven.",
+            "content": "<p>PPC (Pay-Per-Click) adverteren is een van de snelste manieren om verkeer te genereren, maar het kan ook een bodemloze put zijn als het niet correct wordt beheerd.</p><h4>ROI Tips:</h4><ul><li><strong>Uitsluitingszoekwoorden:</strong> Hoe u kunt voorkomen dat u verschijnt bij irrelevante zoekopdrachten die uw budget verspillen.</li><li><strong>Bestemmingspagina Optimalisatie:</strong> Ervoor zorgen dat de belofte van uw advertentie wordt nagekomen door de bestemmingspagina.</li><li><strong>Biedbeheer:</strong> Geautomatiseerde biedstrategieën effectief gebruiken met behoud van controle.</li></ul>"
+        }
+    },
+    "portfolio": {
+        "view_case": "Casestudy Bekijken",
+        "videos": "Video's",
+        "photos": "Foto's",
+        "back_to_gallery": "Terug naar Galerij",
+        "challenge": "De Uitdaging",
+        "solution": "Onze Oplossing",
+        "gallery": "Visuele Showcase",
+        "videos_title": "Video Hoogtepunten",
+        "client_testimonial": "Getuigenis van de Klant",
+        "project_details": "Projectdetails",
+        "key_results": "Belangrijkste Resultaten",
+        "start_similar": "Start Vergelijkbaar Project",
+        "luxury-resort-branding": {
+            "title": "Luxe Resort Branding",
+            "description": "Een uitgebreide branding- en digitale marketingcampagne voor een luxe resort in het hogere segment.",
+            "category": "Gastvrijheid"
+        },
+        "event-photography-2023": {
+            "title": "Groot Evenement Fotografie 2023",
+            "description": "De essentie vasthouden van een grootschalig internationaal evenement door middel van professionele fotografie.",
+            "category": "Evenementen"
+        },
+        "nirvanavan-foundation": {
+            "title": "Nirvanavan Foundation",
+            "location": "Dadikar, Rajasthan",
+            "category": "Evenement",
+            "description": "Een cinematografisch verslag van een 8-daags kunstinitiatief van een NGO (World Art Mela, 1–8 december 2025), waarbij kunstenaars uit heel India live kunstwerken creëerden en donaties ophaalden voor sociale doelen. Wij zijn de digitale partner van de Nirvanavan Foundation.",
+            "client": "Nirvanan Foundation",
+            "duration": "1 Week",
+            "challenge": "De stichting had betekenisvolle visuele documentatie van de art mela nodig die het eigenlijke doel weerspiegelde — deelname van live kunstenaars, gemeenschapsbetrokkenheid en de impact van donaties — in plaats van generieke evenementfoto's. De uitdaging was om emoties, storytelling en geloofwaardigheid in een enkele dag vast te leggen en tegelijkertijd recht te doen aan 8 dagen artistieke bijdrage.",
+            "solution": "We creëerden een cinematografische storytelling-film die zich richtte op de kunstenaars, hun werkproces, interacties met bezoekers en de missie van de stichting. Naast gestructureerde fotografie van kunstwerken, menigten, donatiemomenten en deelname van vrijwilligers, produceerden we een video die geoptimaliseerd is voor bewustwording en het opbouwen van vertrouwen op YouTube en sociale platforms.",
+            "results": [
+                "Met succes meer dan 20 kunstenaars en de creatie van live kunstwerken gedocumenteerd",
+                "NGO verkreeg sterke visuele assets voor bewustwording en geloofwaardigheid",
+                "Video gepubliceerd op YouTube om langdurige betrokkenheid en steun te stimuleren"
+            ],
+            "testimonial": {
+                "text": "GK WebTech heeft niet alleen een evenement verslagen — ze hebben onze missie en de passie van de kunstenaars prachtig vastgelegd. De film zal ons helpen meer mensen te inspireren om bij te dragen en zich te verbinden met ons doel.",
+                "author": "Nirvanan Bodhisattva",
+                "role": "Oprichter van Nirvanavan Foundation"
+            }
+        },
+        "rambihari-palace": {
+            "title": "Rambihari Palace",
+            "location": "Kishanpur, Alwar, Rajasthan",
+            "category": "Gastvrijheid & Luxe Paleis Shoot",
+            "description": "Een uitgebreid verblijf-en-evaluatieproject in het historische Rambihari Palace in Alwar, gericht op het beoordelen van het pand tegen Europese normen voor wellness-retraites. Wij zijn de partners voor de digitale opschaling van de keten.",
+            "client": "Rambihari Palace A Luxury Hotel",
+            "duration": "1 Week",
+            "challenge": "Het uitvoeren van een objectieve evaluatie van de faciliteiten van het paleis, servicenormen, wellnesspotentieel en gastervaring vanuit een Europees perspectief — terwijl we als werkelijke gasten verbleven, met begrip voor culturele verwachtingen, kwaliteitsbenchmarks en retraitevitaliteit in een historische gastvrijheidscontext.",
+            "solution": "We verbleven 2 nachten en 3 dagen in het pand met onze buitenlandse gast, waarbij we belangrijke elementen beoordeelden, waaronder kamercomfort, servicekwaliteit, wellnessaanbod, restaurantervaring, ambiance, natuurlijke omgeving en de algemene geschiktheid voor een wellness-retraite. Door middel van gestructureerde observaties op locatie, interviews met personeel, lifestyle-fotografie en cinematografische videodekking, produceerden we een gedetailleerd evaluatierapport en visuele assets voor de strategische planning van de klant.",
+            "results": [
+                "Gedetailleerd gastervaringsrapport opgesteld in overeenstemming met internationale wellnessnormen",
+                "Hoogwaardige beelden van architectuur, ruimtes, voorzieningen en omgeving vastgelegd",
+                "Bruikbare aanbevelingen gedaan voor retraite-potentieel en verbetering van het gastcomfort"
+            ],
+            "testimonial": {
+                "text": "De aandacht voor detail van het team is ongeëvenaard. Ze zijn erin geslaagd om het erfgoed perfect te combineren met een moderne esthetiek.",
+                "author": "Dhr. Ram Kaushik",
+                "role": "Eigenaar"
+            }
+        },
+        "dadikar-fort": {
+            "title": "Dadikar Fort",
+            "location": "Dadikar, Rajasthan",
+            "category": "Historische Gastvrijheid & Luxe Fort Shoot",
+            "description": "Creatie van een uitgebreide zakelijke en digitale marketingstrategie om het pand te evalueren en op te schalen voor bestemmingsbruiloften en wellnesstoerisme. Ons team produceerde cinematografisch promotiemateriaal via strategische buitenshoots, ondersteund door SEO- en GEO-optimalisatie. Wij zijn de digitale opschalingspartners die de uitbreiding naar internationale retraite- en bruiloftspublieken begeleiden.",
+            "client": "Dadhikar Fort & Resorts Private Limited",
+            "duration": "1 Week",
+            "challenge": "Beoordelen of dit historische fort-hotel — met wortels die teruggaan tot de 9e-10e eeuw en nu gerestaureerd met moderne gastvrijheid — voldoet aan internationale wellness-retraite benchmarks, terwijl de historische essentie, culturele waarde en het comfort van de gasten binnen een beperkt tijdsbestek worden vastgelegd.",
+            "solution": "Ons team voerde een gedetailleerde beoordeling op locatie uit tijdens het verblijf, waarbij de kwaliteit van de accommodatie, de gastenservice, de interactie met lokale culturele elementen, de gastvrijheidsnormen, het wellnesspotentieel (rust, toegang tot de natuur, voorzieningen) en de algemene gastervaring werden onderzocht. We combineerden dit met cinematografische videografie en zorgvuldig samengestelde fotografie die de historische charme, moderne voorzieningen en geschiktheid voor retraites van het pand op een overtuigende, professionele manier presenteert.",
+            "results": [
+                "Uitgebreid wellness-evaluatierapport volgens Europese normen geleverd",
+                "Rijke visuele storytelling van geschiedenis, gastvrijheid en serene landschappen vastgelegd",
+                "Bruikbare aanbevelingen gedaan voor de positionering van retraites en verbetering van de gastervaring"
+            ]
+        },
+        "bamboo-saa-resort-and-spa": {
+            "title": "Bamboo Saa Resort & Spa",
+            "location": "Jaipur, Rajasthan",
+            "category": "Wellness Gastvrijheid Beoordeling & Samenwerking",
+            "description": "Een verblijf-en-auditproject om de wellness-retraite-ervaring te toetsen aan Europese normen voor gastvrijheid en comfort. We leverden op de strategie afgestemde promotionele shoots en digitale assets voor de opschaling van een op wellness gericht platform. Partnerschapsadvies ondersteund door SEO- en GEO-aanbevelingen om de wereldwijde zoekzichtbaarheid voor wellness en de positionering van retraites te verbeteren.",
+            "client": "Dhr. V.K. Agarwal",
+            "duration": "1 Week",
+            "challenge": "Een bestaande wellness-retraite toetsen aan de verwachtingen van het Europese wellnesstoerisme terwijl we als echte gasten verbleven, waarbij we ervoor zorgden dat onze feedback praktisch nut, culturele compatibiliteit, zakelijk potentieel en de reikwijdte van het partnerschap vastlegde zonder de lopende retraite-activiteiten te verstoren.",
+            "solution": "We voerden een meeslepende, onbevooroordeelde beoordeling uit van wellnessprogramma's, spadiensten, voedselkwaliteit, gedrag van het personeel, hygiëneprotocollen, ambiance, duurzaamheid, stiltezones, natuurintegratie, toegankelijkheid en gastcomfort. Na de evaluatie hebben we een gestructureerde suggestienotitie aan de eigenaar overhandigd en mogelijke samenwerkingen en langetermijnkansen besproken.",
+            "results": [
+                "Het pand gevalideerd als een uitzonderlijke wellness-retraite met internationale aantrekkingskracht",
+                "Aanbevelingen volgens Europese normen gedeeld voor toekomstige uitbreiding en exploitatie van retraites",
+                "Gesprekken over partnerschap gestart voor samenwerking in retraite-ervaring & internationale gastenprogramma's"
+            ]
+        }
+    },
+    "testimonials": {
+        "label": "Klant Succes",
+        "title": "Wat Onze",
+        "subtitle": "Partners Zeggen",
+        "data": {
+            "1": {
+                "text": "GK WebTech heeft onze digitale aanwezigheid getransformeerd. Hun SEO- en PPC-campagnes hebben consequent een hoge ROI en kwalitatieve leads opgeleverd.",
+                "name": "Sarah J.",
+                "role": "CEO, TechFlow"
+            },
+            "2": {
+                "text": "Het creatieve ontwerp en de contentstrategie van GK WebTech zijn een game-changer geweest voor onze merkidentiteit. Zeer aanbevolen!",
+                "name": "David M.",
+                "role": "Marketingdirecteur, LuxStay"
+            },
+            "3": {
+                "text": "Hun technische expertise in SEO en analytics is ongeëvenaard. We hebben een groei van 200% in organisch verkeer gezien sinds we zijn gaan samenwerken.",
+                "name": "Elena R.",
+                "role": "Oprichter, GrowthOps"
+            }
+        }
+    },
+    "team": {
+        "label": "Ons Team",
+        "title": "Ontmoet de",
+        "subtitle": "Breinen",
+        "members": {
+            "dr-anuj-tiwari": {
+                "name": "Dr. Anuj Tiwari",
+                "role": "Oprichter & Directeur",
+                "education": "PhD, Erasmus Uni., Nederland"
+            },
+            "preeti-tiwari": {
+                "name": "Preeti Tiwari",
+                "role": "Algemeen Directeur",
+                "education": "PhD, Auckland Uni., Nieuw-Zeeland"
+            },
+            "j-e-spek": {
+                "name": "J. E. Spek",
+                "role": "Adviseur",
+                "education": ""
+            },
+            "utkarsh-sharma": {
+                "name": "Utkarsh Sharma",
+                "role": "Technisch Directeur (CTO)",
+                "education": ""
+            },
+            "archana-avasthi": {
+                "name": "Archana Avasthi",
+                "role": "Wordpress Ontwikkelaar",
+                "education": ""
+            }
+        }
+    },
+    "choose_us": {
+        "title": "Ontworpen voor",
+        "subtitle": "Uw Groei",
+        "label": "Waarom Voor Ons Kiezen",
+        "reasons": {
+            "data-driven": {
+                "title": "Data-Gedreven Strategieën",
+                "description": "We maken gebruik van geavanceerde analyses en marktinzichten om strategieën te bouwen die meetbaar, aanpasbaar en gegarandeerd presterend zijn. Geen giswerk, alleen resultaten."
+            },
+            "experienced-team": {
+                "title": "Ervaren Team",
+                "description": "Ons diverse team van digitale experts brengt jarenlange ervaring mee uit verschillende sectoren, wat zorgt voor uitvoering op topniveau en innovatieve probleemoplossing voor elke campagne."
+            },
+            "client-focus": {
+                "title": "Focus op Klantsucces",
+                "description": "Uw groei is onze poolster. We geven prioriteit aan transparante communicatie, op maat gemaakte oplossingen en een partnerschapsmentaliteit om uw succes op de lange termijn te garanderen."
+            }
+        }
+    },
+    "contact_section": {
+        "tag": "Neem Contact Op",
+        "title_prefix": "Laten we groeien",
+        "title_highlight": "Uw Bedrijf",
+        "description": "Klaar om uw digitale aanwezigheid naar een hoger niveau te tillen? Neem vandaag nog contact met ons op voor een gratis consult en audit.",
+        "form": {
+            "name": "Uw Naam *",
+            "name_placeholder": "Bijv. Jan Janssen",
+            "email": "E-mail *",
+            "email_placeholder": "voorbeeld@bedrijf.nl",
+            "phone": "Telefoon *",
+            "phone_placeholder": "Voer telefoonnummer in",
+            "service": "Service waarin u geïnteresseerd bent",
+            "service_placeholder": "Selecteer Service (Optioneel)",
+            "details": "Projectdetails",
+            "details_placeholder": "Vertel ons over uw doelen (Optioneel)...",
+            "send": "Bericht Verzenden",
+            "sending": "Verzenden...",
+            "success": "Bericht succesvol verzonden! We nemen binnenkort contact met u op.",
+            "error": "Er is iets misgegaan. Probeer het opnieuw of bel ons rechtstreeks.",
+            "custom_quote": "Maak Aangepaste Offerte"
+        },
+        "popup": {
+            "title": "Inzending Ontvangen",
+            "message": "Bedankt voor het contact opnemen met GK WebTech. We nemen snel contact met u op.",
+            "close": "Sluiten"
+        }
+    },
+    "footer": {
+        "description": "GK WebTech is een prestatiegericht digitaal marketingbureau dat SEO-, PPC- en brandingsoplossingen biedt.",
+        "quick_links": "Snelle Links",
+        "services": "Onze Diensten",
+        "contact": "Neem Contact Op",
+        "rights": "Alle rechten voorbehouden."
+    },
+    "faq": {
+        "title": "Veelgestelde Vragen",
+        "subtitle": "Alles wat u moet weten over onze diensten.",
+        "questions": {
+            "seo-results": {
+                "question": "Hoe lang duurt het voordat ik resultaten zie van SEO?",
+                "answer": "SEO is een langetermijnstrategie. Meestal kunt u binnen 3 tot 6 maanden merkbare verbeteringen verwachten in organisch verkeer en ranglijsten."
+            },
+            "custom-packages": {
+                "question": "Bieden jullie aangepaste marketingpakketten aan?",
+                "answer": "Ja, we begrijpen dat elk bedrijf uniek is. We bieden pakketten op maat aan die passen bij uw specifieke doelen, budget en branchevereisten."
+            },
+            "social-platforms": {
+                "question": "Op welke sociale mediaplatforms moet mijn bedrijf aanwezig zijn?",
+                "answer": "Dit hangt af van uw doelgroep. B2B-bedrijven gedijen meestal goed op LinkedIn, terwijl lifestyle-merken grote betrokkenheid zien op Instagram en TikTok."
+            },
+            "campaign-reporting": {
+                "question": "Hoe rapporteren jullie over de prestaties van campagnes?",
+                "answer": "We bieden gedetailleerde maandelijkse rapporten en hebben tweewekelijkse strategiegesprekken. U krijgt toegang tot een aangepast dashboard waarop KPI's zoals ROI, verkeer en conversies worden bijgehouden."
+            },
+            "rebranding": {
+                "question": "Kunnen jullie helpen met rebranding?",
+                "answer": "Absoluut. Ons creatieve team is gespecialiseerd in merkstrategie, logo-ontwerp en visuele identiteit om uw bedrijf een frisse, moderne uitstraling te geven."
+            }
+        }
+    },
+    "techstack": {
+        "label": "Onze Tech Stack",
+        "title": "Tools Die We Gebruiken Om",
+        "subtitle": "Groei Te Stimuleren"
+    },
+    "pricing": {
+        "label": "Prijsplannen",
+        "title": "Flexibele Pakketten voor",
+        "subtitle": "Elke Fase",
+        "description": "Kies het perfecte plan om uw groei te versnellen. Alle plannen zijn exclusief dagelijkse advertentiebudgetten per platform.",
+        "categories": {
+            "web": "Web Ontwikkeling",
+            "seo": "SEO",
+            "social": "Sociaal | Content",
+            "ads": "Campagnes | Advertenties",
+            "branding": "Branding | Ontwerp"
+        },
+        "durations": {
+            "monthly": "Maandelijks",
+            "quarterly": "Per Kwartaal",
+            "half_yearly": "Halfjaarlijks",
+            "annually": "Jaarlijks"
+        },
+        "common": {
+            "get_started": "Aan de Slag",
+            "contact_us": "Neem Contact Op",
+            "custom_quote": "Maak Aangepaste Offerte",
+            "view_details": "Bekijk Gedetailleerde Vergelijking",
+            "indicative": "Prijzen zijn indicatief en kunnen variëren op basis van de scope."
+        }
+    },
+    "terms": {
+        "title": "Algemene Voorwaarden",
+        "last_updated": "Laatst Bijgewerkt: Maart 2024"
+    },
+    "privacy": {
+        "title": "Privacybeleid",
+        "last_updated": "Laatst Bijgewerkt: Maart 2024"
+    },
+    "cookie": {
+        "message": "We gebruiken cookies om uw ervaring te verbeteren.",
+        "accept": "Alles Accepteren",
+        "settings": "Cookie-instellingen"
+    }
+}

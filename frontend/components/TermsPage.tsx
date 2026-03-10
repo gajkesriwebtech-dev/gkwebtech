@@ -1,13 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Seo } from './Seo';
 
 export const TermsPage: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="pt-32 pb-20 bg-bg-light dark:bg-gray-950 min-h-screen transition-colors">
       <Seo
-        title="Terms & Conditions | GK WebTech | GKWebTech"
-        description="Read the terms governing services, training, communication consent, payments, and liability at GK WebTech. GKWebTech helps businesses grow online."
-        keywords="terms, conditions, policy, payments, liability, internship, training"
+        title={t('seo.terms.title', 'Terms & Conditions | GK WebTech | GKWebTech')}
+        description={t('seo.terms.description', 'Read the terms governing services, training, communication consent, payments, and liability at GK WebTech.')}
+        keywords={t('seo.terms.keywords', 'terms, conditions, policy, payments, liability, internship, training')}
         canonical={`${window.location.origin}/terms`}
         image={`${window.location.origin}/images/logo.png`}
         type="website"

@@ -1,8 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { ArrowRight } from 'lucide-react';
 import { getUnsplashUrl } from '../utils/unsplash';
 
 export const About: React.FC = () => {
+  const { t } = useTranslation();
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -11,83 +13,83 @@ export const About: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-primary text-white xl:mx-[-2rem] 2xl:mx-[-4rem]" id="about">
+    <section className="py-20 bg-primary text-white" id="about">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
-           
-           {/* Left Image Circle */}
-           <div className="relative flex-shrink-0 mx-auto justify-self-center">
-              <div className="w-72 h-72 md:w-96 md:h-96 rounded-full border-4 border-secondary p-2 relative z-10">
-                 <img 
-                   src={getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 800)} 
-                   alt="ri Webtech" 
-                   loading="lazy"
-                   decoding="async"
-                   width="800"
-                   height="800"
-                   className="w-full h-full rounded-full object-cover border-4 border-primary"
-                 />
-                 
-                 {/* Floating tags */}
-                 <div className="absolute top-4 -left-4 bg-[#2D5C4B] px-4 py-2 rounded-full text-xs font-semibold text-secondary border border-secondary">
-                   Digital Strategy
-                 </div>
-                 <div className="absolute top-1/2 -right-8 bg-[#2D5C4B] px-4 py-2 rounded-full text-xs font-semibold text-secondary border border-secondary">
-                   SEO Analysis
-                 </div>
-                 <div className="absolute bottom-10 -left-0 bg-[#2D5C4B] px-4 py-2 rounded-full text-xs font-semibold text-secondary border border-secondary">
-                   Lead Gen
-                 </div>
-                 <div className="absolute bottom-0 right-10 bg-[#2D5C4B] px-4 py-2 rounded-full text-xs font-semibold text-secondary border border-secondary">
-                   PPC Ads
-                 </div>
-              </div>
-              <div className="absolute inset-0 bg-secondary rounded-full blur-[100px] opacity-20 -z-0"></div>
-           </div>
 
-           {/* Right Content */}
-           <div className="flex-1 max-w-2xl xl:max-w-3xl w-full">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="h-0.5 w-4 bg-secondary"></span>
-                <span className="text-sm font-semibold uppercase tracking-wider text-secondary">
-                  About Us
+          {/* Left Image Circle */}
+          <div className="relative flex-shrink-0 mx-auto justify-self-center">
+            <div className="w-72 h-72 md:w-96 md:h-96 rounded-full border-4 border-secondary p-2 relative z-10">
+              <img
+                src={getUnsplashUrl("photo-1573496359142-b8d87734a5a2", 800)}
+                alt="ri Webtech"
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="800"
+                className="w-full h-full rounded-full object-cover border-4 border-primary"
+              />
+
+              {/* Floating tags */}
+              <div className="absolute top-4 -left-4 bg-[#2D5C4B] px-4 py-2 rounded-full text-xs font-semibold text-secondary border border-secondary">
+                {t("about.tags.strategy", "Digital Strategy")}
+              </div>
+              <div className="absolute top-1/2 -right-8 bg-[#2D5C4B] px-4 py-2 rounded-full text-xs font-semibold text-secondary border border-secondary">
+                {t("about.tags.seo", "SEO Analysis")}
+              </div>
+              <div className="absolute bottom-10 -left-0 bg-[#2D5C4B] px-4 py-2 rounded-full text-xs font-semibold text-secondary border border-secondary">
+                {t("about.tags.lead_gen", "Lead Gen")}
+              </div>
+              <div className="absolute bottom-0 right-10 bg-[#2D5C4B] px-4 py-2 rounded-full text-xs font-semibold text-secondary border border-secondary">
+                {t("about.tags.ppc", "PPC Ads")}
+              </div>
+            </div>
+            <div className="absolute inset-0 bg-secondary rounded-full blur-[100px] opacity-20 -z-0"></div>
+          </div>
+
+          {/* Right Content */}
+          <div className="flex-1 max-w-2xl xl:max-w-3xl w-full">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="h-0.5 w-4 bg-secondary"></span>
+              <span className="text-sm font-semibold uppercase tracking-wider text-secondary">
+                {t("about.tag", "About Us")}
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              {t("about.title_prefix", "Who is")} <span className="text-secondary">{t("about.title_highlight", "GK WebTech?")}</span>
+            </h2>
+            <p className="text-gray-300 mb-10 leading-relaxed max-w-xl">
+              {t("about.description", "We are a full-service digital marketing agency dedicated to growing your business. From small startups to large enterprises, we tailor our strategies to meet your unique goals and deliver measurable results.")}
+            </p>
+
+            <div className="grid grid-cols-3 gap-8 mb-10 border-b border-gray-600 pb-10">
+              <div>
+                <h3 className="text-3xl font-bold text-secondary mb-1">600+</h3>
+                <p className="text-gray-400 text-sm">{t("about.stats.campaigns", "Campaigns Delivered")}</p>
+              </div>
+              <div>
+                <h3 className="text-3xl font-bold text-secondary mb-1">50+</h3>
+                <p className="text-gray-400 text-sm">{t("about.stats.industries", "Industries Served")}</p>
+              </div>
+              <div>
+                <h3 className="text-3xl font-bold text-secondary mb-1">18+</h3>
+                <p className="text-gray-400 text-sm">{t("about.stats.excellence", "Years of Excellence")}</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-8">
+              <button
+                onClick={scrollToContact}
+                className="bg-[#2D5C4B] border border-secondary text-white rounded-full pl-6 pr-2 py-2 flex items-center gap-3 hover:bg-secondary hover:text-primary transition-all group cursor-pointer"
+              >
+                <span className="font-medium text-sm">{t("about.contact_btn", "Contact Us")}</span>
+                <span className="w-8 h-8 rounded-full bg-white text-primary group-hover:bg-primary group-hover:text-white flex items-center justify-center transition-colors">
+                  <ArrowRight size={16} />
                 </span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Who is <span className="text-secondary">GK WebTech?</span>
-              </h2>
-              <p className="text-gray-300 mb-10 leading-relaxed max-w-xl">
-                We are a full-service digital marketing agency dedicated to growing your business. From small startups to large enterprises, we tailor our strategies to meet your unique goals and deliver measurable results.
-              </p>
+              </button>
 
-              <div className="grid grid-cols-3 gap-8 mb-10 border-b border-gray-600 pb-10">
-                <div>
-                   <h3 className="text-3xl font-bold text-secondary mb-1">600+</h3>
-                   <p className="text-gray-400 text-sm">Campaigns Delivered</p>
-                </div>
-                <div>
-                   <h3 className="text-3xl font-bold text-secondary mb-1">50+</h3>
-                   <p className="text-gray-400 text-sm">Industries Served</p>
-                </div>
-                <div>
-                   <h3 className="text-3xl font-bold text-secondary mb-1">18+</h3>
-                   <p className="text-gray-400 text-sm">Years of Excellence</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-8">
-                <button 
-                  onClick={scrollToContact}
-                  className="bg-[#2D5C4B] border border-secondary text-white rounded-full pl-6 pr-2 py-2 flex items-center gap-3 hover:bg-secondary hover:text-primary transition-all group cursor-pointer"
-                >
-                   <span className="font-medium text-sm">Contact Us</span>
-                   <span className="w-8 h-8 rounded-full bg-white text-primary group-hover:bg-primary group-hover:text-white flex items-center justify-center transition-colors">
-                     <ArrowRight size={16} />
-                   </span>
-                </button>
-                
-              </div>
-           </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

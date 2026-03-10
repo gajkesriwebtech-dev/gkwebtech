@@ -1,21 +1,24 @@
-import React from 'react';
 import { Instagram, Youtube, Linkedin, FileText } from 'lucide-react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 // Embedded SVG Data URI for GK WebTech Logo
 const LOGO_SRC = "/images/logo.webp";
 
 export const Footer: React.FC = () => {
+  const { t, i18n } = useTranslation();
+  const langPrefix = i18n.language === 'en' ? '' : `/${i18n.language}`;
+
   return (
     <footer className="bg-white dark:bg-gray-950 pt-20 pb-10 border-t border-gray-100 dark:border-gray-800 transition-colors">
       <div className="container mx-auto px-4 md:px-6">
         {/* Call to Action Section */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-20 border-b border-gray-100 dark:border-gray-800 pb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-text-dark dark:text-white mb-6 md:mb-0 max-w-xl">
-            Ready to <span className="text-secondary">Scale</span> your brand with us?
+            {t("hero.cta_secondary")}
           </h2>
-          <Button variant="primary" icon="arrow" href="/services">Start Your Project</Button>
+          <Button variant="primary" icon="arrow" href={`${langPrefix}/services`}>{t("hero.cta_primary")}</Button>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
@@ -33,7 +36,7 @@ export const Footer: React.FC = () => {
               />
             </div>
             <p className="text-gray-700 dark:text-gray-400 text-sm leading-relaxed mb-8 max-w-sm">
-              A premier digital marketing agency helping businesses grow through data-driven strategies and creative excellence.
+              {t("footer.description")}
             </p>
             <div className="flex gap-4">
               {/* YouTube */}
@@ -59,20 +62,20 @@ export const Footer: React.FC = () => {
 
           {/* Links Column - Centered visually in desktop grid */}
           <div className="lg:col-span-3 lg:pl-10">
-            <h4 className="text-lg font-bold text-primary dark:text-white mb-6">Company</h4>
+            <h4 className="text-lg font-bold text-primary dark:text-white mb-6">{t("footer.quick_links", "Quick Links")}</h4>
             <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-400">
-              <li><Link to="/#about" className="hover:text-secondary transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="hover:text-secondary transition-colors">Services</Link></li>
-              <li><Link to="/portfolio" className="hover:text-secondary transition-colors">Portfolio</Link></li>
-              <li><Link to="/blogs" className="hover:text-secondary transition-colors">Blog</Link></li>
-              <li><Link to="/#faq" className="hover:text-secondary transition-colors">FAQ</Link></li>
-              <li><Link to="/#contact" className="hover:text-secondary transition-colors">Contact</Link></li>
+              <li><Link to={`${langPrefix}/#about`} className="hover:text-secondary transition-colors">{t("footer.about_us", "About Us")}</Link></li>
+              <li><Link to={`${langPrefix}/services`} className="hover:text-secondary transition-colors">{t("footer.services", "Services")}</Link></li>
+              <li><Link to={`${langPrefix}/portfolio`} className="hover:text-secondary transition-colors">{t("footer.portfolio", "Portfolio")}</Link></li>
+              <li><Link to={`${langPrefix}/blogs`} className="hover:text-secondary transition-colors">{t("footer.blog", "Blog")}</Link></li>
+              <li><Link to={`${langPrefix}/#faq`} className="hover:text-secondary transition-colors">{t("footer.faq", "FAQ")}</Link></li>
+              <li><Link to={`${langPrefix}/#contact`} className="hover:text-secondary transition-colors">{t("footer.contact", "Contact")}</Link></li>
             </ul>
           </div>
 
           {/* Contact Column - Right aligned */}
           <div className="lg:col-span-4">
-            <h4 className="text-lg font-bold text-primary dark:text-white mb-6">Get in Touch</h4>
+            <h4 className="text-lg font-bold text-primary dark:text-white mb-6">{t("footer.get_in_touch", "Get in Touch")}</h4>
             <ul className="space-y-4 text-sm text-gray-700 dark:text-gray-400">
               <li className="flex items-start gap-3">
                 <span className="font-bold text-secondary">P:</span>
@@ -98,20 +101,20 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
-          <p>Copyright © 2024 <span className="text-primary dark:text-white font-medium">GK WebTech</span>. All Rights Reserved.</p>
+          <p>Copyright © 2024 <span className="text-primary dark:text-white font-medium">GK WebTech</span>. {t("footer.rights")}</p>
           <div className="flex items-center gap-6">
-            <Link to="/" className="flex items-center gap-1 hover:text-secondary transition-colors" title="Download Brochure PDF">
+            <Link to={`${langPrefix}/`} className="flex items-center gap-1 hover:text-secondary transition-colors" title="Download Brochure PDF">
               <FileText size={0} />
               <span></span>
             </Link>
-            <Link to="/terms" target="_blank" className="hover:text-secondary transition-colors">Terms & Conditions</Link>
-            <Link to="/privacy" target="_blank" className="hover:text-secondary transition-colors">Privacy Policy</Link>
+            <Link to={`${langPrefix}/terms`} target="_blank" className="hover:text-secondary transition-colors">{t("footer.terms", "Terms & Conditions")}</Link>
+            <Link to={`${langPrefix}/privacy`} target="_blank" className="hover:text-secondary transition-colors">{t("footer.privacy", "Privacy Policy")}</Link>
             <button
               onClick={() => window.dispatchEvent(new CustomEvent('reopen-cookie-settings'))}
               className="hover:text-secondary transition-colors"
               type="button"
             >
-              Cookie Settings
+              {t("cookie.settings", "Cookie Settings")}
             </button>
           </div>
         </div>

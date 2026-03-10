@@ -2,11 +2,14 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { blogsData } from '../data';
 import { ArrowRight, ArrowLeft, User, Clock } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { SectionHeader } from './SectionHeader';
 import { TiltCard } from './TiltCard';
 import { Seo } from './Seo';
 
 export const BlogsPage: React.FC = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -14,9 +17,9 @@ export const BlogsPage: React.FC = () => {
   return (
     <div className="pt-32 pb-20 bg-bg-light dark:bg-gray-950 min-h-screen transition-colors">
       <Seo
-        title="Blog | GK WebTech | GKWebTech"
-        description="GK WebTech shares practical insights on SEO, social media, PPC, and web growth strategies. GKWebTech helps businesses grow online."
-        keywords="blog, SEO trends, social media, PPC, content strategy, web development"
+        title={t('seo.blogs.title', 'Blogs | GK WebTech | GKWebTech')}
+        description={t('seo.blogs.description', 'Stay updated with the latest digital marketing trends, SEO tips, and industry insights from the GK WebTech team.')}
+        keywords={t('seo.blogs.keywords', 'blogs, marketing tips, SEO trends, industry insights')}
         canonical={`${window.location.origin}/blogs`}
         image={`${window.location.origin}/images/logo.png`}
         type="website"
@@ -25,77 +28,77 @@ export const BlogsPage: React.FC = () => {
         <div className="mb-6">
           <Link to="/" className="inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-secondary transition-colors backdrop-blur-sm bg-black/5 dark:bg-white/5 px-4 py-2 rounded-full">
             <ArrowLeft size={16} />
-            <span>Back to Home</span>
+            <span>{t("nav.back_home", "Back to Home")}</span>
           </Link>
         </div>
-        
+
         {/* Page Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-           <div className="flex items-center justify-center gap-3 mb-3">
+          <div className="flex items-center justify-center gap-3 mb-3">
             <span className="h-0.5 w-4 bg-secondary"></span>
             <span className="text-sm font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-400">
-              Our Insights
+              {t("blogs_page.insights", "Our Insights")}
             </span>
             <span className="h-0.5 w-4 bg-secondary"></span>
-           </div>
-           <h1 className="text-4xl md:text-5xl font-bold text-text-dark dark:text-white mb-6">
-             Latest <span className="text-secondary">Articles</span>
-           </h1>
-           <p className="text-gray-700 dark:text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-             Expert analysis, digital marketing trends, and actionable strategies to help your business grow.
-           </p>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-text-dark dark:text-white mb-6">
+            {t("blogs_page.latest", "Latest")} <span className="text-secondary">{t("blogs_page.articles", "Articles")}</span>
+          </h1>
+          <p className="text-gray-700 dark:text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+            {t("blogs_page.description", "Expert analysis, digital marketing trends, and actionable strategies to help your business grow.")}
+          </p>
         </div>
 
         {/* Blogs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogsData.map((blog, index) => (
             <div key={blog.id} className="animate-fade-in-up h-full" style={{ animationDelay: `${index * 0.1}s` }}>
-               <Link to={`/blog/${blog.id}`} className="block h-full group">
-                  <TiltCard className="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 active:shadow-2xl md:hover:shadow-2xl active:border-secondary md:hover:border-secondary transition-all duration-300 h-full flex flex-col active:scale-[0.98]">
-                    
-                    {/* Image */}
-                    <div className="relative aspect-[4/3] overflow-hidden">
-                       <img 
-                         src={blog.image} 
-                         alt={blog.title} 
-                         loading="lazy"
-                         decoding="async"
-                         width="400"
-                         height="300"
-                         className="w-full h-full object-cover transform md:group-hover:scale-110 transition-transform duration-700" 
-                       />
-                       <div className="absolute top-4 left-4 bg-secondary text-primary px-3 py-1 rounded-full text-xs font-bold shadow-md">
-                          {blog.category}
-                       </div>
+              <Link to={`/blog/${blog.id}`} className="block h-full group">
+                <TiltCard className="bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 active:shadow-2xl md:hover:shadow-2xl active:border-secondary md:hover:border-secondary transition-all duration-300 h-full flex flex-col active:scale-[0.98]">
+
+                  {/* Image */}
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <img
+                      src={blog.image}
+                      alt={blog.title}
+                      loading="lazy"
+                      decoding="async"
+                      width="400"
+                      height="300"
+                      className="w-full h-full object-cover transform md:group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute top-4 left-4 bg-secondary text-primary px-3 py-1 rounded-full text-xs font-bold shadow-md">
+                      {t(`blogs.${blog.id}.category`, blog.category)}
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6 flex flex-col flex-grow">
+                    <div className="flex items-center gap-4 text-xs text-gray-400 mb-4">
+                      <span className="flex text-gray-600 dark:text-gray-400 items-center gap-1">
+                        <Clock size={14} /> {blog.readTime}
+                      </span>
+                      <span>|</span>
+                      <span className="flex text-gray-600 dark:text-gray-400 items-center gap-1">
+                        <User size={14} /> {blog.author}
+                      </span>
                     </div>
 
-                    {/* Content */}
-                    <div className="p-6 flex flex-col flex-grow">
-                       <div className="flex items-center gap-4 text-xs text-gray-400 mb-4">
-                          <span className="flex text-gray-600 dark:text-gray-400 items-center gap-1">
-                             <Clock size={14} /> {blog.readTime}
-                          </span>
-                          <span>|</span>
-                          <span className="flex text-gray-600 dark:text-gray-400 items-center gap-1">
-                             <User size={14} /> {blog.author}
-                          </span>
-                       </div>
+                    <h3 className="text-xl font-bold text-text-dark dark:text-white mb-3 line-clamp-2 leading-tight group-active:text-primary md:group-hover:text-primary dark:group-active:text-secondary dark:md:group-hover:text-secondary transition-colors">
+                      {t(`blogs.${blog.id}.title`, blog.title)}
+                    </h3>
 
-                       <h3 className="text-xl font-bold text-text-dark dark:text-white mb-3 line-clamp-2 leading-tight group-active:text-primary md:group-hover:text-primary dark:group-active:text-secondary dark:md:group-hover:text-secondary transition-colors">
-                          {blog.title}
-                       </h3>
-                       
-                       <p className="text-gray-700 dark:text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed flex-grow">
-                          {blog.excerpt}
-                       </p>
+                    <p className="text-gray-700 dark:text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed flex-grow">
+                      {t(`blogs.${blog.id}.excerpt`, blog.excerpt)}
+                    </p>
 
-                       <div className="flex items-center text-primary dark:text-secondary font-semibold text-sm mt-auto group-active:underline md:group-hover:underline decoration-2 underline-offset-4">
-                          Read Full Article <ArrowRight size={16} className="ml-2" />
-                       </div>
+                    <div className="flex items-center text-primary dark:text-secondary font-semibold text-sm mt-auto group-active:underline md:group-hover:underline decoration-2 underline-offset-4">
+                      {t("blogs.read_full", "Read Full Article")} <ArrowRight size={16} className="ml-2" />
                     </div>
+                  </div>
 
-                  </TiltCard>
-               </Link>
+                </TiltCard>
+              </Link>
             </div>
           ))}
         </div>

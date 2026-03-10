@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { SectionHeader } from "./SectionHeader";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { TiltCard } from "./TiltCard";
+import { useTranslation } from 'react-i18next';
 import { servicesData, coursesData } from "../data";
 
 const CardContent: React.FC<{ item: any; activeTab: string }> = ({
   item,
   activeTab,
 }) => {
+  const { t } = useTranslation();
   return (
     <div className="bg-white dark:bg-gray-900 p-6 rounded-3xl shadow-xl border border-gray-300 transition cursor-pointer h-full flex flex-col">
       <div className="w-full h-48 rounded-2xl mb-6 overflow-hidden border border-gray-100">
@@ -24,11 +26,11 @@ const CardContent: React.FC<{ item: any; activeTab: string }> = ({
       </div>
 
       <h3 className="text-2xl font-bold text-[#1F4037] dark:text-white mb-4 line-clamp-1">
-        {item.title}
+        {t(`services.${item.id}.title`)}
       </h3>
 
       <p className="text-gray-700 dark:text-gray-400 mb-6 text-sm leading-relaxed line-clamp-3 flex-grow">
-        {item.description}
+        {t(`services.${item.id}.description`)}
       </p>
 
       <div className="flex items-center gap-2 text-[#1F4037] dark:text-[#FDB827] font-semibold text-sm mt-auto">
@@ -40,6 +42,7 @@ const CardContent: React.FC<{ item: any; activeTab: string }> = ({
 };
 
 export const Services: React.FC = () => {
+  const { t } = useTranslation();
   const scrollRef = useRef<HTMLDivElement>(null);
   const isTouching = useRef(false);
   const rafLock = useRef(false);
@@ -122,9 +125,9 @@ export const Services: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <SectionHeader
-            label="Our Offerings"
-            title="Solutions We"
-            subtitle="Provide"
+            label={t("services.label", "Our Offerings")}
+            title={t("services.title_main", "Solutions We")}
+            subtitle={t("services.subtitle_main", "Provide")}
           />
 
           <div className="flex items-center gap-2">

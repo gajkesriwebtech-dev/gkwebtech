@@ -1,7 +1,9 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Flower, ChevronDown, Sun, Moon, Menu } from "lucide-react";
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { Flower, ChevronDown, Sun, Moon, Menu, Globe } from "lucide-react";
+import { useTranslation } from 'react-i18next';
+import i18n from '../src/i18n';
 
 const LOGO_SRC = "/images/logo.webp";
 
@@ -13,6 +15,8 @@ export const Navbar: React.FC = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const navigate = useNavigate();
+  const { lang: pathLang } = useParams();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -36,6 +40,33 @@ export const Navbar: React.FC = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [serviceOpen]);
+
+  const changeLanguage = (lng: string) => {
+    const currentPath = location.pathname;
+    const pathParts = currentPath.split('/');
+
+    // Remove existing lang prefix if present
+    const isLangPrefix = ['nl', 'de'].includes(pathParts[1]);
+    if (isLangPrefix) {
+      pathParts.splice(1, 1);
+    }
+
+    // Add new lang prefix if not English
+    if (lng !== 'en') {
+      pathParts.splice(1, 0, lng);
+    }
+
+    const newPath = pathParts.join('/') || '/';
+    i18n.changeLanguage(lng);
+    localStorage.setItem('siteLanguage', lng);
+    navigate(newPath);
+  };
+
+  const getLocalizedPath = (path: string) => {
+    const currentLang = i18n.language;
+    if (currentLang === 'en') return path;
+    return `/${currentLang}${path === '/' ? '' : path}`;
+  };
 
   const toggleTheme = () => {
     if (isDark) {
@@ -61,36 +92,40 @@ export const Navbar: React.FC = () => {
   };
 
   const handleTabRedirect = (tab: "tech" | "institute") => {
-    window.history.replaceState(null, "", `/?tab=${tab}`);
-    scrollToSection("services");
+    if (tab === "tech") {
+      window.history.replaceState(null, "", `/?tab=tech`);
+      scrollToSection("services");
+    } else {
+      scrollToSection("gk-institute-section");
+    }
   };
 
   const navLinks = [
-    { name: "About", id: "about" },
-    { name: "Services", id: "services", dropdown: true },
-    { name: "Portfolio", id: "portfolio" },
-    { name: "Pricing", path: "/pricing" },
-    { name: "Blogs", path: "/blogs" },
+    { name: t("nav.home"), id: "home", path: "/" },
+    { name: t("nav.services"), id: "services", dropdown: true },
+    { name: t("nav.portfolio"), id: "portfolio", path: "/portfolio" },
+    { name: t("nav.pricing"), path: "/pricing" },
+    { name: t("nav.blogs"), path: "/blogs" },
     { name: "FAQ", id: "faq" },
-    { name: "Tools", path: "/tools" }
+    { name: t("nav.tools"), path: "/tools" }
   ];
 
   return (
     <nav className="fixed inset-x-0 z-50 top-0 py-4 transition-all duration-300">
       <div className="mx-auto max-w-screen-2xl px-4 md:px-6 xl:px-8 2xl:px-16">
         <div className={`flex justify-between items-center rounded-full px-3 pl-4 py-1.5 bg-[#1F4037] dark:bg-gray-900 shadow-xl border border-[#2D5C4B] dark:border-gray-700 w-full`}>
-          
+
           {/* Logo */}
           <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex w-1/6 items-center gap-3 group cursor-pointer">
-            <img 
-                  src={LOGO_SRC} 
-                  alt="GK Logo" 
-                  width="200"
-                  height="56"
-                  fetchPriority="high"
-                  loading="eager" /* LCP Optimization: Ensure logo loads immediately */
-                  className="h-14 w-auto object-contain transition-transform group-hover:scale-105 duration-300"
-                />
+            <img
+              src={LOGO_SRC}
+              alt="GK Logo"
+              width="200"
+              height="56"
+              fetchPriority="high"
+              loading="eager" /* LCP Optimization: Ensure logo loads immediately */
+              className="h-14 w-auto object-contain transition-transform group-hover:scale-105 duration-300"
+            />
           </Link>
 
           {/* Desktop Menu */}
@@ -134,12 +169,25 @@ export const Navbar: React.FC = () => {
 
             {/* Theme Toggle */}
             <button onClick={toggleTheme} className="p-2 rounded-full text-gray-300 hover:text-[#FDB827] hover:bg-white/10 transition">
-              {isDark ? <Sun size={20}/> : <Moon size={20}/>}
+              {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:block">
+          {/* Desktop CTA & Language Switcher */}
+          <div className="hidden md:flex items-center gap-4">
+            <div className="flex items-center gap-2 bg-white/10 rounded-full px-3 py-1 border border-white/20">
+              <Globe className="w-4 h-4 text-gray-300" />
+              {['en', 'nl', 'de'].map((lng) => (
+                <button
+                  key={lng}
+                  onClick={() => changeLanguage(lng)}
+                  className={`text-xs font-bold uppercase transition-colors ${i18n.language === lng ? 'text-[#FDB827]' : 'text-gray-400 hover:text-white'
+                    }`}
+                >
+                  {lng}
+                </button>
+              ))}
+            </div>
             <button onClick={() => scrollToSection("contact")} className="bg-[#FDB827] text-[#1F4037] px-6 py-2.5 rounded-full font-bold hover:bg-white hover:text-[#1F4037] transition-all duration-300 shadow-md transform hover:scale-105">
               Get Proposal
             </button>
@@ -148,10 +196,10 @@ export const Navbar: React.FC = () => {
           {/* Mobile Toggle */}
           <div className="md:hidden flex items-center gap-4">
             <button onClick={toggleTheme} className="text-gray-300 hover:text-[#FDB827]">
-              {isDark ? <Sun size={20}/> : <Moon size={20}/>}
+              {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
             <button className="text-[#FDB827]" onClick={() => setIsOpen(!isOpen)}>
-              <Menu className="w-8 h-8"/>
+              <Menu className="w-8 h-8" />
             </button>
           </div>
         </div>
@@ -178,7 +226,7 @@ export const Navbar: React.FC = () => {
                 ) : (
                   <Link
                     key={idx}
-                    to={link.path || "/"}
+                    to={link.path ? getLocalizedPath(link.path) : "/"}
                     onClick={() => setIsOpen(false)}
                     className="font-medium text-lg text-gray-300 hover:text-[#FDB827] hover:underline transition-all text-left"
                   >

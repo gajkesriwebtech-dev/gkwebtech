@@ -1,0 +1,477 @@
+{
+    "portfolio_page": {
+        "work": "Unsere Arbeit",
+        "title_prefix": "Einfangen",
+        "title_highlight": "Erbe & Luxus",
+        "description": "Entdecken Sie unser vielfältiges Portfolio an digitalen Kampagnen, visuellem Storytelling und Markentransformationen."
+    },
+    "nav": {
+        "home": "Startseite",
+        "services": "Leistungen",
+        "courses": "Kurse",
+        "portfolio": "Portfolio",
+        "blogs": "Blogs",
+        "tools": "Tools",
+        "pricing": "Preise"
+    },
+    "hero": {
+        "title_prefix": "GK WebTech,",
+        "title_main": "Online Marketing",
+        "title_suffix": "Agentur mit globaler Präsenz.",
+        "subtitle": "Lassen Sie Ihr Unternehmen mit einer Online Marketing Agentur wachsen. Wir helfen Marken mit datengestützten Strategien, SEO und kreativen Kampagnen.",
+        "cta_book": "Beratung buchen",
+        "results_label": "Ergebnisse",
+        "roi_value": "300% ROI",
+        "marketing_partners": "Marketing-Partner",
+        "cta_primary": "Jetzt starten",
+        "cta_secondary": "Leistungen ansehen"
+    },
+    "seo": {
+        "home": {
+            "title": "GK WebTech | Online Marketing Agentur",
+            "description": "GK WebTech ist eine Online Marketing Agentur, die Unternehmen mit SEO, Google Ads und Social Media Marketing beim Wachstum unterstützt. GKWebTech liefert messbare Ergebnisse.",
+            "keywords": "online marketing agentur, SEO agentur, digital marketing agentur, Google Ads agentur, social media marketing agentur, digitale marketing dienstleistungen"
+        },
+        "services": {
+            "title": "Leistungen | GK WebTech | Online Marketing Experten",
+            "description": "GK WebTech bietet digitale marketing dienstleistungen wie SEO, Google Ads, Social Media Marketing und Website-Management durch online marketing experten.",
+            "keywords": "digitale marketing dienstleistungen, online marketing experten, SEO experten, Google Ads spezialist, website management"
+        },
+        "portfolio": {
+            "title": "Portfolio | GK WebTech | Fallstudien",
+            "description": "Entdecken Sie unser Portfolio an Online-Marketing-Erfolgsgeschichten, cineastischen Berichten und luxuriösen Markentransformationen, verwaltet von GK WebTech.",
+            "keywords": "marketing portfolio, fallstudien, online marketing ergebnisse, visuelles storytelling"
+        },
+        "blogs": {
+            "title": "Blogs | GK WebTech | Marketing-Tipps",
+            "description": "Bleiben Sie auf dem Laufenden mit den neuesten Online-Marketing-Trends, SEO-Tipps und Brancheneinblicken vom Team von GK WebTech.",
+            "keywords": "marketing blogs, SEO trends 2024, online marketing tipps"
+        },
+        "pricing": {
+            "title": "Preise | GK WebTech | Marketing-Pakete",
+            "description": "Transparente und wettbewerbsfähige Preise für unsere digitalen Marketing-Dienstleistungen, einschließlich SEO, Google Ads und Website-Management.",
+            "keywords": "online marketing kosten, SEO pakete, Google Ads preise"
+        },
+        "contact": {
+            "title": "Kontakt | GK WebTech | Beratung",
+            "description": "Kontaktieren Sie GK WebTech für fachkundige Online-Marketing-Beratung und Dienstleistungen, um Ihr Unternehmen online wachsen zu lassen.",
+            "keywords": "kontakt online marketing agentur, marketing beratung"
+        },
+        "tools": {
+            "title": "Kostenloze Tools | GK WebTech | SEO-Hilfsmittel",
+            "description": "Nutzen Sie kostenlose Online-Marketing-Tools und SEO-Hilfsmittel von GK WebTech, um Ihre Online-Präsenz zu optimieren.",
+            "keywords": "kostenlose SEO tools, marketing hilfsmittel"
+        },
+        "detail_suffix": {
+            "service": "Bereitgesteld von GK WebTech mit einem Performance-First-Ansatz. GKWebTech hilft Unternehmen online zu wachsen.",
+            "project": "Umgesetzt von GK WebTech für messbare digitale Ergebnisse. GKWebTech hilft Unternehmen online zu wachsen.",
+            "blog": "Experten-Einblicke vom GK WebTech-Team zum digitalen Wachstum. GKWebTech hilft Unternehmen online zu wachsen."
+        }
+    },
+    "about": {
+        "tag": "Über uns",
+        "title_prefix": "Wer ist",
+        "title_highlight": "GK WebTech?",
+        "description": "Wir sind eine Full-Service-Agentur für digitales Marketing, die sich dem Wachstum Ihres Unternehmens verschrieben hat. Von kleinen Startups bis hin zu großen Unternehmen passen wir unsere Strategien an Ihre einzigartigen Ziele an und liefern messbare Ergebnisse.",
+        "stats": {
+            "campaigns": "Kampagnen geliefert",
+            "industries": "Bedierte Branchen",
+            "excellence": "Jahre an Exzellenz"
+        },
+        "contact_btn": "Kontaktieren Sie uns",
+        "tags": {
+            "strategy": "Digitale Strategie",
+            "seo": "SEO-Analyse",
+            "lead_gen": "Lead-Generierung",
+            "ppc": "PPC-Anzeigen"
+        }
+    },
+    "services": {
+        "seo-optimization": {
+            "title": "SEO Agentur für Unternehmen",
+            "description": "Verbessern Sie Ihre Suchrankings und steigern Sie den organischen Traffic mit den datengesteuerten Strategien unserer SEO Agentur.",
+            "fullDescription": "Als spezialisierte SEO Agentur katapultieren wir Ihr Unternehmen an die Spitze der Suchmaschinenergebnisse. Unsere SEO experten bieten eine umfassende Strategie mit technischen SEO-Audits, On-Page-Optimierung und Linkbuilding.",
+            "features": [
+                "Umfassendes Website-Audit & Technisches SEO",
+                "Keyword-Recherche & Wettbewerbsanalyse",
+                "On-Page-Optimierung durch SEO experten",
+                "Off-Page Linkbuilding & Autoritätswachstum",
+                "Lokales SEO für geografisches Targeting",
+                "Monatliche Leistungsberichte & Tracking"
+            ]
+        },
+        "social-media-marketing": {
+            "title": "Social Media Marketing Agentur",
+            "description": "Binden Sie Ihr Publikum ein und bauen Sie Markenloyalität mit unserer Social Media Marketing Agentur auf.",
+            "fullDescription": "Als Social Media Marketing Agentur erstellen wir maßgeschneiderte Strategien, die Ihre Markenstimme verstärken und das Engagement in der Community auf allen relevanten Plattformen fördern.",
+            "features": [
+                "Plattformspezifische Strategie (Instagram, LinkedIn, Twitter, TikTok)",
+                "Inhaltskalender & Planung",
+                "Community Management & Engagement",
+                "Influencer-Partnerschaftsmanagement",
+                "Social Listening & Trendanalyse",
+                "Integration bezahlter Social-Media-Kampagnen"
+            ]
+        },
+        "content-strategy": {
+            "title": "Content-Strategie & Branding",
+            "description": "Erstellen Sie überzeugende Inhalte und eine starke Markenidentität, die bei Ihrem Publikum Anklang findet.",
+            "fullDescription": "Content ist der König, aber der Kontext ist die Königin. Wir entwickeln robuste Content-Strategien, die auf Ihre Geschäftsziele abgestimmt sind und direkt die Schmerzpunkte Ihrer Kunden ansprechen. Unsere Branding-Services stellen sicher, dass jeder Inhalt—von Blogposts bis hin zu Whitepapers—Ihre einzigartige Identität widerspiegelt und Vertrauen sowie Autorität in Ihrer Branche schafft.",
+            "features": [
+                "Entwicklung von Markenstimme & Identität",
+                "Content-Audits & Gap-Analyse",
+                "Blog-Schreiben & Long-form Content",
+                "Copywriting für Web & Werbemittel",
+                "Visual Storytelling & Infografiken",
+                "Newsletter & E-Mail-Marketing-Inhalte"
+            ]
+        },
+        "google-meta-ads": {
+            "title": "Google Ads Agentur für Unternehmen",
+            "description": "Maximieren Sie den ROI mit gezielten Kampagnen unserer Google Ads Agentur auf Google, Facebook und Instagram.",
+            "fullDescription": "Unsere Google Ads Agentur konzipiert hochkonvertierende Kampagnen. Ein Google Ads spezialist nutzt fortschrittliches Targeting und Retargeting, um Ihren ROI zu maximieren.",
+            "features": [
+                "Verwaltung durch einen Google Ads spezialist",
+                "Facebook & Instagram Werbekampagnen",
+                "Retargeting & Lookalike Audiences",
+                "A/B-Tests für Werbemittel",
+                "Einrichtung des Conversion-Trackings",
+                "Budgetoptimierung in Echtzeit"
+            ]
+        },
+        "campaign-planning": {
+            "title": "Kampagnenplanung & Analytics",
+            "description": "Strategische Planung und tiefgreifende Analysen zur Optimierung jedes Aspekts Ihres Marketings.",
+            "fullDescription": "Daten ohne Erkenntnisse sind nur Rauschen. Wir bieten eine End-to-End-Kampagnenplanung, unterstützt durch strenge Analysen. Egal, ob Sie ein neues Produkt einführen oder skalieren möchten, unser Team bildet die gesamte Customer Journey ab. Wir legen klare KPIs fest und nutzen fortschrittliche Analyse-Tools, um die Leistung zu verfolgen und sicherzustellen, dass jeder ausgegebene Dollar zu Ihrem Unternehmenserfolg beiträgt.",
+            "features": [
+                "Full-Funnel Kampagnenstrategie",
+                "Customer Journey Mapping",
+                "Google Analytics 4 (GA4) Setup & Audit",
+                "Erstellung benutzerdefinierter Dashboards",
+                "Conversion Rate Optimization (CRO)",
+                "Wettbewerbs-Benchmarking"
+            ]
+        },
+        "website-management": {
+            "title": "Website-Management & WordPress",
+            "description": "Sichere, schnelle und optimierte Website-Management-Services, spezialisiert auf WordPress.",
+            "fullDescription": "Ihre Website ist Ihr digitales Schaufenster. Wir bieten umfassende WordPress-Management-Services, um Ihre Website sicher, schnell und auf dem neuesten Stand zu halten. Von Plugin-Updates und Sicherheitspatches bis hin zur Geschwindigkeitsoptimierung und kleineren Designanpassungen kümmern wir uns um die technischen Details, damit Sie sich auf Ihr Geschäft konzentrieren können.",
+            "features": [
+                "Updates für WordPress-Themes & Plugins",
+                "Website-Geschwindigkeitsoptimierung (Core Web Vitals)",
+                "Tägliche Backups & Sicherheitsüberwachung",
+                "Malware-Entfernung & Schutz",
+                "Inhaltsaktualisierungen & Layout-Fixes",
+                "Hosting-Management & Migration"
+            ]
+        },
+        "creative-design": {
+            "title": "Kreatives Anzeigendesign & Reels",
+            "description": "Auffällige Grafiken und Kurzvideo-Inhalte, die darauf ausgelegt sind, viral zu gehen.",
+            "fullDescription": "In einer überfüllten digitalen Landschaft sind visuelle Elemente Ihr erster Eindruck. Unser Kreativstudio produziert beeindruckende Grafikdesigns und energiegeladene Kurzvideos (Reels/TikToks) die sofort Aufmerksamkeit erregen. Wir verbinden Ästhetiek mit Psychologie, um Anzeigen zu erstellen, die nicht nur gut aussehen, sondern auch Handlungen auslösen.",
+            "features": [
+                "Social-Media-Grafiken & Vorlagen",
+                "Produktion von Kurzvideos (Reels/Shorts)",
+                "Display-Anzeigenbanner & Werbemittel",
+                "Motion Graphics & Animation",
+                "Videobewerking & Postproduktion",
+                "Thumbnail-Design"
+            ]
+        }
+    },
+    "gkinstitute": {
+        "title": "GK Institut für Digitales Marketing",
+        "subtitle": "Studierende mit praxisnahen digitalen Marketingfähigkeiten stärken.",
+        "description": "Am GK Institut schließen wir die Lücke zwischen akademischem Wissen und den Anforderungen der Industrie. Unsere Kurse werden von Experten entwickelt, um praktische Erfahrung zu vermitteln und Sie auf eine erfolgreiche Karriere im digitalen Marketing vorzubereiten.",
+        "join_us": "Kommen Sie zum GK Institut"
+    },
+    "blogs": {
+        "seo-trends-2024": {
+            "title": "SEO-Trends, die man 2024 im Auge behalten sollte",
+            "excerpt": "Entdecken Sie die neuesten SEO-Trends, die die digitale Landschaft im Jahr 2024 dominieren werden, und wie Sie an der Spitze bleiben.",
+            "content": "<p>Die SEO-Landschaft entwickelt sich ständig weiter. Im Jahr 2024 sehen wir eine signifikante Verschiebung hin zu KI-integrierten Sucherlebnissen und einen erneuten Fokus auf E-E-A-T (Erfahrung, Expertise, Autorität und Vertrauenswürdigkeit).</p><h4>Wichtige Trends:</h4><ul><li><strong>KI-generierte Inhalte:</strong> Google wird immer besser darin, qualitativ hochwertige KI-Inhalte zu identifizieren, aber die menschliche Note bleibt unerlässlich.</li><li><strong>Search Generative Experience (SGE):</strong> So optimieren Sie für KI-Snapshots an der Spitze der Suchergebnisse.</li><li><strong>Zero-Click-Suchen:</strong> Unmittelbaren Mehrwert in Meta-Beschreibungen bieten, um auch ohne Klick Aufmerksamkeit zu erregen.</li></ul>"
+        },
+        "social-media-growth": {
+            "title": "Strategien für Social-Media-Wachstum",
+            "excerpt": "Praktische Tipps und Strategien, um die Präsenz Ihrer Marke auf Social-Media-Plattformen effektiv auszubauen.",
+            "content": "<p>Wachstum in den sozialen Medien erfordert im Jahr 2024 mehr als nur regelmäßiges Posten. Es erfordert ein tiefes Verständnis der Algorithmusänderungen und einen Community-First-Ansatz.</p><h4>Top-Strategien:</h4><ul><li><strong>Kurzvideos:</strong> Reels, Shorts und TikToks treiben weiterhin das meiste Engagement an.</li><li><strong>Authentisches Storytelling:</strong> Weg von hochgradig kuratierten Feeds hin zu Inhalten 'hinter den Kulissen'.</li><li><strong>Engagement vor Reichweite:</strong> Warum das Beantworten von Kommentaren wichtiger ist als viral zu gehen.</li></ul>"
+        },
+        "ppc-roi-optimization": {
+            "title": "ROI von PPC-Kampagnen maximieren",
+            "excerpt": "Erfahren Sie, wie Sie Ihre PPC-Kampagnen optimieren können, um die beste Rendite für Ihre Marketingausgaben zu erzielen.",
+            "content": "<p>PPC-Werbung (Pay-Per-Click) ist einer der schnellsten Wege, um Traffic zu generieren, kann aber auch viel Geld kosten, wenn sie nicht richtig verwaltet wird.</p><h4>ROI-Tipps:</h4><ul><li><strong>Negative Keywords:</strong> So verhindern Sie, dass Sie bei irrelevanten Suchanfragen erscheinen, die Ihr Budget verschwenden.</li><li><strong>Landingpage-Optimierung:</strong> Sicherstellen, dass das Versprechen Ihrer Anzeige auf der Zielseite eingehalten wird.</li><li><strong>Gebotsmanagement:</strong> Automatisierte Gebotsstrategien effektiv nutzen und dabei die Kontrolle behalten.</li></ul>"
+        }
+    },
+    "portfolio": {
+        "view_case": "Fallstudie ansehen",
+        "videos": "Videos",
+        "photos": "Fotos",
+        "back_to_gallery": "Zurück zur Galerie",
+        "challenge": "Die Herausforderung",
+        "solution": "Unsere Lösung",
+        "gallery": "Visuelle Showcase",
+        "videos_title": "Video-Highlights",
+        "client_testimonial": "Kundenreferenz",
+        "project_details": "Projektdetails",
+        "key_results": "Wichtige Ergebnisse",
+        "start_similar": "Ähnliches Projekt starten",
+        "luxury-resort-branding": {
+            "title": "Luxus-Resort Branding",
+            "description": "Eine umfassende Branding- und digitale Marketingkampagne für ein hochwertiges Luxusresort.",
+            "category": "Gastgewerbe"
+        },
+        "event-photography-2023": {
+            "title": "Großveranstaltung Fotografie 2023",
+            "description": "Die Essenz einer groß angelegten internationalen Veranstaltung durch professionelle Fotografie einfangen.",
+            "category": "Events"
+        },
+        "nirvanavan-foundation": {
+            "title": "Nirvanavan Foundation",
+            "location": "Dadikar, Rajasthan",
+            "category": "Veranstaltung",
+            "description": "Eine cineastische Veranstaltungsdokumentation einer 8-tägigen Kunstinitiative einer NGO (World Art Mela, 1.–8. Dezember 2025), bei der Künstler aus ganz Indien Live-Kunstwerke schufen und Spenden für soziale Zwecke sammelten. Wir sind der digitale Partner der Nirvanavan Foundation.",
+            "client": "Nirvanan Foundation",
+            "duration": "1 Woche",
+            "challenge": "Die Stiftung benötigte eine aussagekräftige visuelle Dokumentation der Art Mela, die ihren eigentlichen Zweck widerspiegelte — die Teilnahme von Live-Künstlern, das Engagement der Gemeinschaft und die Wirkung von Spenden — anstatt generischer Veranstaltungsfotos. Die Herausforderung bestand darin, Emotionen, Storytelling und Glaubwürdigkeit an einem einzigen Tag einzufangen und gleichzeitig acht Tagen künstlerischem Beitrag gerecht zu werden.",
+            "solution": "Wir haben einen cineastischen Storytelling-Film erstellt, der sich auf die Künstler, ihr Schaffen, ihr Umfeld, die Interaktionen mit den Besuchern und die Mission der Stiftung konzentriert. Neben strukturierter Fotografie von Kunstwerken, Menschenmengen, Spendenmomenten und der Teilnahme von Freiwilligen produzierten wir ein Video, das für Aufmerksamkeit und Vertrauensbildung auf YouTube und sozialen Plattformen optimiert ist.",
+            "results": [
+                "Erfolgreiche Dokumentation von über 20 Künstlern und der Entstehung von Live-Kunstwerken",
+                "NGO erhielt starke visuelle Assets für Bekanntheit und Glaubwürdigkeit",
+                "Video auf YouTube veröffentlicht, um langfristiges Engagement und Unterstützung zu fördern"
+            ],
+            "testimonial": {
+                "text": "GK WebTech hat nicht nur über eine Veranstaltung berichtet — sie haben unsere Mission und die Leidenschaft der Künstler wunderschön eingefangen. Der Film wird uns helfen, mehr Menschen zu inspirieren, beizutragen und sich mit unserem Anliegen zu verbinden.",
+                "author": "Nirvanan Bodhisattva",
+                "role": "Gründer der Nirvanavan Foundation"
+            }
+        },
+        "rambihari-palace": {
+            "title": "Rambihari Palace",
+            "location": "Kishanpur, Alwar, Rajasthan",
+            "category": "Gastgewerbe & Luxuspalast-Shooting",
+            "description": "Erstellung eines umfassenden Aufenthalts- und Evaluierungsprojekts im historischen Rambihari Palace in Alwar, mit Fokus auf die Bewertung des Anwesens nach europäischen Standards für Wellness-Retreats. Wir sind die Partner für die digitale Skalierung der Kette.",
+            "client": "Rambihari Palace A Luxury Hotel",
+            "duration": "1 Woche",
+            "challenge": "Durchführung einer objektiven Bewertung der Einrichtungen des Palastes, der Servicestandards, des Wellnesspotenzials und des Gästeerlebnisses aus europäischer Perspektive — während wir als tatsächliche Gäste übernachteten, unter Berücksichtigung kultureller Erwartungen, Qualitätsbenchmarks und der Retreat-Vielseitigkeit in einem historischen Gastgewerbekontext.",
+            "solution": "Wir verbrachten 2 nachten und 3 Tage in dem Anwesen mit unserem ausländischen Gast und bewerteten Schlüsselelemente wie Zimmerkomfort, Servicequalität, Wellnessangebote, Speiseerlebnis, Ambiente, natürliche Umgebung und die allgemeine Eignung für ein Wellness-Retreat. Durch strukturierte Beobachtungen vor Ort, Interviews mit Mitarbeitern, lifestyle-Fotografie und cineastische Videodokumentation erstellten wir einen detaillierten Evaluierungsbericht und visuelle Assets für die strategische Planung des Kunden.",
+            "results": [
+                "Umfassender Gästeerlebnisbericht gemäß internationalen Wellness-Standards dokumentiert",
+                "Hochwertige visuelle Darstellungen von Architektur, Räumen, Annehmlichkeiten und Umgebung eingefangen",
+                "Umsetzbare Empfehlungen für das Retreat-Potenzial und die Verbesserung des Gästekomforts bereitgestellt"
+            ],
+            "testimonial": {
+                "text": "Die Liebe zum Detail des Teams ist unübertroffen. Es ist ihnen gelungen, das Erbe perfekt mit einer modernen Ästhetik in Einklang zu bringen.",
+                "author": "Herr Ram Kaushik",
+                "role": "Eigentümer"
+            }
+        },
+        "dadikar-fort": {
+            "title": "Dadikar Fort",
+            "location": "Dadikar, Rajasthan",
+            "category": "Historisches Gastgewerbe & Luxusfort-Shooting",
+            "description": "Erstellung einer umfassenden Geschäfts- und digitalen Marketingstrategie zur Bewertung und Skalierung des Anwesens für Hochzeiten und Wellnesstourismus. Unser Team produzierte cineastisches Werbematerial durch strategische Außenshootings, unterstützt durch SEO- und GEO-Optimierung. Wir sind die digitalen Skalierungspartner, die die Expansion für ein internationales Retreat- und Hochzeitspublikum leiten.",
+            "client": "Dadhikar Fort & Resorts Private Limited",
+            "duration": "1 Woche",
+            "challenge": "Bewertung, ob dieses historische Fort-Hotel — dessen Wurzeln bis ins 9.–10. Jahrhundert zurückreichen und das nun mit moderner Gastfreundschaft restauriert wurde — die internationalen Benchmarks für Wellness-Retreats erfüllt, während seine historische Essenz, sein kultureller Wert und der Gästekomfort innerhalb eines begrenzten Zeitrahmens eingefangen werden.",
+            "solution": "Unser Team führte während des Aufenthalts eine detaillierte Vor-Ort-Bewertung durch und untersuchte die Qualität der Unterbringung, den Gästeservice, die Interaktion mit lokalen kulturellen Elementen, die Servicestandards, das Wellnesspotenzial (Ruhe, Zugang zur Natur, Annehmlichkeiten) und das allgemeine Gästeerlebnis. Wir kombinierten dies mit cineastischer Videografie und kuratierter Fotografie, die den historischen Charme des Anwesens, die modernen Annehmlichkeiten und die Eignung für Retreats in einem überzeugenden, professionellen Format präsentiert.",
+            "results": [
+                "Umfassender Wellness-Evaluierungsbericht nach europäischem Standard geliefert",
+                "Reichhaltiges visuelles Storytelling von Geschichte, Gastfreundschaft und ruhigen Landschaften eingefangen",
+                "Umsetzbare Empfehlungen für die Positionierung des Retreats und die Verbesserung des Gästeerlebnisses bereitgestellt"
+            ]
+        },
+        "bamboo-saa-resort-and-spa": {
+            "title": "Bamboo Saa Resort & Spa",
+            "location": "Jaipur, Rajasthan",
+            "category": "Wellness-Gastgewerbe Bewertung & Zusammenarbeit",
+            "description": "Ein Aufenthalts- und Auditprojekt zum Benchmarking des Wellness-Retreat-Erlebnisses an europäischen Gastlichkeits- und Komfortstandards. Wir lieferten strategiekonforme Werbeshootings und digitale Assets für die Skalierung einer wellnessorientierten Plattform. Partnerschaftsberatung, unterstützt durch SEO- und GEO-Empfehlungen zur Verbesserung der weltweiten Sichtbarkeit in der Wellness-Suche und der Retreat-Positionierung.",
+            "client": "Herr V.K. Agarwal",
+            "duration": "1 Woche",
+            "challenge": "Benchmarking eines bestehenden Wellness-Retreats an den Erwartungen des europäischen Wellnesstourismus, während wir als echte Gäste übernachteten, um sicherzustellen, dass unser Feedback die Praktikabilität, die kulturelle Kompatibilität, das Geschäftspotenzial und den Umfang der Partnerschaft erfasste, ohne den laufenden Retreat-Betrieb zu stören.",
+            "solution": "Wir führten eine immersive, unvoreingenommene Bewertung durch, die Wellnessprogramme, Spa-Dienstleistungen, Lebensmittelqualität, Mitarbeiterverhalten, Hygieneprotokolle, Ambiente, Nachhaltigkeit, Ruhezonen, Integration der Natur, Zugänglichkeit und Gästekomfort abdeckte. Nach der Evaluierung lieferten wir dem Eigentümer einen strukturierten Vorschlag und diskutierten potenzielle Zusammenarbeiten und langfristige Partnerschaftsmöglichkeiten.",
+            "results": [
+                "Das Anwesen als außergewöhnliches Wellness-Retreat mit internationaler Anziehungskraft validiert",
+                "Empfehlungen nach europäischem Standard für die künftige Retreat-Erweiterung und den Betrieb geteilt",
+                "Partnerschaftsgespräche für die Zusammenarbeit im Bereich Retreat-Erlebnis & internationale Gästeprogramme initiiert"
+            ]
+        }
+    },
+    "testimonials": {
+        "label": "Kundenerfolg",
+        "title": "Was Unsere",
+        "subtitle": "Partner Sagen",
+        "data": {
+            "1": {
+                "text": "GK WebTech hat unsere digitale Präsenz transformiert. Ihre SEO- und PPC-Kampagnen haben konsistent einen hohen ROI und qualifizierte Leads geliefert.",
+                "name": "Sarah J.",
+                "role": "CEO, TechFlow"
+            },
+            "2": {
+                "text": "Das kreative Design und die Content-Strategie von GK WebTech waren ein echter Wendepunkt für unsere Markenidentität. Sehr empfehlenswert!",
+                "name": "David M.",
+                "role": "Marketingdirektor, LuxStay"
+            },
+            "3": {
+                "text": "Ihre technische Expertise in den Bereichen SEO und Analytics ist unübertroffen. Wir haben ein Wachstum des organischen Traffics von 200 % verzeichnet, seit wir zusammenarbeiten.",
+                "name": "Elena R.",
+                "role": "Gründerin, GrowthOps"
+            }
+        }
+    },
+    "team": {
+        "label": "Unser Team",
+        "title": "Lernen Sie die",
+        "subtitle": "Köpfe kennen",
+        "members": {
+            "dr-anuj-tiwari": {
+                "name": "Dr. Anuj Tiwari",
+                "role": "Gründer & Direktor",
+                "education": "Doktortitel, Erasmus Uni., Niederlande"
+            },
+            "preeti-tiwari": {
+                "name": "Preeti Tiwari",
+                "role": "Geschäftsführende Direktorin",
+                "education": "Doktortitel, Auckland Uni., Neuseeland"
+            },
+            "j-e-spek": {
+                "name": "J. E. Spek",
+                "role": "Berater",
+                "education": ""
+            },
+            "utkarsh-sharma": {
+                "name": "Utkarsh Sharma",
+                "role": "Technischer Leiter (CTO)",
+                "education": ""
+            },
+            "archana-avasthi": {
+                "name": "Archana Avasthi",
+                "role": "Wordpress-Entwicklerin",
+                "education": ""
+            }
+        }
+    },
+    "choose_us": {
+        "title": "Entwickelt für",
+        "subtitle": "Ihr Wachstum",
+        "label": "Warum Sie uns wählen sollten",
+        "reasons": {
+            "data-driven": {
+                "title": "Datengetriebene Strategien",
+                "description": "Wir nutzen fortschrittliche Analysen und Markteinblicke, um Strategien zu entwickeln, die messbar, anpassungsfähig und garantiert leistungsfähig sind. Kein Rätselraten, nur Ergebnisse."
+            },
+            "experienced-team": {
+                "title": "Erfahrenes Team",
+                "description": "Unser vielfältiges Team von Digitalexperten bringt jahrelange Erfahrung in verschiedenen Branchen mit und gewährleistet so eine erstklassige Ausführung und innovative Problemlösung für jede Kampagne."
+            },
+            "client-focus": {
+                "title": "Fokus auf den Kundenerfolg",
+                "description": "Ihr Wachstum ist unser Nordstern. Wir setzen auf transparente Kommunikation, maßgeschneiderte Lösungen und eine Partnerschaftsmentalität, um Ihren langfristigen Erfolg sicherzustellen."
+            }
+        }
+    },
+    "contact_section": {
+        "tag": "Kontaktieren Sie uns",
+        "title_prefix": "Lassen Sie uns wachsen",
+        "title_highlight": "Ihr Unternehmen",
+        "description": "Sind Sie bereit, Ihre digitale Präsenz auf die nächste Stufe zu heben? Kontaktieren Sie uns noch heute für eine kostenlose Beratung und ein Audit.",
+        "form": {
+            "name": "Ihr Name *",
+            "name_placeholder": "z. B. Max Mustermann",
+            "email": "E-Mail *",
+            "email_placeholder": "beispiel@firma.de",
+            "phone": "Telefon *",
+            "phone_placeholder": "Telefonnummer eingeben",
+            "service": "Interessierte Dienstleistung",
+            "service_placeholder": "Dienstleistung auswählen (Optional)",
+            "details": "Projektdetails",
+            "details_placeholder": "Erzählen Sie uns von Ihren Zielen (Optional)...",
+            "send": "Nachricht senden",
+            "sending": "Wird gesendet...",
+            "success": "Nachricht erfolgreich gesendet! Wir werden uns in Kürze bei Ihnen melden.",
+            "error": "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an.",
+            "custom_quote": "Individuelles Angebot erstellen"
+        },
+        "popup": {
+            "title": "Einsendung erhalten",
+            "message": "Vielen Dank für Ihre Kontaktaufnahme mit GK WebTech. Wir werden uns in Kürze bei Ihnen melden.",
+            "close": "Schließen"
+        }
+    },
+    "footer": {
+        "description": "GK WebTech ist eine leistungsorientierte digitale Marketingagentur, die SEO-, PPC- und Branding-Lösungen anbietet.",
+        "quick_links": "Schnelllinks",
+        "services": "Unsere Leistungen",
+        "contact": "Kontaktieren Sie uns",
+        "rights": "Alle Rechte vorbehalten."
+    },
+    "faq": {
+        "title": "Häufig Gestellte Fragen",
+        "subtitle": "Alles, was Sie über unsere Dienstleistungen wissen müssen.",
+        "questions": {
+            "seo-results": {
+                "question": "Wie lange dauert es, bis man Ergebnisse von SEO sieht?",
+                "answer": "SEO ist eine langfristige Strategie. In der Regel können Sie innerhalb von 3 bis 6 Monaten spürbare Verbesserungen des organischen Traffics und der Rankings erwarten."
+            },
+            "custom-packages": {
+                "question": "Bieten Sie maßgeschneiderte Marketingpakete an?",
+                "answer": "Ja, wir verstehen, dass jedes Unternehmen einzigartig ist. Wir bieten maßgeschneiderte Pakete an, die auf Ihre spezifischen Ziele, Ihr Budget und Ihre Branchenanforderungen zugeschnitten sind."
+            },
+            "social-platforms": {
+                "question": "Auf welchen Social-Media-Plattformen sollte mein Unternehmen vertreten sein?",
+                "answer": "Das hängt von Ihrer Zielgruppe ab. B2B-Unternehmen florieren in der Regel auf LinkedIn, während Lifestyle-Marken auf Instagram und TikTok großes Engagement verzeichnen."
+            },
+            "campaign-reporting": {
+                "question": "Wie berichten Sie über die Kampagnenleistung?",
+                "answer": "Wir erstellen detaillierte Monatsberichte und führen zweiwöchentliche Strategiegespräche. Sie haben Zugriff auf ein benutzerdefiniertes Dashboard, das KPIs wie ROI, Traffic und Conversions verfolgt."
+            },
+            "rebranding": {
+                "question": "Können Sie beim Rebranding helfen?",
+                "answer": "Absolut. Unser Kreativteam ist auf Markenstrategie, Logo-Design und visuelle Identität spezialisiert, um Ihrem Unternehmen ein frisches, modernes Aussehen zu verleihen."
+            }
+        }
+    },
+    "techstack": {
+        "label": "Unser Tech-Stack",
+        "title": "Tools, die wir nutzen, um",
+        "subtitle": "Wachstum voranzutreiben"
+    },
+    "pricing": {
+        "label": "Preispläne",
+        "title": "Flexible Pakete für",
+        "subtitle": "jede Phase",
+        "description": "Wählen Sie den perfekten Plan, um Ihr Wachstum zu beschleunigen. Alle Pläne verstehen sich exklusive täglicher Werbebudgets der Plattformen.",
+        "categories": {
+            "web": "Webentwicklung",
+            "seo": "SEO",
+            "social": "Social | Content",
+            "ads": "Kampagnen | Anzeigen",
+            "branding": "Branding | Design"
+        },
+        "durations": {
+            "monthly": "Monatlich",
+            "quarterly": "Vierteljährlich",
+            "half_yearly": "Halbjährlich",
+            "annually": "Jährlich"
+        },
+        "common": {
+            "get_started": "Jetzt starten",
+            "contact_us": "Kontaktieren Sie uns",
+            "custom_quote": "Individuelles Angebot erstellen",
+            "view_details": "Detaillierten Vergleich ansehen",
+            "indicative": "Die Preise sind Richtwerte und können je nach Umfang variieren."
+        }
+    },
+    "terms": {
+        "title": "Allgemeine Geschäftsbedingungen",
+        "last_updated": "Zuletzt aktualisiert: März 2024"
+    },
+    "privacy": {
+        "title": "Datenschutzbestimmungen",
+        "last_updated": "Zuletzt aktualisiert: März 2024"
+    },
+    "cookie": {
+        "message": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern.",
+        "accept": "Alle akzeptieren",
+        "settings": "Cookie-Einstellungen"
+    }
+}

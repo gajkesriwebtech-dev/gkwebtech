@@ -470,12 +470,12 @@ export const projectsData: Project[] = [
     duration: "1 Week",
     challenge: "The foundation needed meaningful visual documentation of the art mela that truly reflected its purpose — live artist participation, community engagement, and donation impact — rather than generic event photos. The challenge was to capture emotions, storytelling, and credibility in a single day while doing justice to 8 days of artistic contribution.",
     solution:
-    "We created a cinematic storytelling film focusing on artists, their artwork process, visitor interactions, and the foundation’s mission. Along with structured photography of artwork, crowds, donation moments, and volunteer participation, we produced a video optimized for awareness and trust-building on YouTube and social platforms.",
-  results: [
-    "Successfully documented 20+ artists and live artwork creation",
-    "NGO gained strong visual assets for awareness and credibility",
-    "Video published on YouTube to drive long-term engagement and support"
-  ],
+      "We created a cinematic storytelling film focusing on artists, their artwork process, visitor interactions, and the foundation’s mission. Along with structured photography of artwork, crowds, donation moments, and volunteer participation, we produced a video optimized for awareness and trust-building on YouTube and social platforms.",
+    results: [
+      "Successfully documented 20+ artists and live artwork creation",
+      "NGO gained strong visual assets for awareness and credibility",
+      "Video published on YouTube to drive long-term engagement and support"
+    ],
     testimonial: {
       text: "GK WebTech didn’t just cover an event — they captured our mission and the artists' passion beautifully. The film will help us inspire more people to contribute and connect with our cause.",
       author: "Nirvanan Bodhisattva",
@@ -498,14 +498,14 @@ export const projectsData: Project[] = [
     client: "Rambihari Palace A Luxury Hotel",
     duration: "1 Week",
     challenge:
-    "To conduct an objective evaluation of the palace’s facilities, service standards, wellness potential, and guest experience from a European perspective — while staying as actual guests, understanding cultural expectations, quality benchmarks, and retreat viability in a heritage hospitality context.",
-  solution:
-    "We spent 2 nights and 3 days at the property with our foreign guest, assessing key elements including room comfort, service quality, wellness offerings, food experience, ambiance, natural surroundings, and overall suitability for a wellness retreat. Through structured on-site observation, interviews with staff, lifestyle photography, and cinematic video coverage, we produced a detailed evaluation report and visual assets for the client’s strategic planning.",
-  results: [
-    "Documented comprehensive guest experience report aligned with international wellness standards",
-    "Captured high-quality visuals of architecture, spaces, amenities, and environment",
-    "Provided actionable recommendations for retreat potential & guest comfort enhancement"
-  ],
+      "To conduct an objective evaluation of the palace’s facilities, service standards, wellness potential, and guest experience from a European perspective — while staying as actual guests, understanding cultural expectations, quality benchmarks, and retreat viability in a heritage hospitality context.",
+    solution:
+      "We spent 2 nights and 3 days at the property with our foreign guest, assessing key elements including room comfort, service quality, wellness offerings, food experience, ambiance, natural surroundings, and overall suitability for a wellness retreat. Through structured on-site observation, interviews with staff, lifestyle photography, and cinematic video coverage, we produced a detailed evaluation report and visual assets for the client’s strategic planning.",
+    results: [
+      "Documented comprehensive guest experience report aligned with international wellness standards",
+      "Captured high-quality visuals of architecture, spaces, amenities, and environment",
+      "Provided actionable recommendations for retreat potential & guest comfort enhancement"
+    ],
     testimonial: {
       text: "The team's attention to detail is unmatched. They managed to balance the heritage with a modern aesthetic perfectly.",
       author: "Mr. Ram Kaushik",
@@ -527,14 +527,14 @@ export const projectsData: Project[] = [
     client: "Dadhikar Fort & Resorts Private Limited",
     duration: "1 Week",
     challenge:
-    "To evaluate whether this historic fort-hotel — with roots tracing back to the 9th–10th century and now restored with modern hospitality — meets international wellness retreat benchmarks while capturing its historic essence, cultural value, and guest comfort levels within a limited timeframe.",  
-  solution:
-    "Our team conducted a detailed on-site assessment over the stay, exploring accommodation quality, guest services, interaction with local cultural elements, hospitality standards, wellness potential (tranquility, nature access, amenities), and overall guest experience. We paired this with cinematic videography and curated photography that presents the property’s heritage charm, modern amenities, and retreat suitability in a compelling, professional format.",  
-  results: [
-    "Delivered a comprehensive European-standard wellness evaluation report",
-    "Captured rich visual storytelling of history, hospitality, and serene landscapes",
-    "Provided actionable recommendations for retreat positioning and guest experience enhancement"
-  ],
+      "To evaluate whether this historic fort-hotel — with roots tracing back to the 9th–10th century and now restored with modern hospitality — meets international wellness retreat benchmarks while capturing its historic essence, cultural value, and guest comfort levels within a limited timeframe.",
+    solution:
+      "Our team conducted a detailed on-site assessment over the stay, exploring accommodation quality, guest services, interaction with local cultural elements, hospitality standards, wellness potential (tranquility, nature access, amenities), and overall guest experience. We paired this with cinematic videography and curated photography that presents the property’s heritage charm, modern amenities, and retreat suitability in a compelling, professional format.",
+    results: [
+      "Delivered a comprehensive European-standard wellness evaluation report",
+      "Captured rich visual storytelling of history, hospitality, and serene landscapes",
+      "Provided actionable recommendations for retreat positioning and guest experience enhancement"
+    ],
     gallery: [cld("Group_ab3s76", 1000), cld("20251217_122441_ccans2", 500), cld("DDF7_1_uzekib", 500), cld("DDF1_mlh0dl", 500), cld("DDF4_jf6kgn", 500), cld("20251217_062041_mmwdr2", 500), cld("20251216_194812_ljxyr2", 500), cld("20251217_061903_yw55mk", 500), cld("20251216_194935_rrdkhk", 500), cld("DDF8_m6tz4c", 500), cld("DDF3_1_qxt0en", 500)],
     youtubeIds: ["https://youtu.be/R2gEQOMuUcI?si=LVT3fRgOaA7b4yRK"]
   },
@@ -544,21 +544,21 @@ export const projectsData: Project[] = [
     title: "Bamboo Saa Resort & Spa",
     location: "Jaipur, Rajasthan",
     category: "Wellness Hospitality Assessment & Collaboration",
-    description:  "A stay-and-audit project to benchmark the wellness retreat experience against European hospitality and comfort standards. We delivered strategy-aligned promotional shoots and digital assets for wellness-focused platform scale-up. Partnership advisory backed by SEO and GEO recommendations to enhance global wellness search visibility and retreat positioning.",
+    description: "A stay-and-audit project to benchmark the wellness retreat experience against European hospitality and comfort standards. We delivered strategy-aligned promotional shoots and digital assets for wellness-focused platform scale-up. Partnership advisory backed by SEO and GEO recommendations to enhance global wellness search visibility and retreat positioning.",
     image: cld("download_mopedx", 800),
     mediaStats: { photos: 5, videos: 0 },
     tags: ["Wellness", "Resort", "Spa", "Hospitality", "Retreat"],
     client: "Mr. V.K. Agarwal",
     duration: "1 Week",
     challenge:
-    "To benchmark an existing wellness retreat against European wellness tourism expectations while staying as real guests, ensuring our feedback captured practicality, cultural compatibility, business potential, and partnership scope without disrupting ongoing retreat operations.",
-  solution:
-    "We conducted an immersive, unbiased assessment covering wellness programs, spa services, food quality, staff behavior, hygiene protocols, ambiance, sustainability, silence zones, nature integration, accessibility, and guest comfort. After evaluation, we delivered a structured suggestion brief to the owner and discussed potential collaboration and long-term partnership opportunities.",
-  results: [
-    "Validated the property as an exceptional wellness retreat with international appeal",
-    "Shared European-standard recommendations for future retreat expansion and operations",
-    "Initiated partnership conversations for collaboration in retreat experience & international guest programs"
-  ],
+      "To benchmark an existing wellness retreat against European wellness tourism expectations while staying as real guests, ensuring our feedback captured practicality, cultural compatibility, business potential, and partnership scope without disrupting ongoing retreat operations.",
+    solution:
+      "We conducted an immersive, unbiased assessment covering wellness programs, spa services, food quality, staff behavior, hygiene protocols, ambiance, sustainability, silence zones, nature integration, accessibility, and guest comfort. After evaluation, we delivered a structured suggestion brief to the owner and discussed potential collaboration and long-term partnership opportunities.",
+    results: [
+      "Validated the property as an exceptional wellness retreat with international appeal",
+      "Shared European-standard recommendations for future retreat expansion and operations",
+      "Initiated partnership conversations for collaboration in retreat experience & international guest programs"
+    ],
     gallery: [cld("IMG_1348_o3w5o8", 500), cld("IMG_1349_iizzwv", 500), cld("IMG_1389_w1cim0", 500), cld("IMG_1368_umg7in", 500), cld("IMG_1406_gbkjp1", 500)]
   }
 ];
@@ -599,7 +599,7 @@ export const teamData: TeamMember[] = [
   },
   {
     name: "Utkarsh Sharma",
-    education: "",   
+    education: "",
     role: "Chief Technical Officer",
     country: "India",
     image: cld("Utkarsh1_yiat7m", 200),
@@ -623,6 +623,7 @@ export const teamData: TeamMember[] = [
 
 export const testimonialsData: Testimonial[] = [
   {
+    id: "1",
     rating: 5,
     text: "GK WebTech completely transformed our online presence. Our organic traffic increased by 200% in just six months, and the lead quality has never been better.",
     name: "Leslie Alexander",
@@ -630,6 +631,7 @@ export const testimonialsData: Testimonial[] = [
     image: cldFetch("https://randomuser.me/api/portraits/women/44.jpg", 200)
   },
   {
+    id: "2",
     rating: 5,
     text: "Their social media team is outstanding. They captured our brand voice perfectly and engaged our community in ways we couldn't have imagined.",
     name: "Sahil Gupta",
@@ -637,6 +639,7 @@ export const testimonialsData: Testimonial[] = [
     image: cldFetch("https://randomuser.me/api/portraits/men/1.jpg", 200)
   },
   {
+    id: "3",
     rating: 4,
     text: "The ROI we've seen from their PPC campaigns is incredible. Professional, data-driven, and transparent reporting. Highly recommended!",
     name: "Jenny Wilson",

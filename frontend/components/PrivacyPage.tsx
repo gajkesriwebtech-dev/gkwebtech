@@ -1,17 +1,19 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Seo } from './Seo';
 
 export const PrivacyPage: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="pt-32 pb-20 bg-bg-light dark:bg-gray-950 min-h-screen transition-colors">
       <Seo
-        title="Privacy Policy | GK WebTech | GKWebTech"
-        description="Learn how GK WebTech collects, uses, and protects your data and communication preferences. GKWebTech helps businesses grow online."
-        keywords="privacy policy, data protection, user rights, cookies, analytics"
+        title={t('seo.privacy.title', 'Privacy Policy | GK WebTech | GKWebTech')}
+        description={t('seo.privacy.description', 'Learn how GK WebTech collects, uses, and protects your data and communication preferences.')}
+        keywords={t('seo.privacy.keywords', 'privacy policy, data protection, user rights, cookies, analytics')}
         canonical={`${window.location.origin}/privacy`}
         image={`${window.location.origin}/images/logo.png`}
         type="website"
-      /> 
+      />
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
         <h1 className="text-4xl font-bold text-primary dark:text-white mb-6">Privacy Policy — GK WebTech</h1>
         <div className="prose dark:prose-invert max-w-none leading-relaxed text-gray-700 dark:text-gray-300">

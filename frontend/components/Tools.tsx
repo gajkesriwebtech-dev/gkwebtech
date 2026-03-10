@@ -1,13 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Seo } from './Seo';
 
 export const Tools: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100 dark:bg-gray-900 text-center">
       <Seo
-        title="Tools & Downloads | GK WebTech | GKWebTech"
-        description="Explore tools and downloadable resources from GK WebTech for marketing performance. GKWebTech helps businesses grow online."
-        keywords="tools, downloads, resources, marketing tools"
+        title={t('seo.tools.title', 'Free Tools | GK WebTech | GKWebTech')}
+        description={t('seo.tools.description', 'Access free digital marketing tools and resources provided by GK WebTech to help you optimize your online presence.')}
+        keywords={t('seo.tools.keywords', 'free tools, SEO tools, marketing resources')}
         canonical={`${window.location.origin}/tools`}
         image={`${window.location.origin}/images/logo.png`}
         type="website"
@@ -21,4 +23,3 @@ export const Tools: React.FC = () => {
     </div>
   );
 };
-

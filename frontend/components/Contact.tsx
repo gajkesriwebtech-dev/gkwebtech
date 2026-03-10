@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Phone, Mail, MapPin, ArrowRight, Loader2, CheckCircle } from 'lucide-react';
 import { Button } from './Button';
 
 export const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
@@ -26,7 +28,7 @@ export const Contact: React.FC = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
-      });   
+      });
 
       const data = await response.json();
 
@@ -60,16 +62,16 @@ export const Contact: React.FC = () => {
               <div className="flex items-center gap-3 mb-3">
                 <span className="h-0.5 w-4 bg-primary dark:bg-secondary"></span>
                 <span className="text-sm font-semibold uppercase tracking-wider text-primary dark:text-secondary">
-                  Contact Us
+                  {t("contact_section.tag", "Contact Us")}
                 </span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold leading-tight text-primary dark:text-white">
-                Let's Grow <span className="text-white dark:text-secondary">Your Business</span>
+                {t("contact_section.title_prefix", "Let's Grow")} <span className="text-white dark:text-secondary">{t("contact_section.title_highlight", "Your Business")}</span>
               </h2>
             </div>
 
             <p className="text-primary dark:text-gray-300 mb-8 leading-relaxed font-medium">
-              Ready to take your digital presence to the next level? Contact us today for a free consultation and audit.
+              {t("contact_section.description", "Ready to take your digital presence to the next level? Contact us today for a free consultation and audit.")}
             </p>
 
             <div className="space-y-6">
@@ -81,7 +83,7 @@ export const Contact: React.FC = () => {
                   <span className="text-primary dark:text-gray-200 font-bold">+91 9971944676</span>
                   <span className="text-primary dark:text-gray-200 font-bold">+31 620508410</span>
                 </div>
-                </div>
+              </div>
 
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-primary dark:text-secondary shadow-sm">
@@ -103,7 +105,7 @@ export const Contact: React.FC = () => {
                   <MapPin size={20} />
                 </div>
                 <span className="text-primary dark:text-gray-200 font-bold leading-tight items-start">
-                  Giekerkstraat 60 5043MK, Tilburg, Netherlands 
+                  Giekerkstraat 60 5043MK, Tilburg, Netherlands
                 </span>
               </div>
             </div>
@@ -114,27 +116,27 @@ export const Contact: React.FC = () => {
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-primary dark:text-secondary">Your Name *</label>
+                  <label className="text-sm font-bold text-primary dark:text-secondary">{t("contact_section.form.name", "Your Name *")}</label>
                   <input
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     type="text"
                     required
-                    placeholder="Ex. John Doe"
+                    placeholder={t("contact_section.form.name_placeholder", "Ex. John Doe")}
                     className="w-full bg-white dark:bg-gray-800 border border-transparent dark:border-gray-700 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-secondary transition-all placeholder-gray-400 dark:text-white"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-primary dark:text-secondary">Email *</label>
+                  <label className="text-sm font-bold text-primary dark:text-secondary">{t("contact_section.form.email", "Email *")}</label>
                   <input
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     type="email"
                     required
-                    placeholder="example@company.com"
+                    placeholder={t("contact_section.form.email_placeholder", "example@company.com")}
                     className="w-full bg-white dark:bg-gray-800 border border-transparent dark:border-gray-700 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-secondary transition-all placeholder-gray-400 dark:text-white"
                   />
                 </div>
@@ -142,27 +144,27 @@ export const Contact: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-primary dark:text-secondary">Phone *</label>
+                  <label className="text-sm font-bold text-primary dark:text-secondary">{t("contact_section.form.phone", "Phone *")}</label>
                   <input
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
                     type="tel"
                     required
-                    placeholder="Enter Phone Number"
+                    placeholder={t("contact_section.form.phone_placeholder", "Enter Phone Number")}
                     className="w-full bg-white dark:bg-gray-800 border border-transparent dark:border-gray-700 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-secondary transition-all placeholder-gray-400 dark:text-white"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-primary dark:text-secondary">Service Interested in</label>
+                  <label className="text-sm font-bold text-primary dark:text-secondary">{t("contact_section.form.service", "Service Interested in")}</label>
                   <select
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
                     className="w-full bg-white dark:bg-gray-800 border border-transparent dark:border-gray-700 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-secondary transition-all text-gray-500 dark:text-gray-300"
                   >
-                    <option value="">Select Service (Optional)</option>
+                    <option value="">{t("contact_section.form.service_placeholder", "Select Service (Optional)")}</option>
                     <option value="seo">SEO Optimization</option>
                     <option value="social">Social Media Marketing</option>
                     <option value="content">Content Strategy & Branding</option>
@@ -175,13 +177,13 @@ export const Contact: React.FC = () => {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-bold text-primary dark:text-secondary">Project Details</label>
+                <label className="text-sm font-bold text-primary dark:text-secondary">{t("contact_section.form.details", "Project Details")}</label>
                 <textarea
                   name="details"
                   value={formData.details}
                   onChange={handleChange}
                   rows={6}
-                  placeholder="Tell us about your goals (Optional)..."
+                  placeholder={t("contact_section.form.details_placeholder", "Tell us about your goals (Optional)...")}
                   className="w-full bg-white dark:bg-gray-800 border border-transparent dark:border-gray-700 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-secondary transition-all placeholder-gray-400 dark:text-white"
                 ></textarea>
               </div>
@@ -189,13 +191,13 @@ export const Contact: React.FC = () => {
               {status === 'success' && (
                 <div className="p-4 bg-green-100 text-green-700 rounded-xl flex items-center gap-2">
                   <CheckCircle size={20} />
-                  <span>Message sent successfully! We will contact you shortly.</span>
+                  <span>{t("contact_section.form.success", "Message sent successfully! We will contact you shortly.")}</span>
                 </div>
               )}
 
               {status === 'error' && (
                 <div className="p-4 bg-red-100 text-red-700 rounded-xl">
-                  Something went wrong. Please try again or call us directly.
+                  {t("contact_section.form.error", "Something went wrong. Please try again or call us directly.")}
                 </div>
               )}
 
@@ -206,23 +208,23 @@ export const Contact: React.FC = () => {
                   className="bg-primary dark:bg-white text-white dark:text-primary rounded-full pl-6 pr-2 py-2 flex items-center gap-4 hover:bg-primary-dark dark:hover:bg-gray-200 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   <span className="font-medium">
-                    {status === 'loading' ? 'Sending...' : 'Send Message'}
+                    {status === 'loading' ? t("contact_section.form.sending", "Sending...") : t("contact_section.form.send", "Send Message")}
                   </span>
                   <span className="w-10 h-10 rounded-full bg-secondary dark:bg-primary text-primary dark:text-secondary flex items-center justify-center">
                     {status === 'loading' ? <Loader2 size={18} className="animate-spin" /> : <ArrowRight size={18} />}
                   </span>
                 </button>
 
-                <button 
-                   type="button"
-                   onClick={() => navigate('/pricing#custom-builder')}
-                   className="bg-primary dark:bg-white text-white dark:text-primary rounded-full pl-6 pr-2 py-2 flex items-center gap-4 hover:bg-primary-dark dark:hover:bg-gray-200 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed"
-                 >
-                   <span className="font-medium">Create Custom Quote</span>
-                   <span className="w-10 h-10 rounded-full bg-secondary dark:bg-primary text-primary dark:text-secondary flex items-center justify-center">
-                     <ArrowRight size={18} />
-                   </span>
-                 </button>
+                <button
+                  type="button"
+                  onClick={() => navigate('/pricing#custom-builder')}
+                  className="bg-primary dark:bg-white text-white dark:text-primary rounded-full pl-6 pr-2 py-2 flex items-center gap-4 hover:bg-primary-dark dark:hover:bg-gray-200 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  <span className="font-medium">{t("contact_section.form.custom_quote", "Create Custom Quote")}</span>
+                  <span className="w-10 h-10 rounded-full bg-secondary dark:bg-primary text-primary dark:text-secondary flex items-center justify-center">
+                    <ArrowRight size={18} />
+                  </span>
+                </button>
               </div>
             </form>
           </div>
@@ -235,15 +237,15 @@ export const Contact: React.FC = () => {
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 w-80">
             <div className="flex flex-col items-center text-center">
               <CheckCircle size={36} className="text-green-600 mb-3" />
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white">Submission Received</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white">{t("contact_section.popup.title", "Submission Received")}</h3>
               <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
-                Thanks for contacting GK WebTech. We'll reach out shortly.
+                {t("contact_section.popup.message", "Thanks for contacting GK WebTech. We'll reach out shortly.")}
               </p>
               <button
                 onClick={() => setShowPopup(false)}
                 className="mt-4 bg-primary text-white px-4 py-2 rounded-full text-sm font-medium"
               >
-                Close
+                {t("contact_section.popup.close", "Close")}
               </button>
             </div>
           </div>
