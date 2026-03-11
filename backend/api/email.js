@@ -1,12 +1,12 @@
 import nodemailer from "nodemailer";
 
 export const transporter = nodemailer.createTransport({
-  host: process.env.EMAIL_HOST,
-  port: process.env.EMAIL_PORT,
-  secure: false,
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT),
+  secure: process.env.SMTP_SECURE === "true",
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
   },
 });
 
@@ -56,8 +56,8 @@ export const sendInternalLeadMail = async (lead) => {
   const services = resolveServices(lead);
 
   return transporter.sendMail({
-    from: process.env.EMAIL_FROM,
-    to: process.env.EMAIL_USER,
+    from: process.env.MAIL_FROM,
+    to: process.env.SMTP_USER,
     subject: `� New Lead: ${lead.name} (${lead.type})`,
     html: `
       <!DOCTYPE html>
@@ -210,7 +210,7 @@ export const sendClientConfirmationMail = async (lead) => {
   const services = resolveServices(lead);
 
   return transporter.sendMail({
-    from: process.env.EMAIL_FROM,
+    from: process.env.MAIL_FROM,
     to: lead.email,
     subject: `We've received your request! 🚀 — GK WebTech`,
     html: `
@@ -267,7 +267,7 @@ export const sendClientConfirmationMail = async (lead) => {
           <!-- Footer -->
           <div style="${styles.footer}">
             <p style="${styles.footerText}">GKWebTech Digital Marketing Agency</p>
-            <p style="${styles.footerText}"><a href="mailto:gajkesariwebtech@gmail.com" style="color: ${COLORS.primary}; text-decoration: none;">gajkesariwebtech@gmail.com</a></p>
+            <p style="${styles.footerText}"><a href="mailto:contact@gkwebtech.cloud" style="color: ${COLORS.primary}; text-decoration: none;">contact@gkwebtech.cloud</a></p>
             
             <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid #E5E7EB;">
               <p style="color: ${COLORS.textLight}; font-size: 14px; margin-bottom: 16px; font-weight: 500;">Follow us on our socials</p>

@@ -79,7 +79,7 @@ router.post("/send-otp", protect, admin, rateLimit({ windowMs: 15 * 60 * 1000, m
 
     // Send email with OTP
     await transporter.sendMail({
-      from: process.env.EMAIL_FROM,
+      from: process.env.MAIL_FROM,
       to: process.env.ADMIN_EMAIL, // Send to configured admin email
       subject: "🚨 Urgent: Delete All Leads OTP",
       html: `

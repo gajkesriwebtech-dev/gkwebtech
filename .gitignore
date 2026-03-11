@@ -27,3 +27,22 @@ dist-ssr
 .env
 .env.*
 !.env.example
+
+# Test and scratch scripts
+backend/test_email.js
+backend/check_lead_2.js
+frontend/convert-images.js
+
+# Project specific
+dist/
+dist-ssr/
+node_modules/
+.vite/
+.vercel/
+
+# Editor/Temp
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
