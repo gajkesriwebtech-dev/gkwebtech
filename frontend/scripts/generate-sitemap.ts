@@ -66,32 +66,9 @@ function extractData(fileContent: string, arrayName: string): {id: string, updat
     return items;
 }
 
-function extractBlogDates(fileContent: string): {id: string, date: string}[] {
-    const blogs: {id: string, date: string}[] = [];
-    const arrayRegex = new RegExp(`export const blogsData(?::\\s*[^=]+)?\\s*=\\s*\\[([\\s\\S]*?)\\];`, 'm');
-    const match = fileContent.match(arrayRegex);
 
-    if (match && match[1]) {
-        const content = match[1];
-        const parts = content.split(/id:\s*["']/);
-        for (let i = 1; i < parts.length; i++) {
-            const part = parts[i];
-            const idEndQuote = part.indexOf('"') !== -1 ? part.indexOf('"') : part.indexOf("'");
-            if (idEndQuote === -1) continue;
-            
-            const id = part.substring(0, idEndQuote);
-            
-            let date = '';
-            const dateMatch = part.match(/date:\s*["']([^"']+)["']/);
-            if (dateMatch) {
-                date = dateMatch[1];
-            }
-            
-            blogs.push({ id, date });
-        }
-    }
-    return blogs;
-}
+// Blog sitemap generation should be updated to fetch from MongoDB API.
+// Removing legacy static extraction.
 
 function generateSitemap() {
   const dataContent = fs.readFileSync(DATA_FILE_PATH, 'utf-8');
@@ -99,17 +76,14 @@ function generateSitemap() {
   const services = extractData(dataContent, 'servicesData');
   const courses = extractData(dataContent, 'coursesData');
   const projects = extractData(dataContent, 'projectsData');
-  const blogs = extractBlogDates(dataContent);
-
   const urls: { loc: string; lastmod: string; changefreq: string; priority: string }[] = [];
 
   // Static Routes
   staticRoutes.forEach(route => {
-    // If route is '/', join correctly
     const loc = route === '/' ? `${BASE_URL}/` : `${BASE_URL}${route}`;
     urls.push({
       loc,
-      lastmod: new Date().toISOString().split('T')[0], // Static pages can keep today or we can hardcode
+      lastmod: new Date().toISOString().split('T')[0],
       changefreq: 'monthly',
       priority: PRIORITY_MAP[route] || '0.5'
     });
@@ -121,7 +95,7 @@ function generateSitemap() {
       loc: `${BASE_URL}/service/${item.id}`,
       lastmod: item.updatedAt,
       changefreq: 'weekly',
-      priority: '0.85' // Request: Services -> 0.85
+      priority: '0.85'
     });
   });
 
@@ -131,27 +105,11 @@ function generateSitemap() {
       loc: `${BASE_URL}/course/${item.id}`,
       lastmod: item.updatedAt,
       changefreq: 'weekly',
-      priority: '0.75' // Request: Courses -> 0.75
+      priority: '0.75'
     });
   });
 
-  // Dynamic Routes - Blogs
-  blogs.forEach(blog => {
-    let date = new Date().toISOString().split('T')[0];
-    if (blog.date) {
-        const parsedDate = new Date(blog.date);
-        if (!isNaN(parsedDate.getTime())) {
-            date = parsedDate.toISOString().split('T')[0];
-        }
-    }
-
-    urls.push({
-      loc: `${BASE_URL}/blog/${blog.id}`,
-      lastmod: date, // Keep original blog date logic
-      changefreq: 'monthly',
-      priority: '0.7' // Request: Blogs -> 0.7
-    });
-  });
+  // Dynamic Routes - Blogs (TODO: Fetch from API/DB)
 
   // Dynamic Routes - Portfolio (Projects)
   projects.forEach(item => {

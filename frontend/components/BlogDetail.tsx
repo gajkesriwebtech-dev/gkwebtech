@@ -1,18 +1,48 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { blogsData } from '../data';
+import DOMPurify from 'dompurify';
+import { BlogPost } from '../types';
 import { ArrowLeft, User, Calendar, Clock, Facebook, Twitter, Linkedin, Share2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Seo } from './Seo';
 
 export const BlogDetail: React.FC = () => {
-   const { id } = useParams<{ id: string }>();
-   const blog = blogsData.find(b => b.id === id);
-   const { t } = useTranslation();
+   const { lang, slug } = useParams<{ lang?: string, slug: string }>();
+   const { t, i18n } = useTranslation();
+   const currentLang = lang || "en";
+   const [blog, setBlog] = React.useState<BlogPost | null>(null);
+   const [loading, setLoading] = React.useState(true);
 
    useEffect(() => {
       window.scrollTo(0, 0);
-   }, [id]);
+      fetchBlog();
+   }, [slug, currentLang]);
+
+   const fetchBlog = async () => {
+      try {
+         setLoading(true);
+         const res = await fetch(`/api/blogs/${slug}?lang=${currentLang}`);
+         if (res.ok) {
+            const data = await res.json();
+            setBlog(data);
+         } else {
+            setBlog(null);
+         }
+      } catch (error) {
+         console.error("Error fetching blog:", error);
+         setBlog(null);
+      } finally {
+         setLoading(false);
+      }
+   };
+
+   if (loading) {
+      return (
+         <div className="min-h-screen pt-32 flex justify-center items-center bg-bg-light dark:bg-gray-950">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-secondary"></div>
+         </div>
+      );
+   }
 
    if (!blog) {
       return (
@@ -26,10 +56,10 @@ export const BlogDetail: React.FC = () => {
    return (
       <div className="pt-24 pb-20 bg-bg-light dark:bg-gray-950 min-h-screen transition-colors">
          <Seo
-            title={`${blog.title} | GK WebTech | GKWebTech`}
-            description={`${blog.excerpt} ${t('seo.detail_suffix.blog')}`}
+            title={`${blog.metaTitle || blog.title} | GK WebTech | GKWebTech`}
+            description={`${blog.metaDescription || blog.excerpt} ${t('seo.detail_suffix.blog')}`}
             keywords={(blog.tags || []).join(', ')}
-            canonical={window.location.href}
+            canonical={`${window.location.origin}/blog/${blog.slug}`}
             image={blog.image}
             type="article"
             structuredData={{
@@ -71,7 +101,7 @@ export const BlogDetail: React.FC = () => {
                   {/* Meta Data */}
                   <div className="flex flex-wrap gap-4 md:gap-8 items-center text-sm text-gray-500 dark:text-gray-400 mb-6 border-b border-gray-100 dark:border-gray-800 pb-6">
                      <span className="bg-secondary/20 text-primary dark:text-secondary px-3 py-1 rounded-full font-bold text-xs uppercase tracking-wide">
-                        {t(`blogs.${blog.id}.category`, blog.category)}
+                        {blog.category}
                      </span>
                      <div className="flex items-center gap-2">
                         <Calendar size={16} /> {blog.date}
@@ -86,13 +116,13 @@ export const BlogDetail: React.FC = () => {
 
                   {/* Title */}
                   <h1 className="text-3xl md:text-5xl font-bold text-text-dark dark:text-white mb-8 leading-tight">
-                     {t(`blogs.${blog.id}.title`, blog.title)}
+                     {blog.title}
                   </h1>
 
                   {/* Content Body */}
                   <div
                      className="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-300"
-                     dangerouslySetInnerHTML={{ __html: t(`blogs.${blog.id}.content`, blog.content) }}
+                     dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(blog.content) }}
                   ></div>
 
                </div>

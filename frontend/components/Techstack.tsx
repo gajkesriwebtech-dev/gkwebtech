@@ -17,7 +17,7 @@ export const Techstack: React.FC = () => {
 
   return (
     <section className="py-20 bg-white dark:bg-gray-950 transition-colors">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 xl:px-12 2xl:px-24">
         <SectionHeader
           label={t("techstack.label", "Our Tech Stack")}
           title={t("techstack.title", "Tools We Use to")}

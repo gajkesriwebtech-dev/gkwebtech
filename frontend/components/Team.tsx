@@ -14,7 +14,7 @@ export const Team: React.FC = () => {
 
   return (
     <section className="py-20 bg-gray-100 dark:bg-gray-900 transition-colors" id="team">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 xl:px-12 2xl:px-24">
         <SectionHeader
           label={t("team.label", "Our Team")}
           title={t("team.title", "Meet The")}

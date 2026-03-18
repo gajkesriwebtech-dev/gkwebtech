@@ -12,9 +12,9 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className="bg-white dark:bg-gray-950 pt-20 pb-10 border-t border-gray-100 dark:border-gray-800 transition-colors">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 xl:px-12 2xl:px-24">
         {/* Call to Action Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center mb-20 border-b border-gray-100 dark:border-gray-800 pb-12">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-2 border-b border-gray-100 dark:border-gray-800 pb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-text-dark dark:text-white mb-6 md:mb-0 max-w-xl">
             {t("hero.cta_secondary")}
           </h2>

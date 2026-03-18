@@ -15,7 +15,7 @@ export const Ticker: React.FC = () => {
   ];
 
   return (
-    <div className="bg-secondary py-6 overflow-hidden relative transform -skew-y-1 origin-bottom-left md:skew-y-0 xl:mx-[-2rem] 2xl:mx-[-4rem]">
+    <div className="bg-secondary py-6 overflow-hidden relative transform -skew-y-1 origin-bottom-left md:skew-y-0">
       <div className="absolute inset-0 bg-primary opacity-0 md:hidden"></div> {/* Mobile adjustment if needed */}
       <div className="flex w-max whitespace-nowrap animate-marquee-fast md:animate-marquee items-center will-change-transform">
         {[...items, ...items, ...items].map((item, index) => (

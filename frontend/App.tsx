@@ -71,7 +71,7 @@ function App() {
             <Route path="portfolio" element={<PortfolioPage />} />
             <Route path="portfolio/:id" element={<ProjectDetail />} />
             <Route path="blogs" element={<BlogsPage />} />
-            <Route path="blog/:id" element={<BlogDetail />} />
+            <Route path="blog/:slug" element={<BlogDetail />} />
             <Route path="tools" element={<Tools />} />
             <Route path="terms" element={<TermsPage />} />
             <Route path="privacy" element={<PrivacyPage />} />
@@ -88,7 +88,7 @@ function App() {
             <Route path="portfolio" element={<PortfolioPage />} />
             <Route path="portfolio/:id" element={<ProjectDetail />} />
             <Route path="blogs" element={<BlogsPage />} />
-            <Route path="blog/:id" element={<BlogDetail />} />
+            <Route path="blog/:slug" element={<BlogDetail />} />
             <Route path="tools" element={<Tools />} />
             <Route path="terms" element={<TermsPage />} />
             <Route path="privacy" element={<PrivacyPage />} />
