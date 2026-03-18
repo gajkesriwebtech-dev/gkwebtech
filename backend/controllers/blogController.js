@@ -34,9 +34,34 @@ const findRelatedBlogs = (currentBlog, existingBlogs) => {
 
 export const getBlogs = async (req, res) => {
   try {
-    const { lang } = req.query;
-    const query = lang ? { language: lang } : {};
-    const blogs = await Blog.find(query).sort({ createdAt: -1 });
+    const lang = req.query.lang || "en";
+    console.log("Requested lang:", lang);
+
+    // Optimized $in query to grab the requested language and English together
+    let blogs = await Blog.find({ language: { $in: [lang, "en"] } }).sort({ createdAt: -1 });
+
+    // Deduplicate blogs by slug, prioritizing the requested language over the fallback "en"
+    const uniqueBlogsMap = new Map();
+    for (const blog of blogs) {
+      if (!uniqueBlogsMap.has(blog.slug)) {
+        uniqueBlogsMap.set(blog.slug, blog);
+      } else {
+        // If we already have a blog with this slug, we only overwrite it if the current blog matches the requested language exactly
+        if (blog.language === lang) {
+          uniqueBlogsMap.set(blog.slug, blog);
+        }
+      }
+    }
+    
+    // Convert back to array
+    blogs = Array.from(uniqueBlogsMap.values());
+
+    // 🔥 FINAL fallback (VERY IMPORTANT) - If DB is totally empty of even English fallbacks for some reason
+    if (!blogs.length) {
+      blogs = await Blog.find({}).sort({ createdAt: -1 });
+    }
+
+    console.log("Blogs found:", blogs.length);
     res.json(blogs);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -72,6 +97,9 @@ export const getBlogBySlug = async (req, res) => {
 export const createBlog = async (req, res) => {
   try {
     const blogData = req.body;
+    
+    // Ensure language field is always set
+    blogData.language = blogData.language || "en";
     
     // Fetch existing blogs for internal linking
     const existingBlogs = await Blog.find({ language: blogData.language });
