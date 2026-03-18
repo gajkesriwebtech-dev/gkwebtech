@@ -45,7 +45,7 @@ export const PricingLeadModal: React.FC<PricingLeadModalProps> = ({
     setErrorMessage('');
 
     try {
-       const backendUrl = (import.meta as any).env?.VITE_BACKEND_URL || 'http://localhost:4000/api';
+       const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000/api';
        
        const body = {
          ...payload,

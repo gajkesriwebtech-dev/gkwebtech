@@ -21,9 +21,13 @@ export const BlogDetail: React.FC = () => {
    const fetchBlog = async () => {
       try {
          setLoading(true);
-         const res = await fetch(`/api/blogs/${slug}?lang=${currentLang}`);
+         const backendUrl = import.meta.env.VITE_BACKEND_URL || '';
+         console.log("API URL Blog Detail Component:", backendUrl);
+
+         const res = await fetch(`${backendUrl}/api/blogs/${slug}?lang=${currentLang}`, { cache: "no-store" });
          if (res.ok) {
             const data = await res.json();
+            console.log("Fetched single blog:", data);
             setBlog(data);
          } else {
             setBlog(null);

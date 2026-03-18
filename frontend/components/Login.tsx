@@ -11,7 +11,7 @@ export const Login: React.FC = () => {
   const navigate = useNavigate();
 
   const getApiUrl = () => {
-    const url = (import.meta as any).env?.VITE_BACKEND_URL || 'http://localhost:4000/api';
+    const url = import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000/api';
     return url.endsWith('/api') ? url : `${url}/api`;
   };
 
