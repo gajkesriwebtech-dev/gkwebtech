@@ -20,8 +20,13 @@ export const BlogsPage: React.FC = () => {
   const fetchBlogs = async () => {
     try {
       setLoading(true);
-      const res = await fetch(`/api/blogs?lang=${i18n.language}`);
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || '';
+      console.log("API URL Blogs Page:", backendUrl);
+      
+      const res = await fetch(`${backendUrl}/api/blogs?lang=${i18n.language}`, { cache: "no-store" });
       const data = await res.json();
+      
+      console.log("Fetched paginated blogs:", data);
       setBlogs(data);
     } catch (error) {
       console.error("Error fetching blogs:", error);
@@ -71,6 +76,10 @@ export const BlogsPage: React.FC = () => {
         {loading ? (
           <div className="flex justify-center items-center py-20">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-secondary"></div>
+          </div>
+        ) : blogs.length === 0 ? (
+          <div className="text-center py-20 text-text-dark dark:text-white text-xl">
+            No blogs found in this language.
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

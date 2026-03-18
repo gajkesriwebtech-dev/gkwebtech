@@ -23,7 +23,7 @@ export const Contact: React.FC = () => {
     setStatus('loading');
 
     try {
-      const backendUrl = (import.meta as any).env?.VITE_BACKEND_URL || '';
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || '';
       const response = await fetch(`${backendUrl}/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },

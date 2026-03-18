@@ -16,9 +16,13 @@ export const Blog: React.FC = () => {
 
   const fetchBlogs = async () => {
     try {
-      setLoading(true);
-      const res = await fetch(`/api/blogs?lang=${i18n.language}`);
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || '';
+      console.log("API URL Blogs Component:", backendUrl);
+      
+      const res = await fetch(`${backendUrl}/api/blogs?lang=${i18n.language}`, { cache: "no-store" });
       const data = await res.json();
+      
+      console.log("Fetched home blogs:", data);
       setBlogs(data.slice(0, 3));
     } catch (error) {
       console.error("Error fetching homepage blogs:", error);
@@ -28,7 +32,7 @@ export const Blog: React.FC = () => {
   };
 
   if (loading) return null; // Or a subtle loader
-  if (blogs.length === 0) return null;
+  if (blogs.length === 0) return <div className="text-center py-10">No blogs found.</div>;
 
   return (
     <section className="py-20 bg-gray-100 dark:bg-gray-950 transition-colors" id="blogs">
