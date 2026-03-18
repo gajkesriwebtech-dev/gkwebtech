@@ -31,8 +31,8 @@ export const FAQ: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-primary xl:mx-[-2rem] 2xl:mx-[-4rem]" id="faq">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="py-20 bg-primary" id="faq">
+      <div className="container mx-auto px-4 md:px-6 xl:px-12 2xl:px-24">
         <SectionHeader
           label={t("faq.label", "Common Queries")}
           title={t("faq.title", "Frequently Asked")}

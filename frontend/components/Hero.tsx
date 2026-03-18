@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="pt-32 pb-20 bg-bg-light dark:bg-gray-950 relative overflow-hidden transition-colors duration-300">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 xl:px-12 2xl:px-24">
         <div className="flex flex-col md:flex-row items-center gap-12">
 
           {/* Left Content */}

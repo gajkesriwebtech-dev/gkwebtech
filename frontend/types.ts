@@ -89,7 +89,10 @@ export interface Testimonial {
 }
 
 export interface BlogPost {
-  id: string;
+  _id?: string;
+  id: string; // Legacy ID
+  slug: string;
+  language: string;
   title: string;
   date: string;
   category: string;
@@ -99,6 +102,9 @@ export interface BlogPost {
   readTime: string;
   content: string; // HTML or Markdown string for the full article
   tags?: string[];
+  metaTitle?: string;
+  metaDescription?: string;
+  primaryKeyword?: string;
 }
 
 export interface FAQItem {

@@ -4,6 +4,7 @@ import "dotenv/config";
 import cookieParser from "cookie-parser";
 import contactRouter from "./api/contact.js";
 import authRouter from "./api/auth.js";
+import blogRouter from "./routes/blogRoutes.js";
 import connectToDatabase from "./api/db.js";
 
 const app = express();
@@ -37,6 +38,7 @@ app.use(cookieParser());
 // Mount router
 app.use("/api/admin", authRouter);
 app.use("/api/contact", contactRouter);
+app.use("/api/blogs", blogRouter);
 app.use("/contact", contactRouter); // Legacy fallback
 
 // Health check
@@ -50,6 +52,7 @@ async function startServer() {
   const PORT = process.env.PORT || 5000;
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`Backend running on http://localhost:${PORT}`);
+    console.log(`Access on your network at http://72.62.134.29:${PORT}`);
   });
 }
 
