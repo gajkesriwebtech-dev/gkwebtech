@@ -458,17 +458,6 @@ export const teamData: TeamMember[] = [
     github: "#",
   },
   {
-    name: "J. E. Spek",
-    education: "",
-    role: "Advisor",
-    country: "Netherlands",
-    image: cld("judith_aruw3a", 200),
-    linkedin: "https://www.linkedin.com/in/judithspek/",
-    github: "#",
-    youtube: "#",
-    instagram: "#",
-  },
-  {
     name: "Utkarsh Sharma",
     education: "",
     role: "Chief Technical Officer",
