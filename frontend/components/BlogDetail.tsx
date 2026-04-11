@@ -63,7 +63,7 @@ export const BlogDetail: React.FC = () => {
             title={`${blog.metaTitle || blog.title} | GK WebTech | GKWebTech`}
             description={`${blog.metaDescription || blog.excerpt} ${t('seo.detail_suffix.blog')}`}
             keywords={(blog.tags || []).join(', ')}
-            canonical={`${window.location.origin}/blog/${blog.slug}`}
+            canonical={`/blog/${blog.slug}`}
             image={blog.image}
             type="article"
             structuredData={{
@@ -79,7 +79,7 @@ export const BlogDetail: React.FC = () => {
                   "name": "GK WebTech",
                   "logo": {
                      "@type": "ImageObject",
-                     "url": `${window.location.origin}/images/logo.png`
+                     "url": "https://gkwebtech.cloud/images/logo.png"
                   }
                }
             }}

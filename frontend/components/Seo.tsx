@@ -65,6 +65,8 @@ function setJsonLd(data?: object | object[]) {
   el.textContent = data ? JSON.stringify(data) : '';
 }
 
+export const BASE_URL = 'https://gkwebtech.cloud';
+
 export const Seo: React.FC<Props> = ({ 
   title, 
   description, 
@@ -83,14 +85,20 @@ export const Seo: React.FC<Props> = ({
     if (title) document.title = title;
     if (description) setTag('meta[name="description"]', 'content', description);
     if (keywords) setTag('meta[name="keywords"]', 'content', keywords);
-    if (canonical) setTag('link[rel="canonical"]', 'href', canonical);
+    if (canonical) {
+      const fullCanonical = canonical.startsWith('http') ? canonical : `${BASE_URL}${canonical.startsWith('/') ? '' : '/'}${canonical}`;
+      setTag('link[rel="canonical"]', 'href', fullCanonical);
+    }
     setTag('meta[name="robots"]', 'content', 'index,follow');
 
     // Open Graph
     if (title) setTag('meta[property="og:title"]', 'content', title);
     if (description) setTag('meta[property="og:description"]', 'content', description);
     setTag('meta[property="og:type"]', 'content', type);
-    if (canonical) setTag('meta[property="og:url"]', 'content', canonical);
+    if (canonical) {
+      const fullCanonical = canonical.startsWith('http') ? canonical : `${BASE_URL}${canonical.startsWith('/') ? '' : '/'}${canonical}`;
+      setTag('meta[property="og:url"]', 'content', fullCanonical);
+    }
     if (image) setTag('meta[property="og:image"]', 'content', image);
     setTag('meta[property="og:site_name"]', 'content', 'GK WebTech');
 
@@ -110,8 +118,7 @@ export const Seo: React.FC<Props> = ({
 
     // Hreflang Tags
     if (canonical) {
-      const baseUrl = window.location.origin;
-      const urlObj = new URL(canonical);
+      const urlObj = new URL(canonical.startsWith('http') ? canonical : `${BASE_URL}${canonical.startsWith('/') ? '' : '/'}${canonical}`);
       let path = urlObj.pathname;
 
       // Remove leading language segment if it exists
@@ -123,10 +130,10 @@ export const Seo: React.FC<Props> = ({
 
       const cleanPath = path === '/' ? '' : path;
 
-      setHreflang('en', `${baseUrl}${cleanPath}`);
-      setHreflang('nl', `${baseUrl}/nl${cleanPath}`);
-      setHreflang('de', `${baseUrl}/de${cleanPath}`);
-      setHreflang('x-default', `${baseUrl}${cleanPath}`);
+      setHreflang('en', `${BASE_URL}${cleanPath}`);
+      setHreflang('nl', `${BASE_URL}/nl${cleanPath}`);
+      setHreflang('de', `${BASE_URL}/de${cleanPath}`);
+      setHreflang('x-default', `${BASE_URL}${cleanPath}`);
     }
 
     // Structured Data
@@ -141,7 +148,7 @@ export const Seo: React.FC<Props> = ({
           "@type": "ListItem",
           "position": index + 1,
           "name": bc.name,
-          "item": bc.item.startsWith('http') ? bc.item : `${window.location.origin}${bc.item}`
+          "item": bc.item.startsWith('http') ? bc.item : `${BASE_URL}${bc.item.startsWith('/') ? '' : '/'}${bc.item}`
         }))
       };
 

@@ -47,15 +47,15 @@ export const Home: React.FC = () => {
         title={t('seo.home.title', 'GK WebTech | Digital Marketing Agency | GKWebTech')}
         description={t('seo.home.description', 'GK WebTech is a performance-driven digital marketing agency offering SEO, PPC, and branding solutions. GKWebTech helps businesses grow online.')}
         keywords={t('seo.home.keywords', 'GKWebTech, digital marketing agency, SEO, PPC, social media, web development, training')}
-        canonical={`${window.location.origin}/`}
-        image={`${window.location.origin}/images/logo.png`}
+        canonical="/"
+        image="/images/logo.png"
         type="website"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "GK WebTech",
           "alternateName": "GKWebTech",
-          "url": `${window.location.origin}/`
+          "url": "https://gkwebtech.cloud/"
         }}
       />
       <Hero />
