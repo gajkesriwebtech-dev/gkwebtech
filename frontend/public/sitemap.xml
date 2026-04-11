@@ -1,38 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://gkwebtech.cloud/</loc>
-    <lastmod>2026-02-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gkwebtech.cloud/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gkwebtech.cloud/nl" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://gkwebtech.cloud/de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gkwebtech.cloud/" />
+    <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://gkwebtech.cloud/services</loc>
-    <lastmod>2026-02-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gkwebtech.cloud/services" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gkwebtech.cloud/nl/services" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://gkwebtech.cloud/de/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gkwebtech.cloud/services" />
+    <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://gkwebtech.cloud/courses</loc>
-    <lastmod>2026-02-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gkwebtech.cloud/courses" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gkwebtech.cloud/nl/courses" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://gkwebtech.cloud/de/courses" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gkwebtech.cloud/courses" />
+    <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://gkwebtech.cloud/portfolio</loc>
-    <lastmod>2026-02-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gkwebtech.cloud/portfolio" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gkwebtech.cloud/nl/portfolio" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://gkwebtech.cloud/de/portfolio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gkwebtech.cloud/portfolio" />
+    <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gkwebtech.cloud/blogs</loc>
-    <lastmod>2026-02-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gkwebtech.cloud/blogs" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gkwebtech.cloud/nl/blogs" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://gkwebtech.cloud/de/blogs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gkwebtech.cloud/blogs" />
+    <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gkwebtech.cloud/tools</loc>
-    <lastmod>2026-02-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gkwebtech.cloud/tools" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gkwebtech.cloud/nl/tools" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://gkwebtech.cloud/de/tools" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gkwebtech.cloud/tools" />
+    <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>

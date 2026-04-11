@@ -68,12 +68,26 @@ export const BlogDetail: React.FC = () => {
             type="article"
             structuredData={{
                "@context": "https://schema.org",
-               "@type": "Article",
+               "@type": "BlogPosting",
                "headline": blog.title,
                "image": [blog.image],
                "author": { "@type": "Person", "name": blog.author },
-               "datePublished": blog.date
+               "datePublished": blog.date,
+               "description": blog.excerpt,
+               "publisher": {
+                  "@type": "Organization",
+                  "name": "GK WebTech",
+                  "logo": {
+                     "@type": "ImageObject",
+                     "url": `${window.location.origin}/images/logo.png`
+                  }
+               }
             }}
+            breadcrumbs={[
+               { name: t("nav.home", "Home"), item: "/" },
+               { name: t("nav.blogs", "Blogs"), item: "/blogs" },
+               { name: blog.title, item: `/blog/${blog.slug}` }
+            ]}
          />
 
          {/* Article Header Background */}

@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
+type Breadcrumb = {
+  name: string;
+  item: string;
+};
+
 type Props = {
   title?: string;
   description?: string;
@@ -9,6 +14,7 @@ type Props = {
   image?: string;
   type?: string;
   structuredData?: object;
+  breadcrumbs?: Breadcrumb[];
 };
 
 function setTag(selector: string, attr: string, value: string) {
@@ -43,7 +49,7 @@ function setHreflang(lang: string, href: string) {
   el.setAttribute('href', href);
 }
 
-function setJsonLd(data?: object) {
+function setJsonLd(data?: object | object[]) {
   const id = 'app-structured-data';
   let el = document.getElementById(id) as HTMLScriptElement | null;
   if (!el) {
@@ -52,10 +58,23 @@ function setJsonLd(data?: object) {
     el.id = id;
     document.head.appendChild(el);
   }
+  const content = Array.isArray(data) ? data.map(d => JSON.stringify(d)).join('\n') : (data ? JSON.stringify(data) : '');
+  
+  // For multiple schemas, wrapping in a top-level array or using separate scripts is better.
+  // Using an array for @graph or just an array of objects.
   el.textContent = data ? JSON.stringify(data) : '';
 }
 
-export const Seo: React.FC<Props> = ({ title, description, keywords, canonical, image, type = 'website', structuredData }) => {
+export const Seo: React.FC<Props> = ({ 
+  title, 
+  description, 
+  keywords, 
+  canonical, 
+  image, 
+  type = 'website', 
+  structuredData,
+  breadcrumbs 
+}) => {
   const { i18n } = useTranslation();
   const currentLang = i18n.language || 'en';
 
@@ -91,18 +110,14 @@ export const Seo: React.FC<Props> = ({ title, description, keywords, canonical, 
 
     // Hreflang Tags
     if (canonical) {
-      // Base URL without language prefix (assuming canonical is full URL)
-      // If canonical looks like /services or /nl/services, we need to handle it.
-      // The current implementation passes window.location.origin + path
-
       const baseUrl = window.location.origin;
-      // Extract the path after origin and optional language segment
       const urlObj = new URL(canonical);
       let path = urlObj.pathname;
 
       // Remove leading language segment if it exists
       const pathSegments = path.split('/').filter(Boolean);
-      if (['nl', 'de'].includes(pathSegments[0])) {
+      const supportedLangs = ['nl', 'de'];
+      if (supportedLangs.includes(pathSegments[0])) {
         path = '/' + pathSegments.slice(1).join('/');
       }
 
@@ -115,10 +130,36 @@ export const Seo: React.FC<Props> = ({ title, description, keywords, canonical, 
     }
 
     // Structured Data
-    setJsonLd(structuredData);
+    let finalSchema: any = structuredData;
+
+    // Combine breadcrumbs if provided
+    if (breadcrumbs && breadcrumbs.length > 0) {
+      const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": breadcrumbs.map((bc, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": bc.name,
+          "item": bc.item.startsWith('http') ? bc.item : `${window.location.origin}${bc.item}`
+        }))
+      };
+
+      if (structuredData) {
+        // Use an array to house multiple schemas (@graph pattern)
+        finalSchema = {
+          "@context": "https://schema.org",
+          "@graph": [structuredData, breadcrumbSchema]
+        };
+      } else {
+        finalSchema = breadcrumbSchema;
+      }
+    }
+
+    setJsonLd(finalSchema);
 
     return () => { };
-  }, [title, description, keywords, canonical, image, type, structuredData, currentLang]);
+  }, [title, description, keywords, canonical, image, type, structuredData, currentLang, breadcrumbs]);
 
   return null;
 };
