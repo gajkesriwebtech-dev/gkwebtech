@@ -1,0 +1,24 @@
+# GK WebTech - Professional Digital Marketing Agency & IT Training Institute
+
+GK WebTech is a premier digital marketing agency and IT training institute specializing in SEO, Social Media Marketing, Performance Marketing, and Cinematic Event Coverage. We also provide professional training and internships in digital marketing, full-stack development, and graphic design.
+
+## Main Sections
+
+- [Services](https://gkwebtech.cloud/services): SEO, Social Media Management, Ads Strategy, Cinematic Videography, and Lead Generation.
+- [IT Training / Courses](https://gkwebtech.cloud/courses): Full Stack Development, Digital Marketing, Graphic Design, and UI/UX Training with Internship.
+- [Portfolio](https://gkwebtech.cloud/portfolio): Case studies and success stories across various industries.
+- [Blog](https://gkwebtech.cloud/blogs): Insights on digital marketing trends and technical tutorials.
+
+## Technical Details
+
+- **Hosting**: Vercel
+- **Frontend Stack**: React (Vite), TypeScript, Tailwind CSS, Framer Motion.
+- **Languages**: English, Dutch (NL), German (DE).
+- **SEO Features**: Structured Data (Schema.org), Breadcrumbs, Localized alternates (hreflang).
+
+## Contact Information
+
+- **Email**: contact@gkwebtech.cloud
+- **Phone**: +91 9971944676 / +31 620508410
+- **Location**: Alwar, Rajasthan (India) & Tilburg (Netherlands)
+- **Website**: [https://gkwebtech.cloud](https://gkwebtech.cloud)
