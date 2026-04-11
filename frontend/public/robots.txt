@@ -4,5 +4,6 @@ Allow: /
 Sitemap: https://gkwebtech.cloud/sitemap.xml
 
 # AI-Friendly Context
-LLMs: https://gkwebtech.cloud/llms.txt
+# LLMs: https://gkwebtech.cloud/llms.txt
+
 
