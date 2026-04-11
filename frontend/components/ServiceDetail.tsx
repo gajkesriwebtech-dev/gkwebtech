@@ -44,8 +44,18 @@ export const ServiceDetail: React.FC = () => {
           "name": service.title,
           "description": service.description,
           "url": `${window.location.origin}/service/${service.id}`,
-          "image": service.detailImage
+          "image": service.detailImage,
+          "provider": {
+            "@type": "Organization",
+            "name": "GK WebTech",
+            "url": window.location.origin
+          }
         }}
+        breadcrumbs={[
+          { name: t("nav.home", "Home"), item: "/" },
+          { name: t("nav.services", "Services"), item: "/services" },
+          { name: t(`services.${service.id}.title`, service.title), item: `/service/${service.id}` }
+        ]}
       />
       <div className="pt-24 pb-20 bg-bg-light dark:bg-gray-950 min-h-screen">
         {/* Hero Header */}
