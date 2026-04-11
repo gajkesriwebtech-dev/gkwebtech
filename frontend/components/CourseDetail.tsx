@@ -35,7 +35,7 @@ const CourseDetail: React.FC = () => {
         title={`${course.title} | GK WebTech | GKWebTech`}
         description={`${course.description} GK WebTech delivers practical learning paths for digital growth. GKWebTech helps businesses grow online.`}
         keywords={course.features.join(', ')}
-        canonical={`${window.location.origin}/course/${course.id}`}
+        canonical={`/course/${course.id}`}
         image={course.detailImage}
         type="product"
         structuredData={{
@@ -43,12 +43,12 @@ const CourseDetail: React.FC = () => {
           "@type": "Course",
           "name": course.title,
           "description": course.description,
-          "url": `${window.location.origin}/course/${course.id}`,
+          "url": `https://gkwebtech.cloud/course/${course.id}`,
           "image": course.detailImage,
           "provider": {
             "@type": "Organization",
             "name": "GK WebTech",
-            "url": window.location.origin
+            "url": "https://gkwebtech.cloud/"
           }
         }}
         breadcrumbs={[

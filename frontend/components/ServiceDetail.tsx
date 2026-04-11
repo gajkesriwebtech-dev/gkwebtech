@@ -35,7 +35,7 @@ export const ServiceDetail: React.FC = () => {
         title={`${t(`services.${service.id}.title`, service.title)} | GK WebTech | GKWebTech`}
         description={`${t(`services.${service.id}.description`, service.description)} ${t('seo.detail_suffix.service')}`}
         keywords={service.features.join(', ')}
-        canonical={`${window.location.origin}/service/${service.id}`}
+        canonical={`/service/${service.id}`}
         image={service.detailImage}
         type="product"
         structuredData={{
@@ -43,12 +43,12 @@ export const ServiceDetail: React.FC = () => {
           "@type": "Service",
           "name": service.title,
           "description": service.description,
-          "url": `${window.location.origin}/service/${service.id}`,
+          "url": `https://gkwebtech.cloud/service/${service.id}`,
           "image": service.detailImage,
           "provider": {
             "@type": "Organization",
             "name": "GK WebTech",
-            "url": window.location.origin
+            "url": "https://gkwebtech.cloud/"
           }
         }}
         breadcrumbs={[
